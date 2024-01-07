@@ -1,18 +1,114 @@
+html{
+    font-size: 16px;
+}
+@media (max-width: 1024px) { html{ font-size: 14px; } }
+@media (max-width: 768px) { html{ font-size: 12px; } }
 body{
+    font-family: 'SUIT Variable';
+    font-weight: normal;
+    line-height: 1.4;
     background: url("../images/rootBg.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    word-break: keep-all;
+    color: #fff;
 }
 .inner{
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
 }
 
+/* titleSection */
 .titleSection{
+    position: relative;
     background: url("../images/topBg.jpg") no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 20vh 0;
+    padding: 16vh 0;
+}
+.titleSection::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0,0,0,0.6);
+}
+.titleSection h1{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 2px grey;
+}
+.titleSection p{
+    font-size: 1.1rem;
+}
+
+/* contentSection */
+.contWrap{
+    margin: 30px auto;
+    padding: 2.5rem 3rem;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.8);
+    max-width: 900px;
+}
+.sectionTitle{
+    font-size: 2.2rem;
+    margin-bottom: 1.4rem;
+}
+.contArea{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.contArea .contBox{
+    flex: 1 1 200px;
+}
+.contArea .contBox h3{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+.contArea .contBox p{
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.contArea .contBox p span{
+    display: block;
+    font-size: 0.9rem;
+    color: #818181;
+    margin-top: 2px;
+}
+
+/* blackSection */
+.blackSection{
+    padding: 6rem 0;
+    background-color: black;
+}
+.blackSection .inner{
+    max-width: 840px;
+}
+table{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid grey;
+    overflow: hidden;
+}
+table tr td{
+    vertical-align: middle;
+    padding: 6px 16px;
+    height: 36px;
+    font-size: 1rem;
+}
+table tr:nth-child(odd) td{
+    background-color: #1c1c1c;
+}
+@media (max-width: 768px) {
+    table colgroup{
+        display: none;
+    }
 }
