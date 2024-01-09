@@ -7,15 +7,24 @@ body{
     font-family: 'SUIT Variable';
     font-weight: normal;
     line-height: 1.4;
-    background: url("../images/rootBg.jpg") no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
     word-break: keep-all;
     color: #fff;
 }
 a{
     color: #fff;
+}
+.bg{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .inner{
     max-width: 1000px;
