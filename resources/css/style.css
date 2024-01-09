@@ -14,6 +14,9 @@ body{
     word-break: keep-all;
     color: #fff;
 }
+a{
+    color: #fff;
+}
 .inner{
     max-width: 1000px;
     margin: 0 auto;
@@ -27,7 +30,7 @@ body{
     background: url("../images/topBg.jpg") no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 16vh 0;
+    padding: 18vh 0;
 }
 .titleSection::before{
     content: "";
@@ -89,6 +92,9 @@ body{
     padding: 6rem 0;
     background-color: black;
 }
+.blackSection + .blackSection{
+    padding-top: 2rem;
+}
 .blackSection .inner{
     max-width: 840px;
 }
@@ -111,4 +117,56 @@ table tr:nth-child(odd) td{
     table colgroup{
         display: none;
     }
+}
+
+/* grid */
+.gridArea{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.grid2way{
+    flex: 1 1 300px;
+}
+.grid3way{
+    flex: 1 1 200px;
+}
+.gridBox{
+    padding: 20px;
+    border-radius: 10px;
+}
+.gridColorBox{
+    background-color: #7e023c;
+    border: 1px solid #970248;
+}
+.gridBorderBox{
+    border: 1px solid #aaa;
+}
+.gridColorBox.ready{
+    background-color: #7e023c44;
+    border: 1px solid #97024844;
+}
+.gridBox h3{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+.gridBox p{
+    font-size: 1rem;
+}
+
+/* 이미지 */
+.imgBox{
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+}
+.imgBox img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
