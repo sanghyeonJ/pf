@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev" onclick="location.href='./boardList.html'"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>자유게시판</h1>
+                <div class="boardViewMenu">
+                    <button type="button" class="btn_ViewMenu"><img src="../../resources/images/viewPageMenu.png" alt=""></button>
+                    <div class="menuList">
+                        <button type="button">수정</button>
+                        <button type="button" class="red">삭제</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container">
+            <div class="content_wrap">
+                <div class="inner">
+
+                    <div class="noticeViewWrap">
+                        <h2>게시판 제목입니다.</h2>
+                        <p class="date">2023.01.01</p>
+                        <hr>
+                        <p class="noticeText">
+                            자원봉사 우수사례 공모대회 2023‘세상을 바꾸는 시간 V × 
+                            부산’ 선정 결과를 알려드립니다.
+                            지원해주신 모든 분들께 감사의 말씀을 드립니다.
+                            선정되신 분들은 별도 오리엔테이션 연락을 드리겠습니다
+                        </p>
+
+                        <div class="commentWrap">
+                            <div class="commentHeader">
+                                <h3>댓글</h3>
+                                <button type="button" onclick="popupOpen(commentWrite)">댓글 작성</button>
+                            </div>
+                            <div class="linkList commentList">
+                                <div class="linkItem">
+                                    <div class="linkTop">
+                                        <p class="name">홍길동</p>
+                                        <div class="rightCon">
+                                            <p class="date">2023.01.01</p>
+                                        </div>
+                                    </div>
+                                    <p class="commentText">
+                                        댓글댓글 입니다.댓글댓글 입니다.댓글댓글 입니다.댓글댓글 입니다.댓글댓글 입니다.
+                                    </p>
+                                </div>
+                                <div class="linkItem">
+                                    <div class="linkTop">
+                                        <p class="name">홍길동</p>
+                                        <div class="rightCon">
+                                            <div class="commentBtn">
+                                                <button type="button">수정</button>
+                                                <span></span>
+                                                <button type="button" class="red">삭제</button>
+                                            </div>
+                                            <p class="date">2023.01.01</p>
+                                        </div>
+                                    </div>
+                                    <p class="commentText">
+                                        댓글댓글 입니다.댓글댓글 입니다.댓글댓글 입니다.댓글댓글 입니다.댓글댓글 입니다.
+                                    </p>
+                                </div>
+                                <div class="noComment" style="display: none;">댓글을 달아보세요</div> <!-- 댓글 없을 경우 -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+        <!-- 팝업 -->
+        <div class="slidePopupWrap">
+
+            <div class="slidePopup" id="commentWrite">
+                <div class="slidePopupCont">
+                    <div class="popupCenterTitle small">
+                        <h2>댓글작성</h2>
+                    </div>
+                    <div class="commentWriteWrap">
+                        <textarea placeholder="댓글을 입력해 주세요."></textarea>
+                    </div>
+                </div>
+                <div class="slidePopupBot">
+                    <button type="button" class="btn_bot1 btn_black">확인</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            let aniDuration = 300;
+            // 팝업 열기
+            function popupOpen(popupTargetId){
+                $('.slidePopupWrap').css({display: 'block'});
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0.5)'}, aniDuration);
+                $(popupTargetId).css({transform: 'translateY(0%)'});
+            }
+            // 팝업 닫기
+            function popupClose(popupTargetId){
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                $(popupTargetId).css({transform: 'translateY(100%)'});
+            }
+            $(document).on('click', '.slidePopupWrap', function (e) {
+                var popContent = $('.slidePopup');
+                if (popContent.has(e.target).length === 0) {
+                    $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                    $('.slidePopup').css({transform: 'translateY(100%)'});
+                }
+            });
+        </script>
+        <script>
+            $('.btn_ViewMenu').on('click', function(){
+                $('.menuList').slideToggle(300);
+            })
+        </script>
+
+    </body>
+</html>

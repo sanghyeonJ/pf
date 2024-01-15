@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>자주 묻는 질문</h1>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container">
+            <div class="content_wrap">
+                <div class="inner">
+
+                    <div class="linkList faqList">
+                        <a href="javascript:void(0)" class="linkItem">
+                            <p class="title"><span>Q1</span>문의 제목입니다.</p>
+                            <div class="faqArea">
+                                <p class="answerText">회원가입하는 방법을 가르쳐 드립니다. 회원가입하는 방법을 가르쳐 드립니다. 회원가입하는 방법을 가르쳐 드립니다.</p>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="linkItem">
+                            <p class="title"><span>Q2</span>문의 제목입니다.</p>
+                            <div class="faqArea">
+                                <p class="answerText">회원가입하는 방법을 가르쳐 드립니다. 회원가입하는 방법을 가르쳐 드립니다. 회원가입하는 방법을 가르쳐 드립니다.</p>
+                            </div>
+                        </a>
+                        
+                        <button class="btn_listMore">더보기 (<b>1</b>/3)</button>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+        <script>
+            $(document).on('click', '.faqList .linkItem', function(){
+                $(this).find('.faqArea').slideToggle(300)
+            })
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/swiper-bundle.min.js"></script>
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev" onclick="location.href='./exchangeList.html'"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>물품교환</h1>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container">
+            <div class="content_wrap">
+                <div class="inner">
+
+                    <div class="exchangeViewWrap">
+                        <div class="exchangeSlide">
+                            <div class="swiper exchangeSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../../resources/images/test2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../resources/images/test2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../resources/images/test2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+
+                        <h3>유아용 자전거</h3>
+                        <p class="point"><img src="../../resources/images/ico_point.png" alt="">500</p>
+                        <p class="text">
+                            상태 굿입니다. 상태 굿입니다. 사용한지 1년정도 된 자전거
+                            입니다. 아주 깨끗하게 사용했습니다. 아주 깨끗하게 사용했
+                            습니다.
+                        </p>
+
+                        <div class="input_addressWrap">
+                            <h4>물품수령 주소</h4>
+                            <div class="input_addressArea">
+                                <input type="text" placeholder="우편번호">
+                                <button type="button">주소검색</button>
+                                <input type="text" class="full">
+                                <input type="text" class="full" placeholder="상세주소">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="bottomFix">
+                <div class="inner">
+                    <button type="button" class="btn_bot1 btn_mainColor" onclick="location.href='./exchangeList.html'">교환</button>
+                </div>
+            </div>
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+        <script>
+            var swiper = new Swiper('.exchangeSwiper', {
+                spaceBetween: 16,
+                scrollbar: {
+                    el: '.swiper-scrollbar'
+                }
+            })
+        </script>
+    </body>
+</html>

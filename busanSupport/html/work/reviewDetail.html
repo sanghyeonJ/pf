@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>봉사자 평가</h1>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container">
+            <div class="content_wrap">
+                <div class="inner">
+
+                    <div class="appraisalList">
+                        <div class="appraisalItem">
+                            <div class="profile">
+                                <div class="imgBox">
+                                    <img src="../../resources/images/profileImg.png" alt="" class="noneImg">  <!-- 기본이미지일경우만 noneImg 클래스 추가 -->
+                                </div>
+                                <p>홍길동</p>
+                            </div>
+                            <div class="reviewStar">
+                                <div class="star on">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                                <div class="star">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                                <div class="star">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                                <div class="star">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                                <div class="star">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appraisalItem">
+                            <div class="profile">
+                                <div class="imgBox">
+                                    <img src="../../resources/images/profileImg.png" alt="" class="noneImg">  <!-- 기본이미지일경우만 noneImg 클래스 추가 -->
+                                </div>
+                                <p>홍길동</p>
+                            </div>
+                            <div class="reviewStar">
+                                <div class="star on">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                                <div class="star">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                                <div class="star">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                                <div class="star">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                                <div class="star">
+                                    <img src="../../resources/images/star.png" alt="">
+                                    <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bottomFix">
+                <div class="inner">
+                    <div class="botBtn2way">
+                        <button type="button" class="btn_bot1 btn_black" onclick="popupOpen(appraisalAll)">별점 일괄 부여</button>
+                        <button type="button" class="btn_bot1 btn_mainColor">등록</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+        <!-- 팝업 -->
+        <div class="slidePopupWrap">
+
+            <div class="slidePopup" id="appraisalAll">
+                <div class="slidePopupCont">
+                    <div class="popupCenterTitle">
+                        <h2>일괄평가</h2>
+                    </div>
+                    <div class="appraisalAll">
+                        <div class="reviewStar">
+                            <div class="star on">
+                                <img src="../../resources/images/star.png" alt="">
+                                <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                            </div>
+                            <div class="star">
+                                <img src="../../resources/images/star.png" alt="">
+                                <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                            </div>
+                            <div class="star">
+                                <img src="../../resources/images/star.png" alt="">
+                                <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                            </div>
+                            <div class="star">
+                                <img src="../../resources/images/star.png" alt="">
+                                <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                            </div>
+                            <div class="star">
+                                <img src="../../resources/images/star.png" alt="">
+                                <img src="../../resources/images/star-on.png" alt="" class="imgOn">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slidePopupBot">
+                    <button type="button" class="btn_bot1 btn_black" onclick="popupClose(appraisalAll)">확인</button>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            let aniDuration = 300;
+            // 팝업 열기
+            function popupOpen(popupTargetId){
+                $('.slidePopupWrap').css({display: 'block'});
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0.5)'}, aniDuration);
+                $(popupTargetId).css({transform: 'translateY(0%)'});
+            }
+            // 팝업 닫기
+            function popupClose(popupTargetId){
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                $(popupTargetId).css({transform: 'translateY(100%)'});
+            }
+            $(document).on('click', '.slidePopupWrap', function (e) {
+                var popContent = $('.slidePopup');
+                if (popContent.has(e.target).length === 0) {
+                    $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                    $('.slidePopup').css({transform: 'translateY(100%)'});
+                }
+            });
+        </script>
+
+    </body>
+</html>

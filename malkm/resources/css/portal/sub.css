@@ -1,0 +1,190 @@
+/* ----------------- 로그인 ----------------- */
+.loginWrap{ height: calc(var(--vh, 1vh) * 100); background-color: #6191f6; display: flex; flex-direction: column; padding: 60px 40px; }
+.loginWrap .loginImg{ height: 100%; display: flex; align-items: center; justify-content: center; }
+.loginWrap .loginImg img{ width: 165px; }
+.loginWrap .loginBtn{ display: flex; flex-direction: column; gap: 20px; flex: none; align-items: center; }
+.loginWrap .loginBtn button{ width: 100%; max-width: 400px; height: 48px; border-radius: 12px; font-size: 14px; letter-spacing: -0.56px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.loginWrap .loginBtn button img{ margin-top: -4px; }
+.loginWrap .loginBtn button.kakao{ background-color: #fee500; color: #333; }
+.loginWrap .loginBtn button.kakao img{ width: 16px; }
+.loginWrap .loginBtn button.naver{ background-color: #03c75a; color: #fff; }
+.loginWrap .loginBtn button.naver img{ width: 16px; }
+.loginWrap .loginBtn button.google{ background-color: #fff; color: #333; }
+.loginWrap .loginBtn button.google img{ width: 16px; }
+
+
+/* ----------------- 약관동의 ----------------- */
+.termsBox{ height: 80px; border-radius: 12px; background-color: #e9eef8; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
+.termsBox + .termsBox{ margin-top: 8px; }
+.termsBox button{ flex: none; font-size: 13px; letter-spacing: -0.52px; color: #777; }
+
+.termsText p{ font-size: 14px; letter-spacing: -0.56px; line-height: 22px; color: #333; }
+
+
+/* ----------------- 메인페이지 ----------------- */
+.mainWrap{ background: linear-gradient(180deg, rgba(242,242,242,1) 0%, rgba(255,255,255,1) 100%); }
+.mainWrap::before{ content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image:url(../../images/portal/mainObj.png); background-repeat: no-repeat; background-size: 226px; background-position: right top; opacity: 0.5; }
+.mainWrap::after{ content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(../../images/portal/mainObjBg.png); background-repeat: no-repeat; background-size: 250vw; background-position: -22vw 280px; }
+
+.mainWrap .inner{ height: calc(100% - 64px); min-height: 550px; }
+.mainLogo{ width: 105px; margin-left: 30px; }
+
+.mainContainer{ height: 100%; position: relative; z-index: 1; display: flex; flex-direction: column;  }
+.mainTextArea{ height: 100%; min-height: 200px; display: flex; justify-content: center; flex-direction: column; }
+.mainTextArea h3{ font-size: 48px; letter-spacing: -1.2px; color: #3561d2; font-family: 'PyeongChangPeace-Bold'; margin-bottom: 16px; }
+.mainTextArea p{ font-size: 21px; letter-spacing: -1.05px; color: #3561d2; font-family: 'PyeongChang'; line-height: 28px; }
+
+.mainContArea{ height: 180%; min-height: 350px; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.mainBtnArea{ width: 100%; margin-bottom: 36px; }
+.mainBtnArea .mainBtn{ width: 100%; height: 80px; border-radius: 20px; background-color: #ff6578; box-shadow: 0 8px 16.6px 1.4px rgba(27,56,107,0.2); font-size: 22px; letter-spacing: -0.55px; color: #fff; font-weight:  700; margin-bottom: 28px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.mainBtnArea .mainBtn img{ width: 33px; }
+.mainBtnArea .mainBtnSub{ width: 100%; display: flex; gap: 14px; }
+.mainBtnArea .mainBtnSub button{ width: 100%; height: 100px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; font-size: 13px; letter-spacing: -0.39px; color: #fff; background-color: var(--mainColor); border-radius: 16px; }
+.mainBtnArea .mainBtnSub button img{ width: 40px; height: 40px; object-fit: scale-down; }
+
+.mainNoticeArea{ width: 100%; }
+.mainNoticeArea h4{ font-size: 18px; letter-spacing: -0.9px; color: #333; font-weight:  700; margin-bottom: 14px; }
+.mainNoticeSwiper{ height: 40px; }
+.mainNotice .swiper-slide{ padding: 2px 0; }
+.mainNotice .swiper-slide a{ font-size: 15px; letter-spacing: -0.45px; color: #333; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.mainNotice .swiper-slide span{ display: block; font-size: 12px; letter-spacing: -0.3px; color: #777; margin-top: 10px; }
+
+
+/* ----------------- 예약하기 ----------------- */
+.inputArticleItem + .inputArticleItem{ margin-top: 40px; }
+.inputArticleItem .key{ font-size: 15px; letter-spacing: -0.75px; color: #444; margin-bottom: 12px; }
+.inputArticleBox{ width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.inputArticleBox .cell{ display: flex; gap: 8px; }
+.inputArticleBox input{ width: 100%; height: 48px; border-radius: 10px; border: 1px solid #d1daeb; font-size: 16px; }
+.inputArticleBox button{ width: 72px; height: 48px; border-radius: 10px; background-color: #666; font-size: 14px; letter-spacing: -0.7px; color: #fff; flex: none; }
+.inputArticleBox .comment{ font-size: 13px; letter-spacing: -0.65px; color: #666; }
+
+.input_radio{ display: flex; gap: 8px; }
+.input_radio input[type="radio"] + label{ width: 120px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 24px; background-color: #c1c1c1; font-size: 16px; letter-spacing: -0.8px; color: #fff; }
+.input_radio input[type="radio"]:checked + label{ background-color: var(--mainColor); }
+.input_radio input[type="radio"] + label::before{ display: none; }
+/* 주소검색 */
+input[type="text"].inputSearchAddress{ width: 100%; height: 48px; border-radius: 10px; background: #e9eef8 url(../../images/portal/addressSearch.png) no-repeat; background-size: 17px; background-position: 16px center; padding-left: 40px; border: none; font-size: 15px; }
+.addressList{ margin-top: 16px; height: calc(var(--vh, 1vh) * 100 - 284px); overflow: auto; padding-bottom: 20px; }
+.addressList a{ padding: 16px; background-color: #f4f4f4; border-radius: 10px; }
+.addressList a + a{ margin-top: 10px; }
+.addressList a .adrNum{ margin-bottom: 16px; }
+.addressList a .adrNum b{ font-size: 16px; letter-spacing: -0.4px; color: #3561d2; }
+.addressList a .adrNum span{ font-size: 13px; letter-spacing: -0.33px; color: #333; margin-left: 6px; }
+.addressList a .adrText{ display: flex; align-items: baseline; gap: 8px; }
+.addressList a .adrText + .adrText{ margin-top: 8px; }
+.addressList a .adrText p{ width: 40px; height: 20px; border-radius: 10px; background-color: #888; flex: none; font-size: 11px; letter-spacing: -0.28px; color: #fff; display: flex; align-items: center; justify-content: center; }
+.addressList a .adrText span{ font-size: 14px; letter-spacing: -0.35px; color: #333; line-height: 18px; }
+/* 객실수 */
+input[type="text"].roomNumInput{ width: 100%; height: 48px; border-radius: 10px; background-color: #e9eef8; font-size: 20px; text-align: center; border: none; margin-bottom: 40px; font-weight:  700; }
+/* 완료 */
+.reservCompleteText{ height: 180px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 17px; letter-spacing: -0.43px; line-height: 22px; }
+
+
+/* ----------------- 나의예약 ----------------- */
+.myReservList .item{ background-color: #fff; border-radius: 10px; box-shadow: 0 8px 16.6px 1.4px rgba(27,56,107,0.1); }
+.myReservList .item + .item{ margin-top: 30px; }
+.myReservList .item .top{ padding: 20px 16px 40px 20px; border-bottom: 1px dashed #dcdcdc; }
+.myReservList .item .top .info{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; }
+.myReservList .item .top .info h4{ font-size: 15px; letter-spacing: -0.45px; color: #222; font-weight:  700; }
+.myReservList .item .top .info button{ width: 64px; height: 30px; border-radius: 15px; border: 1px solid #c1c1c1; font-size: 13px; letter-spacing: -0.39px; color: #444; flex: none; }
+.myReservList .item .top .address{ font-size: 15px; letter-spacing: -0.75px; color: #444; line-height: 24px; display: flex; align-items: flex-start; gap: 6px; }
+.myReservList .item .top .address::before{ content: ""; display: block; width: 11px; height: 20px; background: url(../../images/portal/addressText.png) no-repeat; background-size: contain; background-position: center; flex: none; }
+.myReservList .item .bot{ padding: 24px 24px 26px 20px; display: flex; align-items: center; justify-content: space-between; }
+.myReservList .item .bot .price{ font-size: 13px; letter-spacing: -0.39px; color: #000; font-weight:  700; }
+.myReservList .item .bot .price b{ font-size: 16px; letter-spacing: -0.48px; color: #3561d2; font-weight:  700; }
+.myReservList .item .bot .btnBox{ display: flex; gap: 4px; }
+
+
+/* ----------------- 더보기 ----------------- */
+.moreList .box + .box{ margin-top: 40px; padding-top: 40px; border-top: 1px solid #dcdcdc; }
+.moreList .box a{ width: 100%; font-size: 16px; letter-spacing: -0.48px; color: #222; background: url(../../images/portal/moreArrow.png) no-repeat; background-size: 8px; background-position: right center; }
+.moreList .box a + a{ margin-top: 40px; }
+
+/* ----------------- 더보기 : 계정정보 ----------------- */
+.infoArea{ padding-bottom: 40px; border-bottom: 1px solid #dcdcdc; }
+.infoArea .infoBox{ display: flex; align-items: center; justify-content: space-between; }
+.infoArea .infoBox + .infoBox{ margin-top: 40px; }
+.infoArea .infoBox .key,
+.infoArea .infoBox button{ font-size: 16px; letter-spacing: -0.48px; color: #222; }
+.infoArea .infoBox .value{ font-size: 16px; letter-spacing: -0.48px; color: #3561d2; }
+/* 회원탈퇴 */
+.withdrawPopupText{ text-align: center; margin-bottom: 30px; }
+.withdrawPopupText h3{ font-size: 24px; letter-spacing: -0.6px; font-weight:  700; margin-bottom: 26px; }
+.withdrawPopupText p{ font-size: 17px; letter-spacing: -0.43px; line-height: 22px; margin-bottom: 60px; }
+.withdrawPopupText p b{ color: #ff493c; }
+.withdrawPopupText span{ font-size: 13px; letter-spacing: -0.33px; color: #444; line-height: 18px; }
+
+/* ----------------- 더보기 : 공지사항 - 리스트 ----------------- */
+.noticeList{  }
+.noticeList .item{ padding: 16px; border-radius: 10px; background-color: #fff; display: flex; align-items: center; gap: 16px; }
+.noticeList .item + .item{ margin-top: 16px; }
+.noticeList .item .text{ display: flex; flex-direction: column; gap: 10px; }
+.noticeList .item .text span{ font-size: 12px; letter-spacing: -0.36px; color: #777; }
+.noticeList .item .text p{ font-size: 15px; letter-spacing: -0.45px; color: #222; line-height: 1.2; }
+
+.noticeList .item.fix{ border: 1px solid var(--mainColor); }
+.noticeList .item.fix::before{ content: ""; width: 32px; height: 32px; border-radius: 100%; background: #e9eef8 url(../../images/portal/listFix.png) no-repeat 6px center/18px; }
+
+.nodata{ height: calc(var(--vh, 1vh) * 100 - 240px); min-height: 330px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
+.nodata img{ width: 45px; }
+.nodata p{ font-size: 14px; letter-spacing: -0.42px; color: #555; }
+
+/* ----------------- 더보기 : 공지사항 - 뷰 ----------------- */
+.noticeViewTit{ margin-bottom: 20px; }
+.noticeViewTit h4{ font-size: 16px; letter-spacing: -0.48px; color: #222; font-weight:  700; margin-bottom: 14px; }
+.noticeViewTit span{ font-size: 13px; letter-spacing: -0.39px; color: #777; }
+
+.noticeViewCont{ background-color: #fff; width: calc(100% + 60px); margin-left: -30px; padding: 24px 30px 20px; }
+.noticeViewCont .textArea{ min-height: 220px; }
+.textArea{ font-size: 15px; letter-spacing: -0.45px; color: #222; line-height: 22px; margin-bottom: 20px; }
+.fileArea{ display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.fileArea button{ min-height: 30px; padding: 4px 14px; border-radius: 15px; background-color: #efefef; font-size: 13px; letter-spacing: -0.33px; color: #3561d2; line-height: 1.2; }
+
+/* ----------------- 더보기 : faq ----------------- */
+.faqList .item{  }
+.faqList .item + .item{ margin-top: 16px; }
+.faqList .item .question{ display: flex; align-items: baseline; gap: 10px; padding: 20px; background-color: #fff; border-radius: 10px; cursor: pointer; }
+.faqList .item .question span{ font-size: 18px; letter-spacing: -0.9px; color: var(--mainColor); font-weight:  700; flex: none; }
+.faqList .item .question p{ font-size: 15px; letter-spacing: -0.45px; color: #222; line-height: 1.4; }
+.faqList .item .answer{ margin-top: 4px; padding: 20px; background-color: #e9eef8; border-radius: 10px; font-size: 15px; letter-spacing: -0.45px; line-height: 24px; display: none; }
+
+/* ----------------- 더보기 : 문의하기 ----------------- */
+.inquiryTit{ height: 72px; margin-bottom: 16px; }
+.inquiryCont{ height: 400px; }
+
+/* ----------------- 더보기 : 이용안내 ----------------- */
+.category{ margin-top: 24px; width: calc(100% + 60px); margin-left: -30px; padding: 0 30px; }
+.category .swiper-slide{ width: auto; height: 32px; padding: 0 18px; border: 1px solid #c1c1c1; border-radius: 16px; word-break: keep-all; white-space: nowrap; font-size: 15px; letter-spacing: -0.75px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.category .swiper-slide.on{ background-color: #666; color: #fff; border-color: #666; }
+
+.guide{ margin-top: 32px; }
+.guide .tit{ font-size: 14px; letter-spacing: -0.7px; color: #777; margin-bottom: 14px; }
+.guide .guideList{ background-color: #fff; border-radius: 10px; padding: 24px 20px; }
+.guide .guideList li{ font-size: 15px; letter-spacing: -0.45px; display: flex; align-items: baseline; gap: 12px; line-height: 1.2; }
+.guide .guideList li + li{ margin-top: 22px; }
+.guide .guideList li::before{ content: ""; display: block; width: 16px; height: 16px; background: url(../../images/portal/ico_guide.png) no-repeat center / contain; flex: none; }
+
+/* ----------------- 더보기 : 개인정보처리방침 ----------------- */
+.termsPage h4{ font-size: 16px; letter-spacing: -0.64px; margin-bottom: 14px; }
+.termsPage p{ font-size: 13px; letter-spacing: -0.52px; line-height: 20px; margin-bottom: 16px; }
+
+
+/* ----------------- 말끔 보기 - 리스트 ----------------- */
+.malkmList .item + .item{ margin-top: 24px; }
+.malkmList .item .imgBox{ width: 100%; height: 0; padding-top: 100%; position: relative; margin-bottom: 20px; }
+.malkmList .item .imgBox .malkmSwiper{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-shadow: 0 8px 16.6px 1.4px rgba(27,56,107,0.1); border-radius: 10px; }
+.malkmList .item .imgBox .malkmSwiper .swiper-slide{ background-color: #fff; border-radius: 10px; }
+.malkmList .item .imgBox .malkmSwiper .swiper-slide img{ width: 100%; height: 100%; object-fit: scale-down; }
+.malkmList .item .imgBox .malkmSwiper .swiper-scrollbar{ bottom: 15px; width: 160px; left: 50%; transform: translateX(-50%); background-color: rgba(0,0,0,0.3); }
+.malkmList .item .imgBox .malkmSwiper .swiper-scrollbar .swiper-scrollbar-drag{ background-color: var(--mainColor); }
+.malkmList .item .textBox h4{ font-size: 16px; letter-spacing: -0.64px; line-height: 22px; margin-bottom: 10px; }
+.malkmList .item .textBox span{ font-size: 12px; letter-spacing: -0.36px; color: #777; }
+
+/* ----------------- 말끔 보기 - 뷰 ----------------- */
+.malkmViewImgArea{ margin-bottom: 20px; }
+.malkmViewImg{ width: calc(100% + 60px); margin-left: -30px; background-color: #fff; margin-bottom: 10px; }
+.malkmViewImg img{ width: 100%; height: 100; object-fit: scale-down; }
+
+
+

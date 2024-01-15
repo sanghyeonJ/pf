@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev" onclick="location.href='../main/main.html'"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>포인트 사용</h1>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container pointContainer">
+            <div class="textCategory">
+                <a href="javascript:void(0)" class="on">가맹점</a>
+                <a href="./exchangeList.html">물품교환</a>
+            </div>
+            <div class="mapWrap">
+                <div class="mapBox">
+                    <!-- 지도 -->
+    
+                    <div class="mapPin pinGreen" onclick="popupOpen(mapInfo)" style="top: 300px; left: 150px;"> <!-- 적용시 태그 내부 스타일 제거 -->
+                        <img src="../../resources/images/pin_green.png" alt="" class="pinImg">
+                        <div class="pinText">
+                            달콤카페<img src="../../resources/images/pinArrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 지도 검색 -->
+                <div class="mapSelect">
+                    <select>
+                        <option>사상구</option>
+                    </select>
+                    <select class="W60p">
+                        <option>업종</option>
+                    </select>
+                </div>
+                <button type="button" class="btnLocation"><img src="../../resources/images/ico_mapLocation.png" alt=""></button>
+            </div>
+
+            
+
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+        <!-- 팝업 -->
+        <div class="slidePopupWrap">
+
+            <div class="slidePopup" id="mapInfo">
+                <div class="slidePopupCont">
+                    <div class="mapInfoWrap point" onclick="location.href='./storeView.html'">
+                        <h4>달콤카페</h4>
+                        <p class="address"><img src="../../resources/images/mapAddress.png" alt="">부산진구 부전동 260-36 3층 304호</p>
+                        
+                        <div class="infoDetail">
+                            <img src="../../resources/images/test3.png" alt="">
+                            라떼 맛집, 분위기 좋고 친절한 카페입니다. 라떼 맛집, 분위기 좋고 친절한 카페입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <script>
+            let aniDuration = 300;
+            // 팝업 열기
+            function popupOpen(popupTargetId){
+                $('.slidePopupWrap').css({display: 'block'});
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0.5)'}, aniDuration);
+                $(popupTargetId).css({transform: 'translateY(0%)'});
+            }
+            // 팝업 닫기
+            function popupClose(popupTargetId){
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                $(popupTargetId).css({transform: 'translateY(100%)'});
+            }
+            $(document).on('click', '.slidePopupWrap', function (e) {
+                var popContent = $('.slidePopup');
+                if (popContent.has(e.target).length === 0) {
+                    $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                    $('.slidePopup').css({transform: 'translateY(100%)'});
+                    setTimeout(function(){
+                        $('.infoDetailWrap').css({display: 'none'})
+                        $('.mapInfoWrap').removeClass('view')
+                    }, 300)
+                }
+            });
+
+            
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev" onclick="location.href='./missionList.html'"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>봉사미션</h1>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container missionContainer">
+
+            <div class="missionTop">
+                <div class="title">
+                    <div class="imgBox"><img src="../../resources/images/missionTitle.png" alt=""></div>
+                    <h2>니캉내캉 병뚜껑 모아보깡? 탄소중립 비대면 자원봉사</h2>
+                </div>
+                <div class="info">
+                    <div class="time">
+                        <p>미션시작</p>
+                        <b>2023.09.15 15:35:21</b>
+                    </div>
+                    <button type="button" class="btn_mainColor">미션완료</button>  <!-- 완료시 표출 -->
+                </div>
+            </div>
+            <div class="content_wrap">
+
+                <div class="mapBox">
+                    <!-- 지도 -->
+                    <div class="mapPhoto" style="top: 50px; left: 150px;">
+                        <img src="../../resources/images/test.png" alt="">
+                    </div>
+
+                    <img src="../../resources/images/pin_main.png" alt="" class="missionPin" style="top: 200px; left: 50px;">
+                </div>
+
+                <div class="missionProgress">
+                    <div class="item">
+                        <p class="title">이동거리</p>
+                        <p class="value"><b>1.2</b>km</p>
+                    </div>
+                    <div class="item">
+                        <p class="title">수행시간</p>
+                        <p class="value"><b>30</b>분</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="bottomFix bottomFix-wh">
+                <div class="missionPhoto">
+                    <button type="button" class="btn_missionPhoto">
+                        <img src="../../resources/images/inputImg.png" alt="">
+                        인증사진
+                    </button>
+                    <div class="item">
+                        <img src="../../resources/images/test.png" alt="">
+                        <p class="count">1</p>
+                        <div class="info">
+                            13:36:10\0.4km 이동
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../../resources/images/test.png" alt="">
+                        <p class="count">2</p>
+                        <div class="info">
+                            13:36:10\0.4km 이동
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+    </body>
+</html>

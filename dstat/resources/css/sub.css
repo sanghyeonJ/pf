@@ -1,0 +1,210 @@
+.topBanner{ width: 100%; height: 150px; display: flex; align-items: center; margin-bottom: 60px; background-size: cover; }
+.topBanner h1{ font-size: 48px; letter-spacing: -2.4px; color: #fff; font-family: 'SUIT-Bold'; }
+.topBanner.topBanner1{ background: url(../images/topBanner1.png) no-repeat 54% 72%; }
+.topBanner.topBanner2{ background: url(../images/topBanner2.png) no-repeat 56%; }
+.topBanner.topBanner3{ background: url(../images/topBanner3.png) no-repeat center; }
+.topBanner.topBanner4{ background: url(../images/topBanner4.png) no-repeat center; }
+.topBanner.topBanner5{ background: url(../images/topBanner5.png) no-repeat 62%; }
+@media screen and (max-width: 1200px){
+    .topBanner{ height: 70px; margin-bottom: 30px; }
+    .topBanner h1{ font-size: 24px; letter-spacing: -1.2px; }
+}
+
+/* faq */
+.faqSearch{ display: flex; align-items: center; justify-content: center; gap: 8px; padding: 30px; background-color: #eef4f8; border-radius: 10px; margin-bottom: 40px; }
+.faqSearch select{ border: 1px solid #c0d0dc; height: 48px; border-radius: 4px; background-color: #fff; font-size: 16px; letter-spacing: -0.8px; color: #000; }
+.faqSearch input{ border: 1px solid #c0d0dc; height: 48px; border-radius: 4px; background-color: #fff; font-size: 16px; letter-spacing: -0.8px; }
+.faqSearch .btn_search{ flex: none; width: 80px; height: 48px; display: flex; align-items: center; justify-content: center; background-color: #333; border-radius: 4px; gap: 4px; font-size: 15px; letter-spacing: -0.75px; color: #fff; font-family: 'SUIT-SemiBold'; }
+@media screen and (max-width: 1200px){
+    .faqSearch{ padding: 20px; display: grid; grid-template-columns: 1fr; }
+    .faqSearch select{ grid-column: 1 / 3; max-width: none; }
+    .faqSearch div{ max-width: none !important; }
+    .faqSearch input{ max-width: none; }
+}
+
+.faqList{ border-top: 2px solid #6d6d6d; }
+.faqItem .question{ display: flex; align-items: center; padding: 20px; min-height: 70px; border-bottom: 1px solid #e0e0e0; }
+.faqItem .question span{ font-size: 14px; letter-spacing: -0.7px; color: #444; width: 110px; flex: none; }
+.faqItem .question p{ font-size: 16px; letter-spacing: -0.8px; color: #000; width: 100%; line-height: 1.4; padding-right: 24px; cursor: pointer; }
+.faqItem img{ transform: rotate(0deg); transition: all 0.3s; }
+.faqItem.on img{ transform: rotate(180deg); }
+.faqItem .answerBox{ display: none; }
+.faqItem .answer{ display: flex; align-items: center; padding: 10px 20px; min-height: 70px; border-bottom: 1px solid #e0e0e0; background-color: #f8f8f8; }
+.faqItem .answer p{ font-size: 15px; letter-spacing: -0.75px; color: #000; line-height: 1.4; }
+@media screen and (max-width: 1200px){
+    .faqItem .question{ display: grid; grid-template-columns: 1fr; row-gap: 6px; }
+    .faqItem .question p{ grid-row: 2; grid-column: 1 / 3; }
+}
+
+
+/* 한눈에보는지표 */
+.mobileMajorCategory{ display: none; }
+.majorItem{ margin-bottom: 50px; }
+.majorItem:last-child{ margin-bottom: 0; }
+.majorItemTit{ margin-bottom: 20px; font-size: 24px; letter-spacing: -1.2px; color: #000; font-family: 'SUIT-Bold'; }
+
+.majorItemCon{ display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.majorSelect{ display: flex; gap: 16px; }
+.majorSelectItem{ width: 150px; flex: none; padding: 18px 0 20px; border-radius: 10px; border: 1px solid #e0e0e0; text-align: center; }
+.majorSelectItem .label{ display: flex; align-items: center; justify-content: center; width: fit-content; margin: 0 auto; height: 20px; border-radius: 10px; background-color: #e5e5e5; padding: 0 14px; font-size: 13px; letter-spacing: -0.33px; color: #1b4085; font-family: 'SUIT-SemiBold'; margin-bottom: 16px; }
+.majorSelectItem h4{ height: 44px; font-size: 18px; letter-spacing: -0.9px; color: #000; line-height: 22px; font-family: 'SUIT-Bold'; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 4px; margin-bottom: 20px; }
+.majorSelectItem h4 span{ font-size: 14px; letter-spacing: -0.7px; }
+.majorSelectItem h2{ font-size: 36px; letter-spacing: -1.8px; color: #ff493c; font-family:'Roboto-Bold'; margin-bottom: 30px; }
+.majorSelectItem h2 span{ font-size: 18px; letter-spacing: -0.9px; color: #ff493c; font-family: 'SUIT-Bold'; display: inline-block; margin-left: 4px; }
+.majorSelectItem .updown{ font-size: 13px; letter-spacing: -0.65px; color: #444; display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 30px; }
+.majorSelectItem .updown span{ font-size: 14px; letter-spacing: -0.7px; }
+.majorSelectItem .updown span.up{ color: #ff493c; }
+.majorSelectItem .updown span.down{ color: #1952d0; }
+.majorSelectItem .date{ font-size: 12px; letter-spacing: -0.6px; color: #444; }
+.majorSelectItem.on{ box-shadow: inset 0 0 0 2px #a5bdda; }
+
+
+.majorChart{ width: 100%; max-width: 400px; border-radius: 10px; background-color: #f4f4f4; padding: 26px 22px; display: flex; flex-direction: column; }
+.majorChartTit{ display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 16px; }
+.majorChartTit h3{ font-size: 18px; letter-spacing: -0.9px; color: #000; font-family: 'SUIT-Bold'; }
+.majorChartTit span{ font-size: 12px; letter-spacing: -0.6px; color: #444; }
+.majorChartBox{ height: 100%; }
+@media screen and (max-width: 1200px){
+    .mobileMajorCategory{ display: flex; align-items: center; gap: 36px; margin-bottom: 24px; overflow: auto; width: calc(100% + 40px); padding: 0 20px; margin-left: -20px; }
+    .mobileMajorCategory::-webkit-scrollbar{ display: none; }
+    .mobileMajorCategory button{ font-size: 18px; letter-spacing: -0.9px; color: #999; font-family: 'SUIT-Bold'; word-break: keep-all; }
+    .mobileMajorCategory button.on{ color: #000; }
+
+    .majorItem{ margin-bottom: 0; display: none; }
+    .majorItem.majorItem1{ display: block; }
+    .majorItemTit{ display: none; }
+
+    .majorItemCon{ flex-direction: column; }
+    .majorSelect{ width: calc(100% + 40px); padding: 0 20px; margin-left: -20px; overflow: auto; }
+    .majorSelect::-webkit-scrollbar{ display: none; }
+    .majorSelectItem{ width: 120px; }
+    .majorSelectItem .label{ height: 18px; border-radius: 9px; font-size: 12px; letter-spacing: -0.3px; }
+    .majorSelectItem h4{ height: 54px; font-size: 16px; letter-spacing: -0.8px; line-height: 18px; margin-bottom: 16px; }
+    .majorSelectItem h2{ font-size: 30px; letter-spacing: -1.5px; }
+    .majorSelectItem h2 span{ font-size: 14px; letter-spacing: -0.7px; }
+
+
+    .majorChart{ max-width: none; }
+}
+
+
+/* 통계 DB */
+.statsDBWrap{ display: flex; gap: 30px; height: 700px; }
+
+.statsDBSelect{ width: 460px; flex: none; border-radius: 10px; border: 1px solid #a5bdda; display: flex; flex-direction: column; overflow: hidden; }
+.statsDBSelect .statsDBSearch{ width: 100%; height: 88px; background-color: #f4f4f4; padding: 0 22px; display: flex; align-items: center; justify-content: center; gap: 8px; flex: none; border-bottom: 1px solid #e0e0e0; }
+.statsDBSelect .statsDBSearch input{ width: 100%; height: 40px; border: 1px solid #bbb; border-radius: 4px; }
+.statsDBSelect .statsDBSearch .btn_search{ width: 70px; height: 40px; border-radius: 4px; background-color: #333; font-size: 15px; letter-spacing: -0.75px; color: #fff; font-family: 'SUIT-SemiBold'; flex: none; }
+.statsDBSelectList{ padding: 24px; height: 100%; overflow: auto; }
+.statsDBSelectList::-webkit-scrollbar{ width: 14px; height: 14px; }
+.statsDBSelectList::-webkit-scrollbar-thumb{ border: 4px solid #fff; border-radius: 7px; background-color: #bbb; }
+.statsDBSelectList .topList > li{ margin-bottom: 20px; }
+.statsDBSelectList .topList > li:last-child{ margin-bottom: 0; }
+.statsDBSelectList .topList > li > button{ width: 100%; font-size: 18px; letter-spacing: -0.9px; color: #000; font-family: 'SUIT-Bold'; display: flex; align-items: center; }
+.statsDBSelectList .topList > li > button img{ width: 18px; height: 18px; object-fit: scale-down; transition: all 0.3s; }
+.statsDBSelectList .topList > li > button.on img{ transform: rotate(90deg); }
+.statsDBSelectList .minList{ padding-top: 20px; display: none; }
+.statsDBSelectList .minList > li{ margin-bottom: 20px; }
+.statsDBSelectList .minList > li:last-child{ margin-bottom: 0; }
+.statsDBSelectList .minList > li > button{ width: 100%; padding-left: 20px; font-size: 16px; letter-spacing: -0.8px; color: #000; display: flex; align-items: center; }
+.statsDBSelectList .minList > li > button img{ width: 18px; height: 18px; object-fit: scale-down; transition: all 0.3s; }
+.statsDBSelectList .minList > li > button.on img{ transform: rotate(90deg); }
+.statsDBSelectList .botList{ padding-top: 4px; display: none; }
+.statsDBSelectList .botList > li{ margin-bottom: 2px; }
+.statsDBSelectList .botList > li:last-child{ margin-bottom: 2px; }
+.statsDBSelectList .botList > li > button{ width: 100%; padding-left: 34px; height: 34px; font-size: 15px; letter-spacing: -0.75px; color: #444; display: flex; align-items: center; }
+.statsDBSelectList .botList > li > button img{ width: 18px; height: 18px; object-fit: scale-down; margin-right: 6px; }
+.statsDBSelectList .botList > li > button.on{ background-color: #dfecfa; box-shadow: inset 0 0 0 1px #bad8f6; }
+
+.statsDBList{ width: 100%; border-radius: 10px; background-color: #f4f4f4; display: flex; flex-direction: column; }
+.statsDBListTit{ padding: 24px 30px 16px; display: flex; align-items: center; justify-content: space-between; flex: none; }
+.statsDBListTit h4{ font-size: 18px; letter-spacing: -0.9px; color: #000; font-family: 'SUIT-Bold'; }
+.statsDBListTit .statsDBListGuide{ display: flex; align-items: center; gap: 4px; font-size: 13px; letter-spacing: -0.65px; color: #444; }
+.statsDBListArea{ height: 100%; overflow: auto; padding-bottom: 20px; }
+.statsDBListArea::-webkit-scrollbar{ width: 14px; height: 14px; }
+.statsDBListArea::-webkit-scrollbar-thumb{ border: 4px solid #f4f4f4; border-radius: 7px; background-color: #bbb; }
+.statsDBListArea a{ width: 100%; min-height: 40px; display: flex; align-items: center; gap: 8px; padding: 8px 10px 8px 30px; }
+.statsDBListArea a:hover{ background-color: #dae7f4; }
+.statsDBListArea a p{ font-size: 16px; letter-spacing: -0.8px; color: #1952d0; }
+.statsDBListArea a p span{ font-size: 14px; letter-spacing: -0.7px; color: #555; display: inline-block; }
+
+.label-year::before{ content: '년'; display: flex; align-items: center; justify-content: center; flex: none; width: 20px; height: 20px; border-radius: 2px; background-color: #5788f3; font-size: 13px; color: #fff; font-family: 'SUIT-SemiBold'; }
+.label-month::before{ content: '월'; display: flex; align-items: center; justify-content: center; flex: none; width: 20px; height: 20px; border-radius: 2px; background-color: #7bd7b5; font-size: 13px; color: #fff; font-family: 'SUIT-SemiBold'; }
+@media screen and (max-width: 1200px){
+    .statsDBWrap{ height: auto; flex-direction: column; gap: 10px; }
+
+    .statsDBSelect{ width: 100%; }
+    .statsDBSelect .statsDBSearch{ padding: 0 20px; gap: 4px; }
+    .statsDBSelectList{ padding: 24px 20px; }
+    .statsDBSelectList .minList > li > button{ padding-left: 12px; }
+    .statsDBSelectList .botList > li > button{ padding-left: 26px; }
+
+    .statsDBListArea a p span{ display: none; }
+}
+
+/* 통계 DB 상세 */
+.statsViewRoot{ display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+.statsViewRoot p{ font-size: 16px; letter-spacing: -0.8px; color: #000; font-family: 'SUIT-SemiBold'; }
+.statsViewTit{ font-size: 30px; letter-spacing: -1.5px; color: #000; font-family: 'SUIT-Bold'; margin-bottom: 40px; }
+
+.statsViewChartWrap{ display: flex; gap: 20px; margin-bottom: 24px; }
+.statsViewChartArea.chartGraph{ width: 100%; }
+.statsViewChartArea.chartMap{ width: 100%; max-width: 380px; }
+.statsViewChartArea h5{ font-size: 21px; letter-spacing: -1.05px; color: #1b4085; font-family: 'SUIT-Bold'; margin-bottom: 16px; }
+.statsViewChartArea .statsViewChartBox{ width: 100%; border: 3px solid #e8ecf2; border-radius: 10px; height: 400px; padding: 20px; }
+
+.statsViewChartArea.chartMap .statsViewChartBox{ display: flex; align-items: center; justify-content: center; }
+.statsViewMapBox{ position: relative; }
+.statsViewMapBox .mapData{ position: absolute; transform: translate(-50%, -50%); }
+.statsViewMapBox .mapData::before{ content: ''; display: block; width: 100%; height: 0; padding-bottom: 100%; }
+.statsViewMapBox .mapData span{ width: 100%; height: 100%; border-radius: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(25,85,208,0.51); }
+.statsViewMapBox .mapData p{ position: absolute; top: 50%; left: 50%; transform: translateX(-50%); font-size: 13px; letter-spacing: -0.65px; color: #000; font-family: 'SUIT-SemiBold'; }
+.statsViewMapBox .mapData[title="서울"]{ top: 71px; left: 73px; }
+.statsViewMapBox .mapData[title="인천"]{ top: 87px; left: 42px; }
+.statsViewMapBox .mapData[title="경기"]{ top: 110px; left: 90px; }
+.statsViewMapBox .mapData[title="강원"]{ top: 56px; left: 156px; }
+.statsViewMapBox .mapData[title="충남"]{ top: 158px; left: 48px; }
+.statsViewMapBox .mapData[title="세종"]{ top: 161px; left: 81px; }
+.statsViewMapBox .mapData[title="대전"]{ top: 183px; left: 82px; }
+.statsViewMapBox .mapData[title="충북"]{ top: 143px; left: 112px; }
+.statsViewMapBox .mapData[title="경북"]{ top: 184px; left: 178px; }
+.statsViewMapBox .mapData[title="대구"]{ top: 230px; left: 166px; }
+.statsViewMapBox .mapData[title="전북"]{ top: 227px; left: 65px; }
+.statsViewMapBox .mapData[title="광주"]{ top: 271px; left: 50px; }
+.statsViewMapBox .mapData[title="전남"]{ top: 302px; left: 46px; }
+.statsViewMapBox .mapData[title="경남"]{ top: 269px; left: 138px; }
+.statsViewMapBox .mapData[title="울산"]{ top: 260px; left: 214px; }
+.statsViewMapBox .mapData[title="부산"]{ top: 286px; left: 202px; }
+.statsViewMapBox .mapData[title="제주"]{ top: 346px; left: 218px; }
+
+
+.statsViewTableTop{ display: flex; align-items: flex-end; justify-content: flex-end; gap: 10px; margin-bottom: 16px; }
+.statsViewTableTop p{ font-size: 14px; letter-spacing: -0.7px; color: #333;  }
+.statsViewTableTop button{ width: 160px; height: 40px; border-radius: 4px; background-color: #2b4c89; font-size: 15px; letter-spacing: -0.75px; color: #fff; display: flex; align-items: center; justify-content: center; gap: 4px; }
+
+.statsViewGuide{ display: flex; flex-direction: column; gap: 10px; margin: 30px 0 20px; }
+.guideItem h5{ display: flex; align-items: center; gap: 6px; font-size: 15px; letter-spacing: -0.75px; color: #000; font-family: 'SUIT-Bold'; margin-bottom: 14px; }
+.guideItem h5::before{ content: ''; width: 6px; height: 6px; display: block; border-radius: 100%; background-color: #2b4c89; }
+.guideItem p{ padding-left: 16px; font-size: 14px; letter-spacing: -0.7px; color: #000; line-height: 1.2; margin-bottom: 10px; }
+.guideItem p b{ font-size: 14px; letter-spacing: -0.7px; color: #2b4c89; }
+
+.btn_statsView{ width: 100%; height: 48px; border-radius: 10px; background-color: #f3f3f3; font-size: 16px; letter-spacing: -0.8px; color: #2b4c89; font-family: 'SUIT-SemiBold'; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.btn_statsView.close{ display: none; }
+.btn_statsView.close img{ transform: rotate(180deg); }
+
+.statsViewToggleTable{ margin-top: 30px; display: none; }
+@media screen and (max-width: 1200px){
+    .statsViewRoot{ margin-bottom: 20px; }
+    .statsViewRoot p{ font-size: 15px; letter-spacing: -0.75px; }
+    .statsViewTit{ font-size: 24px; letter-spacing: -1.2px; margin-bottom: 30px; }
+
+    .statsViewChartWrap{ flex-direction: column; gap: 16px; margin-bottom: 20px; }
+    .statsViewChartArea.chartMap{ max-width: none; }
+    .statsViewChartArea h5{ font-size: 18px; letter-spacing: -0.9px; margin-bottom: 12px; }
+    .statsViewChartArea .statsViewChartArea{ width: calc(100% + 40px); padding: 0 20px; margin-left: -20px; overflow: auto; }
+    .statsViewChartArea .statsViewChartArea::-webkit-scrollbar{ display: none; }
+    .statsViewChartArea.chartGraph .statsViewChartArea .statsViewChartBox{ min-width: 800px; }
+    .statsViewChartArea.chartMap .statsViewChartArea .statsViewChartBox{ min-width: 380px; }
+
+}
+

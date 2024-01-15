@@ -1,0 +1,261 @@
+/*----------------------------------- 텍스트 ----------*/
+.mobile_only{ display: none !important; }
+.mobile_only-f{ display: none !important; }
+
+.red_dot::after{ content: "*"; color: #ef280e; margin-left: 2px; }
+.black_dot::after{ content: "*"; color: #000; margin-left: 2px; }
+
+.bold{ font-family:'SUIT-Bold'; }
+
+/*-- 정렬 --*/
+.text-c{ text-align: center !important; }
+.text-r{ text-align: right; }
+.text-l{ text-align: left !important; }
+
+/*-- 말줄임 --*/
+.text_cut1{ overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.text_cut2{ overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.text_cut3{ overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.text_cut4{ overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; }
+
+/*-- 인풋클리어 --*/
+.inputClear_wrap{ position: relative; width: 100%; height: 100%; }
+.inputClear_wrap input{ transition: all 0.3s; }
+.inputClearBtn{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%); visibility: hidden; }
+.inputClearBtn img{ position: static !important; }
+
+/*-- 로딩 --*/
+.loading_area{ position: fixed; width: 100vw; height: 100vh; top: 0; left: 0; z-index: 9999; }
+.loading_area .loading_box{ position: relative; width: 100%; height: 100%; }
+.loading_area .loading_box img{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+/*---------------------------------- 레이아웃 정렬 --------------------------*/
+.flex-align-c{display:flex; align-items:center;}
+.flex-align-e{display:flex; align-items:flex-end;}
+
+.flex-just-b{display: flex; justify-content:space-between;}
+.flex-just-c{display: flex; justify-content:center;}
+.flex-just-s{display: flex; justify-content:flex-start;}
+
+.dis_block{ display: block !important; }
+.dis_flex{ display: flex !important; }
+.dis_none{ display: none !important; }
+.dis_con{ display: contents !important; }
+
+.flex_none{ flex: none; }
+
+.flex_wrap{ flex-wrap: wrap; }
+
+.ver_mid{ vertical-align: middle; }
+
+.OF_auto{ overflow-x: auto; }
+.OF_auto::-webkit-scrollbar{
+    width:6px;
+    height:6px;
+    background-color:#fff;
+}
+.OF_auto::-webkit-scrollbar-thumb{
+    background:#afafaf;
+    border-radius: 3px;
+}
+
+.fixed{ position: fixed !important; }
+
+/*----------------------------- 체크박스 & 라디오 ----------------*/
+/*-- 체크박스 --*/
+input[type="checkbox"] {display:none !important;}
+input[type="checkbox"] + label {display:inline-flex; align-items:center; font-size: 14px; color: #000; gap: 8px; cursor: pointer; font-family:'SUIT-SemiBold'; }
+input[type="checkbox"] + label::before{content:''; width: 20px; height: 20px; background: #e6e6e6; flex: none; border-radius: 2px; border: none;  }
+input[type="checkbox"]:checked + label::before{content:''; background: #d7262b url(../images/cb_wh.png); background-repeat: no-repeat; background-position: center; background-size: 10px; }
+
+/*-- 라디오 --*/
+input[type="radio"] {display:none !important;}
+input[type="radio"] + label { display:inline-flex; align-items:center; justify-content: center; gap: 8px; white-space:nowrap; font-size: 16px; color: #333; cursor: pointer; }
+input[type="radio"] + label::before{ box-sizing: border-box; content: ""; width: 22px; height: 22px; border-radius: 100%; background-color: #eaeaea; flex: none; }
+input[type="radio"]:checked + label::before{ background-color: #fff; box-shadow: inset 0 0 0 6px #000; }
+
+/*------------------------------------------ 입력폼 ---------------*/
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="email"]{ background-color: #fff; border: 1px solid #d8d8d8; border-radius: 2px; padding: 0 10px; font-size: 16px; height: 40px; color: #010101; }
+input[type="text"].readonly,
+input[type="number"].readonly,
+input[type="password"].readonly,
+input[type="tel"].readonly,
+input[type="email"].readonly,
+input[type="text"][readonly],
+input[type="password"][readonly],
+input[type="number"][readonly],
+input[type="tel"][readonly],
+input[type="email"][readonly]{ border: none; background-color: #d8d8d8; }
+
+textarea{ background-color: #fff; border: 1px solid #d8d8d8; padding: 15px; font-size: 14px; border-radius: 2px; min-height: 200px; }
+
+select{ height: 40px; border: 1px solid #d8d8d8; border-radius: 2px; padding: 0 22px 0 8px; font-size: 16px; color: #010101; background: #fff url(../images/select.png) no-repeat 50%; background-position-x:calc(100% - 10px); appearance:none; -webkit-appearance:none; }
+
+/* --------------- datepicker ---------------- */
+.datepicker_box{ display: flex; align-items: center; gap: 4px; margin: 4px 0; justify-content: space-between; }
+.datepicker_box input{ width: 48% !important; }
+input.date{ width: 140px; background: #fff url(../images/ico_calendar.png) no-repeat 50%; background-position: calc(100% - 8px); background-size: 17px; padding: 0 6px; }
+input.date.readonly{ width: 140px; background: #fff url(../images/ico_calendar.png) no-repeat 50%; background-position: calc(100% - 10px); background-size: 17px;  }
+.ui-datepicker .ui-datepicker-header{ padding: 6px 0 10px; }
+.ui-datepicker .ui-datepicker-title{ margin: 0 auto; padding: 0 40px; }
+.ui-datepicker .ui-datepicker-title select{ height: 32px; border: none; background-color: #f4f4f4; font-size: 15px; font-family:'SUIT-SemiBold'; margin: 0; }
+.ui-datepicker .ui-datepicker-title span{ font-family:'SUIT-Bold'; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{ width: 32px; height: 32px; background-color: #5f74ed !important; border: none; top: 6px; }
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{ background-size: 8px; }
+.ui-datepicker .ui-datepicker-prev span{ background-image: url(../images/page_prev_wh.png); }
+.ui-datepicker .ui-datepicker-next span{ background-image: url(../images/page_next_wh.png); }
+
+.ui-widget-header .ui-state-disabled{ background-color: #e2e2e2 !important; border: none; }
+.ui-datepicker .ui-datepicker-prev.ui-state-disabled span{ background-image: url(../images/page_prev.png); }
+.ui-datepicker .ui-datepicker-next.ui-state-disabled span{ background-image: url(../images/page_next.png); }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button{ width: 28px; height: 28px; line-height: 28px; }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{ background-color: #5f74ed !important; }
+.ui-widget-content .ui-state-default:focus { box-shadow: 0 0 0 2px #5f74ed !important; }
+
+/*----------------------------- 버튼 ----------------*/
+
+/*-- 버튼 레이아웃 --*/
+.btn_area{ display: flex; gap: 8px; align-items: flex-start; justify-content: space-between; margin-top: 40px; }
+.btn_area .pagination{ margin-top: 0; }
+.btn_area .btn_left{ width: 100%; display: flex; align-items: center; gap: 8px; justify-content: flex-start; }
+.btn_area .btn_center{ width: 100%; display: flex; align-items: center; gap: 8px; justify-content: center; }
+.btn_area .btn_right{ width: 100%; display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+.btn_img{ display: flex; align-items: center; justify-content: center; gap: 4px; }
+
+/*-- 사이즈 --*/
+.btn01{ width: 120px; height: 48px; border-radius: 6px; font-size: 16px; letter-spacing: -0.64px; font-family: 'SUIT-SemiBold'; }
+.btn02{ width: 200px; height: 48px; border-radius: 6px; font-size: 16px; letter-spacing: -0.64px; font-family: 'SUIT-SemiBold'; }
+
+/* 테이블 */
+.tableBtn01{ width: 80px; height: 40px; border-radius: 6px; font-size: 15px; letter-spacing: -0.6px; font-family: 'SUIT-SemiBold'; }
+.tableBtn02{ width: 100px; height: 40px; border-radius: 6px; font-size: 15px; letter-spacing: -0.6px; font-family: 'SUIT-SemiBold'; }
+.tableBtn03{ width: 60px; height: 32px; border-radius: 6px; font-size: 14px; letter-spacing: -0.56px; font-family: 'SUIT-SemiBold'; }
+.tableBtn04{ width: 120px; height: 40px; border-radius: 6px; font-size: 15px; letter-spacing: -0.6px; font-family: 'SUIT-SemiBold'; }
+
+
+/* 라운드버튼 */
+
+/* 모바일 사이즈 */
+
+/*-- 컬러 --*/
+.btn_grey_line{ background-color: transparent; color: #000; border: 1px solid #a7a7a7; }
+
+.btn_blue_line{ background-color: transparent; color: #0f59b5; border: 1px solid #0f59b5; }
+
+.btn_red_line{ background-color: transparent; color: #e51c02; border: 1px solid #e51c02; }
+
+.btn_black{ background-color: #333; color: #fff; }
+.btn_black2{ background-color: #444; color: #fff; }
+
+/* hover */
+.btnHov_blue:hover{ border: none; background-color: #0f59b5; color: #fff; transition: all 0.2s; }
+
+@media screen and (max-width:1024px){
+    .mobile_only{ display: block !important; }
+    .mobile_only-f{ display: flex !important; }
+    .mobile_none{ display: none !important; }
+}
+/*----------------------------- width / height / margin / padding ----------------*/
+/*width*/
+.minWn{ min-width: 0 !important; }
+.minW60{ min-width: 60px !important; }
+.minW600{ min-width: 600px; }
+.minW970{ min-width: 970px; }
+.minW1139{ min-width: 1139px; }
+.minW1190{ min-width: 1190px; }
+.minW1300{ min-width: 1300px; }
+
+.maxW40{ max-width: 40px; }
+.maxW50{ max-width: 50px; }
+.maxW60{ max-width: 60px; }
+.maxW64{ max-width: 64px; }
+.maxW80{ max-width: 80px; }
+.maxW85{ max-width: 85px; }
+.maxW100{ max-width: 100px; }
+.maxW110{ max-width: 110px; }
+.maxW120{ max-width: 120px; }
+.maxW130{ max-width: 130px; }
+.maxW150{ max-width: 150px; }
+.maxW160{ max-width: 160px; }
+.maxW175{ max-width: 175px; }
+.maxW180{ max-width: 180px; }
+.maxW185{ max-width: 185px; }
+.maxW190{ max-width: 190px; }
+.maxW200{ max-width: 200px; }
+.maxW210{ max-width: 210px; }
+.maxW220{ max-width: 220px; }
+.maxW240{ max-width: 240px; }
+.maxW250{ max-width: 250px; }
+.maxW260{ max-width: 260px; }
+.maxW280{ max-width: 280px; }
+.maxW300{ max-width: 300px; }
+.maxW320{ max-width: 320px; }
+.maxW330{ max-width: 330px; }
+.maxW342{ max-width: 342px; }
+.maxW360{ max-width: 360px; }
+.maxW380{ max-width: 380px; }
+.maxW400{ max-width: 400px; }
+.maxW420{ max-width: 420px; }
+.maxW440{ max-width: 440px; }
+.maxW450{ max-width: 450px; }
+.maxW460{ max-width: 460px; }
+.maxW500{ max-width: 500px; }
+.maxW520{ max-width: 520px; }
+.maxW540{ max-width: 540px; }
+.maxW600{ max-width: 600px !important }
+.maxW640{ max-width: 640px !important }
+.maxW650{ max-width: 650px; }
+.maxW700{ max-width: 700px; }
+.maxW720{ max-width: 720px; }
+.maxW740{ max-width: 740px; }
+.maxW800{ max-width: 800px !important }
+.maxW820{ max-width: 820px !important }
+.maxW920{ max-width: 920px !important }
+.maxW940{ max-width: 940px !important }
+.maxW1000{ max-width: 1000px !important }
+.maxW1200{ max-width: 1200px !important }
+.maxW1420{ max-width: 1420px !important }
+.maxW1820{ max-width: 1820px !important }
+
+/*width percent*/
+.W10p { width: 10% !important; }
+.W14p { width: 14% !important; }
+.W15p { width: 15% !important; }
+.W16p { width: 16% !important; }
+.W16_5p { width: 16.5% !important; }
+.W17p { width: 17% !important; }
+.W18p { width: 18% !important; }
+.W19p { width: 19% !important; }
+.W20p { width: 20% !important; }
+.W25p { width: 25% !important; }
+.W30p { width: 30% !important; }
+.W35p { width: 35% !important; }
+.W35_5p { width: 35.5% !important; }
+.W40p { width: 40% !important; }
+.W45p { width: 45% !important; }
+.W48p { width: 48% !important; }
+.W49p { width: 49% !important; }
+.W50p { width: 50% !important; }
+.W55p { width: 55% !important; }
+.W60p { width: 60% !important; }
+.W65p { width: 65% !important; }
+.W70p { width: 70% !important; }
+.W75p { width: 75% !important; }
+.W80p { width: 80% !important; }
+.W85p { width: 85% !important; }
+.W90p { width: 90% !important; }
+.W95p { width: 95% !important; }
+.W100p { width: 100% !important; }
+
+/*height*/
+.H100p{ height: 100% !important; }
+
+/* padding */
+.PdR{ padding-right: 0 !important; }
+
+
+

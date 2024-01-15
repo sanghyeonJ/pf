@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev" onClick="location.href='./joinMenu.html'"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>서비스 이용약관</h1>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container">
+            <div class="content_wrap">
+                <div class="inner">
+
+                    <div class="termsWrap">
+                        <div class="termsItem">
+                            <input type="checkbox" id="termsService"><label for="termsService"></label>
+                            <button type="button" onclick="popupOpen(popupService)">서비스 이용약관 동의<img src="../../resources/images/termsArrow.png" alt=""></button>
+                        </div>
+                        <div class="termsItem">
+                            <input type="checkbox" id="termsInfo"><label for="termsInfo"></label>
+                            <button type="button" onclick="popupOpen(popupInfo)">개인정보 수집 및 이용 동의<img src="../../resources/images/termsArrow.png" alt=""></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bottomFix">
+                <div class="inner">
+                    <button type="button" class="btn_bot1 btn_mainColor" onClick="location.href='./profile.html'">확인</button>
+                </div>
+            </div>
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+        <!-- 팝업 -->
+        <div class="slidePopupWrap">
+
+            <div class="slidePopup" id="popupService">
+                <div class="slidePopupTitle">
+                    <h2>서비스 이용약관 동의</h2>
+                </div>
+                <div class="slidePopupCont">
+                    <div class="termsText">
+                        <b>제 1장 총칙</b><br><br>
+                        제 1 조 (목적)<br>
+                        이 이용약관(이하 "약관"이라 합니다.)은 이용고객(이하 "회원"이라 
+                        합니다)이 부산광역자원봉사센터(이하 "자원봉사센터’라 합니다)의 
+                        자원봉사 분야(www.busan1365.kr)를 이용함에 있어 자원봉사센터
+                        와 회원 간의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+                        제 1 조 (목적)<br>
+                        이 이용약관(이하 "약관"이라 합니다.)은 이용고객(이하 "회원"이라 
+                        합니다)이 부산광역자원봉사센터(이하 "자원봉사센터’라 합니다)의 
+                        자원봉사 분야(www.busan1365.kr)를 이용함에 있어 자원봉사센터
+                        와 회원 간의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+                        <b>제 2장 총칙</b><br><br>
+                        제 1 조 (목적)<br>
+                        이 이용약관(이하 "약관"이라 합니다.)은 이용고객(이하 "회원"이라 
+                        합니다)이 부산광역자원봉사센터(이하 "자원봉사센터’라 합니다)의 
+                        자원봉사 분야(www.busan1365.kr)를 이용함에 있어 자원봉사센터
+                        와 회원 간의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+                    </div>
+                </div>
+                <div class="slidePopupBot">
+                    <button type="button" class="btn_bot1 btn_mainColor" onclick="termsAgree(popupService,termsService)">동의하기</button>
+                    <button type="button" class="btn_text" onclick="popupClose(popupService)">닫기</button>
+                </div>
+            </div>
+
+            <div class="slidePopup" id="popupInfo">
+                <div class="slidePopupTitle">
+                    <h2>개인정보 수집 및 이용 동의</h2>
+                </div>
+                <div class="slidePopupCont">
+                    <div class="termsText">
+                        <b>제 1장 총칙</b><br><br>
+                        제 1 조 (목적)<br>
+                        이 이용약관(이하 "약관"이라 합니다.)은 이용고객(이하 "회원"이라 
+                        합니다)이 부산광역자원봉사센터(이하 "자원봉사센터’라 합니다)의 
+                        자원봉사 분야(www.busan1365.kr)를 이용함에 있어 자원봉사센터
+                        와 회원 간의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+                        제 1 조 (목적)<br>
+                        이 이용약관(이하 "약관"이라 합니다.)은 이용고객(이하 "회원"이라 
+                        합니다)이 부산광역자원봉사센터(이하 "자원봉사센터’라 합니다)의 
+                        자원봉사 분야(www.busan1365.kr)를 이용함에 있어 자원봉사센터
+                        와 회원 간의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+                        <b>제 2장 총칙</b><br><br>
+                        제 1 조 (목적)<br>
+                        이 이용약관(이하 "약관"이라 합니다.)은 이용고객(이하 "회원"이라 
+                        합니다)이 부산광역자원봉사센터(이하 "자원봉사센터’라 합니다)의 
+                        자원봉사 분야(www.busan1365.kr)를 이용함에 있어 자원봉사센터
+                        와 회원 간의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+                    </div>
+                </div>
+                <div class="slidePopupBot">
+                    <button type="button" class="btn_bot1 btn_mainColor" onclick="termsAgree(popupInfo,termsInfo)">동의하기</button>
+                    <button type="button" class="btn_text" onclick="popupClose(popupInfo)">닫기</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <script>
+            let aniDuration = 300;
+            // 팝업 열기
+            function popupOpen(popupTargetId){
+                $('.slidePopupWrap').css({display: 'block'});
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0.5)'}, aniDuration);
+                $(popupTargetId).css({transform: 'translateY(0%)'});
+            }
+            // 팝업 닫기
+            function popupClose(popupTargetId){
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                $(popupTargetId).css({transform: 'translateY(100%)'});
+            }
+            $(document).on('click', '.slidePopupWrap', function (e) {
+                var popContent = $('.slidePopup');
+                if (popContent.has(e.target).length === 0) {
+                    $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                    $('.slidePopup').css({transform: 'translateY(100%)'});
+                    setTimeout(function(){
+                        $('.infoDetailWrap').css({display: 'none'})
+                        $('.mapInfoWrap').removeClass('view')
+                    }, 300)
+                }
+            });
+
+            // 체크박스 체크
+            function termsAgree(popupTargetId, termsId){
+                popupClose(popupTargetId);
+                $(termsId).prop('checked', true);
+            }
+        </script>
+    </body>
+</html>

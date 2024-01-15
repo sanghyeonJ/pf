@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/chart.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+
+<!------------------------------------ header::start ------------------------------->
+<body>
+    <header>
+        <div class="inner">
+            <a href="javascript:void(0)"><img src="../../resources/images/headerLogo.png" alt="NFT Market place 로고"></a>
+            <div class="headerRight">
+                <button type="button" class="btn_logout"><img src="../../resources/images/ico_logout.png" alt="">로그아웃</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="containerWrap">
+        <nav>
+            <a href="javascript:void(0)" class="on">
+                <img src="../../resources/images/menu_dashboard.png" alt="" class="navIco_off">
+                <img src="../../resources/images/menu_dashboard-on.png" alt="" class="navIco_on">
+                대시보드
+            </a>
+            <a href="javascript:void(0)">
+                <img src="../../resources/images/menu_token.png" alt="" class="navIco_off">
+                <img src="../../resources/images/menu_token-on.png" alt="" class="navIco_on">
+                토큰관리
+            </a>
+            <a href="javascript:void(0)">
+                <img src="../../resources/images/menu_stamp.png" alt="" class="navIco_off">
+                <img src="../../resources/images/menu_stamp-on.png" alt="" class="navIco_on">
+                스탬프관리
+            </a>
+            <a href="javascript:void(0)">
+                <img src="../../resources/images/menu_member.png" alt="" class="navIco_off">
+                <img src="../../resources/images/menu_member-on.png" alt="" class="navIco_on">
+                회원관리
+            </a>
+        </nav>
+
+        <div class="container">
+<!------------------------------------ header::end ------------------------------->
+
+
+<!------------------------------------ content::start ------------------------------->
+            <article>
+                <div class="inner">
+                    <div class="dashboard_wrap">
+                        <div class="dashboard_top">
+                            <section>
+                                <div class="secTitle">
+                                    <h3>NFT 신규등록</h3>
+                                    <div class="dashboard_search">
+                                        <input type="radio" name="rb1" id="rb1-1">
+                                        <label for="rb1-1" class="radioButton">최근 일주일</label>
+                                        <input type="radio" name="rb1" id="rb1-2">
+                                        <label for="rb1-2" class="radioButton">최근 한달</label>
+                                        <input type="text" class="date everyStartDate1" placeholder="시작일">
+                                        ~
+                                        <input type="text" class="date everyEndDate1" placeholder="종료일">
+                                        <button type="button" class="tableBtn02 btn_black2">검색</button>
+                                    </div>
+                                </div>
+                                <div class="chartBox">
+                                    <canvas id="newNFTChart"></canvas>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="secTitle">
+                                    <h3>NFT 판매</h3>
+                                    <div class="dashboard_search">
+                                        <input type="radio" name="rb2" id="rb2-1">
+                                        <label for="rb2-1" class="radioButton">최근 일주일</label>
+                                        <input type="radio" name="rb2" id="rb2-2">
+                                        <label for="rb2-2" class="radioButton">최근 한달</label>
+                                        <input type="text" class="date everyStartDate1" placeholder="시작일">
+                                        ~
+                                        <input type="text" class="date everyEndDate1" placeholder="종료일">
+                                        <button type="button" class="tableBtn02 btn_black2">검색</button>
+                                    </div>
+                                </div>
+                                <div class="chartBox">
+                                    <canvas id="NFTSaleChart"></canvas>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="dashboard_bot">
+                            <section>
+                                <div class="secTitle">
+                                    <h3>토큰 거래량 통계</h3>
+                                    <div class="dashboard_search">
+                                        <input type="radio" name="rb3" id="rb3-1">
+                                        <label for="rb3-1" class="radioButton">최근 일주일</label>
+                                        <input type="radio" name="rb3" id="rb3-2">
+                                        <label for="rb3-2" class="radioButton">최근 한달</label>
+                                        <input type="text" class="date everyStartDate1" placeholder="시작일">
+                                        ~
+                                        <input type="text" class="date everyEndDate1" placeholder="종료일">
+                                        <button type="button" class="tableBtn02 btn_black2">검색</button>
+                                    </div>
+                                </div>
+                                <div class="chartBox">
+                                    <canvas id="tokenVolumeChart"></canvas>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </article>
+<!------------------------------------ content::end ------------------------------->
+
+
+<!------------------------------------ footer::start ------------------------------->
+            <footer>
+                <p>©2023 RAPA. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+<!------------------------------------ footer::end ------------------------------->
+
+<script>
+// nft 신규등록
+const newNFTChart = document.getElementById('newNFTChart');
+new Chart(newNFTChart, {
+    type: 'line',
+    data: {
+        labels: ['07월01일', '07월02일', '07월03일', '07월04일', '07월05일', '07월06일'],
+        datasets: [{
+            data: [12, 19, 3, 5, 2, 3],
+            label: 'NFT 신규등록',
+            borderColor: '#3e57e6',
+            pointRadius: 5,
+            pointBackgroundColor: '#3e57e6',
+            pointHoverRadius: 6
+        }]
+    },
+    options: {
+        aspectRatio: 3.6,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels:{
+                    boxWidth: 20,
+                    boxHeight: 1,
+                    padding: 20
+                }
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                }
+            },
+            y: {
+                afterDataLimits: (scale) => {
+                    scale.max = scale.max * 1.2
+                }
+            }
+        }
+    }
+})
+// nft 판매
+const NFTSaleChart = document.getElementById('NFTSaleChart');
+new Chart(NFTSaleChart, {
+    type: 'bar',
+    data: {
+        labels: ['07월01일', '07월02일', '07월03일', '07월04일', '07월05일', '07월06일'],
+        datasets: [{
+            data: [12, 19, 3, 5, 2, 3],
+            label: '판매등록',
+            borderColor: '#3e57e6',
+            backgroundColor: '#3e57e6',
+        },{
+            data: [12, 19, 3, 5, 2, 3],
+            label: '판매완료',
+            borderColor: '#3add92',
+            backgroundColor: '#3add92',
+        }]
+    },
+    options: {
+        aspectRatio: 3.6,
+        barThickness: 20,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels:{
+                    boxWidth: 20,
+                    boxHeight: 4,
+                    padding: 20
+                }
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                }
+            },
+            y: {
+                afterDataLimits: (scale) => {
+                    scale.max = scale.max * 1.2
+                }
+            }
+        }
+    }
+})
+// 토큰거래량
+const tokenVolumeChart = document.getElementById('tokenVolumeChart');
+new Chart(tokenVolumeChart, {
+    type: 'line',
+    data: {
+        labels: ['07월01일', '07월02일', '07월03일', '07월04일', '07월05일', '07월06일'],
+        datasets: [{
+            data: [12, 19, 3, 5, 2, 3],
+            label: '토큰 거래량',
+            pointRadius: 6,
+            borderColor: '#3e57e6',
+            pointBorderColor: '#fff',
+            pointBackgroundColor: '#3e57e6',
+            pointBorderWidth: 2,
+            pointHoverBorderWidth: 1,
+            pointHoverRadius: 6
+        }]
+    },
+    options: {
+        aspectRatio: 6.2,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels:{
+                    boxWidth: 20,
+                    boxHeight: 1,
+                    padding: 20
+                }
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                }
+            },
+            y: {
+                afterDataLimits: (scale) => {
+                    scale.max = scale.max * 1.2
+                }
+            }
+        }
+    }
+})
+</script>
+</html>

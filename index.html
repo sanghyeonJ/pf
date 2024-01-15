@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>웹 퍼블리셔 정상현의 포트폴리오</title>
 
     <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/global.css">
+
+    <script src="./resources/js/index.js" defer></script>
   </head>
   <body>
 
@@ -29,15 +31,15 @@
         <div class="contWrap">
           <h2 class="sectionTitle">프로필</h2>
           <div class="contArea">
-            <div class="contBox">
+            <div class="contBox ani">
               <h3>소개</h3>
               <p>저는 성실과 열정을 바탕으로 제가 하고자하는 것에 몰두하여 더 좋은 결과물을 만드는것을 좋아합니다. 협업을 통해 최상의 결과물을 만들기 위해 다른 팀원들과 원활한 의사소통을 합니다.</p>
             </div>
-            <div class="contBox">
+            <div class="contBox ani">
               <h3>교육</h3>
               <p>SBS 컴퓨터 아트학원 웹디자인 과정 교육이수<span>2020.04 ~ 2021.02</span></p>
             </div>
-            <div class="contBox">
+            <div class="contBox ani">
               <h3>자격증</h3>
               <p>정보처리기사<span>2023.09</span></p>
             </div>
@@ -51,7 +53,7 @@
     <section class="blackSection">
       <div class="inner">
         <h2 class="sectionTitle">경력 및 업무경험</h2>
-        <table>
+        <table class="ani">
           <colgroup>
             <col width="30%">
             <col width="30%">
@@ -77,29 +79,47 @@
       <div class="inner">
         <h2 class="sectionTitle">기술 스택</h2>
         <div class="gridArea">
-          <div class="gridBox grid2way gridColorBox">
-            <h3>HTML</h3>
-            <p>시맨틱 마크업을 통한 웹 페이지 구조 생성</p>
+          <div class="gridBox grid2way gridColorBox skillBox ani">
+            <img src="./resources/images/ico_html.png" alt="html">
+            <div class="skillText">
+              <h3>HTML</h3>
+              <p>시맨틱 마크업을 통한 웹 페이지 구조 생성<br>웹 접근성을 준수한 WA마크 인증경험</p>
+            </div>
           </div>
-          <div class="gridBox grid2way gridColorBox">
-            <h3>CSS</h3>
-            <p>레이아웃 디자인 및 스타일링</p>
+          <div class="gridBox grid2way gridColorBox skillBox ani">
+            <img src="./resources/images/ico_css.png" alt="css">
+            <div class="skillText">
+              <h3>CSS</h3>
+              <p>레이아웃 디자인 및 스타일링<br>간단한 애니메이션 구현</p>
+            </div>
           </div>
-          <div class="gridBox grid2way gridColorBox">
-            <h3>JavaScript</h3>
-            <p>인터랙티브한 웹 요소 및 애니메이션 추가</p>
+          <div class="gridBox grid2way gridColorBox skillBox ani">
+            <img src="./resources/images/ico_js.png" alt="js">
+            <div class="skillText">
+              <h3>JavaScript</h3>
+              <p>인터랙티브한 웹 요소 및 애니메이션 추가</p>
+            </div>
           </div>
-          <div class="gridBox grid2way gridColorBox">
-            <h3>Jquery</h3>
-            <p>여러 동적 효과 부여 및 다양한 플러그인 적용</p>
+          <div class="gridBox grid2way gridColorBox skillBox ani">
+            <img src="./resources/images/ico_jquery.png" alt="jquery">
+            <div class="skillText">
+              <h3>Jquery</h3>
+              <p>여러 동적 효과 부여 및 다양한 플러그인 적용</p>
+            </div>
           </div>
-          <div class="gridBox grid2way gridColorBox">
-            <h3>Git/SVN</h3>
-            <p>협업을 위한 형상관리</p>
+          <div class="gridBox grid2way gridColorBox skillBox ani">
+            <img src="./resources/images/ico_git.png" alt="git">
+            <div class="skillText">
+              <h3>Git/SVN</h3>
+              <p>협업을 위한 형상관리</p>
+            </div>
           </div>
-          <div class="gridBox grid2way gridColorBox ready">
-            <h3>REACT (학습중)</h3>
-            <p>재사용 가능한 컴포넌트 개발 및 상태 관리</p>
+          <div class="gridBox grid2way gridColorBox skillBox ani">
+            <img src="./resources/images/ico_react.png" alt="react">
+            <div class="skillText">
+              <h3>REACT</h3>
+              <p>재사용 가능한 컴포넌트 개발 및 상태 관리</p>
+            </div>
           </div>
         </div>
       </div>
@@ -111,18 +131,90 @@
       <div class="inner">
         <h2 class="sectionTitle">프로젝트</h2>
         <div class="gridArea">
-          <a href="" class="gridBox grid3way gridBorderBox">
-            <h3>abc</h3>
-            <p>안녕하세요안녕안녕 이런 프로젝트 저런 프로젝트 뚝딱뚝딱</p>
-          </a>
-          <a href="" class="gridBox grid3way gridBorderBox">
-            <h3>abc</h3>
-            <p>안녕하세요안녕안녕 이런 프로젝트 저런 프로젝트 뚝딱뚝딱</p>
-          </a>
-          <a href="" class="gridBox grid3way gridBorderBox">
-            <h3>abc</h3>
-            <p>안녕하세요안녕안녕 이런 프로젝트 저런 프로젝트 뚝딱뚝딱</p>
-          </a>
+          <div class="grid3way projectBox ani">
+            <div class="gridBox gridBorderBox projectBoxInner">
+              <div class="front">
+                <div class="imgBox"><img src="./resources/images/dgstat.png" alt=""></div>
+              </div>
+              <div class="back">
+                <h3>대구산업경제동향</h3>
+                <p>대구지역 산업경제 디지털데이터 플랫폼 반응형 웹</p>
+                <a href="./dstat/html/main/main.html" target='_blank' class="btn">
+                  페이지 열기
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="grid3way projectBox ani">
+            <div class="gridBox gridBorderBox projectBoxInner">
+              <div class="front">
+                <div class="imgBox"><img src="./resources/images/etri.png" alt=""></div>
+              </div>
+              <div class="back">
+                <h3>첨단메카닉고분자 기술교류시스템</h3>
+                <p>대구테크노파크에서 주관하는 기술혁신지원 플랫폼 반응형 웹</p>
+                <a href="./etri/html/main/main.html" target='_blank' class="btn">
+                  페이지 열기
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="grid3way projectBox ani">
+            <div class="gridBox gridBorderBox projectBoxInner">
+              <div class="front">
+                <div class="imgBox"><img src="./resources/images/busan.png" alt=""></div>
+              </div>
+              <div class="back">
+                <h3>자원봉사은행 앱</h3>
+                <p>부산시에서 기획한 자원봉사 플랫폼 웹앱</p>
+                <a href="./busanSupport/html/main/main.html" target='_blank' class="btn">
+                  페이지 열기
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="grid3way projectBox ani">
+            <div class="gridBox gridBorderBox projectBoxInner">
+              <div class="front">
+                <div class="imgBox"><img src="./resources/images/lmph.png" alt=""></div>
+              </div>
+              <div class="back">
+                <h3>노사평화의 전당</h3>
+                <p>노사평화의 전당 홍보 및 안내를 위한 반응형 웹</p>
+                <a href="./lmph/config/main/main.html" target='_blank' class="btn">
+                  페이지 열기
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="grid3way projectBox ani">
+            <div class="gridBox gridBorderBox projectBoxInner">
+              <div class="front">
+                <div class="imgBox"><img src="./resources/images/malkm.png" alt=""></div>
+              </div>
+              <div class="back">
+                <h3>말끄미 앱</h3>
+                <p>호텔이나 빌딩의 청소예약을 위한 웹앱</p>
+                <a href="./malkm/html/portal/main/main.html" target='_blank' class="btn">
+                  페이지 열기
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="grid3way projectBox ani">
+            <div class="gridBox gridBorderBox projectBoxInner">
+              <div class="front">
+                <div class="imgBox"><img src="./resources/images/rapa.png" alt=""></div>
+              </div>
+              <div class="back">
+                <h3>NFT마켓플레이스 관리자</h3>
+                <p>관리자를 위한 PC환경 웹페이지</p>
+                <a href="./rapa_spt/html/dashboard/dashboard.html" target='_blank' class="btn">
+                  페이지 열기
+                </a>
+              </div>
+            </div>
+          </div>
       </div>
     </section>
     <!-- //프로젝트 -->
@@ -133,17 +225,17 @@
         <div class="contWrap">
           <h2 class="sectionTitle">개인작업물</h2>
           <div class="gridArea">
-            <a href="" class="gridBox grid3way">
+            <a href="" class="gridBox grid3way ani">
               <div class="imgBox"><img src="./resources/images/imsi.jpeg" alt=""></div>
               <h3>개인작업</h3>
               <p>어쩌구 저쩌구 개인작업 설명설명</p>
             </a>
-            <a href="" class="gridBox grid3way">
+            <a href="" class="gridBox grid3way ani">
               <div class="imgBox"><img src="./resources/images/imsi.jpeg" alt=""></div>
               <h3>개인작업</h3>
               <p>어쩌구 저쩌구 개인작업 설명설명</p>
             </a>
-            <a href="" class="gridBox grid3way">
+            <a href="" class="gridBox grid3way ani">
               <div class="imgBox"><img src="./resources/images/imsi.jpeg" alt=""></div>
               <h3>개인작업</h3>
               <p>어쩌구 저쩌구 개인작업 설명설명</p>
@@ -159,15 +251,15 @@
       <div class="inner">
         <h2 class="sectionTitle">Contact</h2>
         <div class="gridArea">
-          <div class="gridBox grid3way gridColorBox">
+          <div class="gridBox grid3way gridColorBox ani">
             <h3>이메일</h3>
             <p>jsh080000@gmail.com</p>
           </div>
-          <div class="gridBox grid3way gridColorBox">
+          <div class="gridBox grid3way gridColorBox ani">
             <h3>전화번호</h3>
             <p>010-5278-7606</p>
           </div>
-          <div class="gridBox grid3way gridColorBox">
+          <div class="gridBox grid3way gridColorBox ani">
             <h3>주소</h3>
             <p>대구광역시 수성구 만촌동</p>
           </div>

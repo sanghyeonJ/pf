@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../../resources/css/aos.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+        <link rel="stylesheet" href="../../resources/css/main.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/swiper-bundle.min.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/chart.js"></script>
+        <script src="../../resources/js/chartjs-plugin-datalabels.js"></script>
+        <script src="../../resources/js/aos.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+        <script src="../../resources/js/main.js"></script>
+    </head>
+
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <div class="headerTop">
+                    <div class="topLogo">
+                        <img src="../../resources/images/logoDg-t.png" alt="자유와 활력이 넘치는 파워풀 대구" class="transparentImg">
+                        <img src="../../resources/images/logoDgtp-t.png" alt="DGTP 대구테크노파크" class="transparentImg">
+                        <img src="../../resources/images/logoDg.png" alt="자유와 활력이 넘치는 파워풀 대구" class="Img">
+                        <img src="../../resources/images/logoDgtp.png" alt="DGTP 대구테크노파크" class="Img">
+                    </div>
+                    <div class="topBtn">
+                        <button type="button">회원가입</button>
+                        <button type="button">로그인</button>
+                    </div>
+                </div>
+                <div class="headerBot">
+                    <a href="javascript:void(0)" class="logo">
+                        <img src="../../resources/images/headerLogo-t.png" alt="DSTAT 대구산업경제동향" class="transparentImg">
+                        <img src="../../resources/images/headerLogo.png" alt="DSTAT 대구산업경제동향" class="Img">
+                    </a>
+                    <div class="gnbWrap">
+                        <ul class="gnb">
+                            <!-- 모바일 -->
+                            <div class="mobileMenuTop">
+                                <div class="joinBtn">
+                                    <button type="button">회원가입</button>
+                                    <button type="button">로그인</button>
+                                </div>
+                                <button type="button" class="m_menuClose"><img src="../../resources/images/ico_menuClose.png" alt=""></button>
+                            </div>
+                            <!-- // 모바일 -->
+                            <li>
+                                <a href="javascript:void(0)">주요지표</a>
+                                <ul class="lnb">
+                                    <li><a href="javascript:void(0)">한눈에 보는 지표</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">통계DB</a>
+                                <ul class="lnb">
+                                    <li><a href="javascript:void(0)">산업현황지표</a></li>
+                                    <li><a href="javascript:void(0)">경제동향지표</a></li>
+                                    <li><a href="javascript:void(0)">소득현황지표</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">대구 산업별 현황</a>
+                                <ul class="lnb">
+                                    <li><a href="javascript:void(0)">인포그래픽</a></li>
+                                    <li><a href="javascript:void(0)">5대미래산업</a></li>
+                                    <li><a href="javascript:void(0)">대구주요산업</a></li>
+                                    <li><a href="javascript:void(0)">산업경제뉴스</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">동향조사/연구</a>
+                                <ul class="lnb">
+                                    <li><a href="javascript:void(0)">산업통계브리프</a></li>
+                                    <li><a href="javascript:void(0)">대구산업동향</a></li>
+                                    <li><a href="javascript:void(0)">경제동향 경기종합지수<img src="../../resources/images/ico_link.png" alt=""></a></li>
+                                    <li><a href="javascript:void(0)">대구기업패널조사</a></li>
+                                    <li><a href="javascript:void(0)">이슈보고서</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">알림마당</a>
+                                <ul class="lnb">
+                                    <li><a href="javascript:void(0)">시스템소개</a></li>
+                                    <li><a href="javascript:void(0)">공지사항</a></li>
+                                    <li><a href="javascript:void(0)">FAQ</a></li>
+                                    <li><a href="javascript:void(0)">Q&A</a></li>
+                                    <li><a href="javascript:void(0)">사이트맵</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="botBtn">
+                            <button type="button" class="btn_search">
+                                <img src="../../resources/images/header_search-t.png" alt="검색버튼" class="transparentImg">
+                                <img src="../../resources/images/header_search.png" alt="검색버튼" class="Img">
+                            </button>
+                            <button type="button" class="btn_ham">
+                                <img src="../../resources/images/ico_ham-t.png" alt="메뉴버튼" class="transparentImg">
+                                <img src="../../resources/images/ico_ham.png" alt="메뉴버튼" class="Img">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerSearchWrap">
+                <div class="headerSearch">
+                    <button type="button" class="btn_back"><img src="../../resources/images/mobile_searchArrow.png" alt=""></button>
+                    <p>통합검색</p>
+                    <input type="text" placeholder="검색어를 입력해 주세요.">
+                    <button type="button" class="btn_search">검색</button>
+                </div>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <div class="mainWrap">
+            <!-- section1 -->
+            <section class="section1">
+                <div class="sectionBgBox on">
+                    <img src="../../resources/images/section1Bg.png" alt="">
+                </div>
+                <div class="sectionCenterPosition">
+                    <div class="inner">
+                        <div class="sectionTitle">
+                            <h1 data-aos="zoom-out" data-aos-duration="500">대구지역 산업경제 <b>디지털 데이터 플랫폼</b></h1>
+                            <p data-aos="zoom-out" data-aos-delay="500" data-aos-duration="500">대구산업경제동향</p>
+                        </div>
+                        <div class="section1ChartWrap" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="800">
+                            <h3>대구산업 주요지표</h3>
+                            
+                            <div class="chartArea">
+                                <div class="chartSelectArea">
+                                    <div class="chartSelectItem on">
+                                        <div class="titleBox">
+                                            <button type="button" class="title title1">지역내총생산</button>
+                                            <button type="button" class="more"><img src="../../resources/images/ico_plus.png" alt="더보기"></button>
+                                        </div>
+                                        <div class="statsBox">
+                                            <div class="statsBoxInner">
+                                                <div class="text">
+                                                    <p>대구 2022년 지역내 총생산</p>
+                                                    <b>63,805,635</b>
+                                                </div>
+                                                <img src="../../resources/images/mainSec1Icon1.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chartSelectItem">
+                                        <div class="titleBox">
+                                            <button type="button" class="title title2">실업률</button>
+                                            <button type="button" class="more"><img src="../../resources/images/ico_plus.png" alt="더보기"></button>
+                                        </div>
+                                        <div class="statsBox">
+                                            <div class="statsBoxInner">
+                                                <div class="text">
+                                                    <p>대구 2022년 실업률</p>
+                                                    <b>63,805,635</b>
+                                                </div>
+                                                <img src="../../resources/images/mainSec1Icon2.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chartSelectItem">
+                                        <div class="titleBox">
+                                            <button type="button" class="title title3">소비자물가지수</button>
+                                            <button type="button" class="more"><img src="../../resources/images/ico_plus.png" alt="더보기"></button>
+                                        </div>
+                                        <div class="statsBox">
+                                            <div class="statsBoxInner">
+                                                <div class="text">
+                                                    <p>대구 2022년 소비자물가지수</p>
+                                                    <b>63,805,635</b>
+                                                </div>
+                                                <img src="../../resources/images/mainSec1Icon3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chartSelectItem">
+                                        <div class="titleBox">
+                                            <button type="button" class="title title4">무역수지</button>
+                                            <button type="button" class="more"><img src="../../resources/images/ico_plus.png" alt="더보기"></button>
+                                        </div>
+                                        <div class="statsBox">
+                                            <div class="statsBoxInner">
+                                                <div class="text">
+                                                    <p>대구 2022년 무역수지</p>
+                                                    <b>63,805,635</b>
+                                                </div>
+                                                <img src="../../resources/images/mainSec1Icon4.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chartSelectItem">
+                                        <div class="titleBox">
+                                            <button type="button" class="title title5">지역별 수출액</button>
+                                            <button type="button" class="more"><img src="../../resources/images/ico_plus.png" alt="더보기"></button>
+                                        </div>
+                                        <div class="statsBox">
+                                            <div class="statsBoxInner">
+                                                <div class="text">
+                                                    <p>대구 2022년 지역별 수출액</p>
+                                                    <b>63,805,635</b>
+                                                </div>
+                                                <img src="../../resources/images/mainSec1Icon5.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chartSelectItem">
+                                        <div class="titleBox">
+                                            <button type="button" class="title title6">제조업 현황</button>
+                                            <button type="button" class="more"><img src="../../resources/images/ico_plus.png" alt="더보기"></button>
+                                        </div>
+                                        <div class="statsBox">
+                                            <div class="statsBoxInner">
+                                                <div class="text">
+                                                    <p>대구 2022년 제조업 현황</p>
+                                                    <b>63,805,635</b>
+                                                </div>
+                                                <img src="../../resources/images/mainSec1Icon6.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 모바일 -->
+                                <div class="chartSelectArea-m">
+                                    <div class="chartSelectTitle">
+                                        <button type="button" class="on">지역내총생산</button>
+                                        <button type="button">실업률</button>
+                                        <button type="button">소비자물가지수</button>
+                                        <button type="button">무역수지</button>
+                                        <button type="button">지역별 수출액</button>
+                                        <button type="button">제조업 현황</button>
+                                    </div>
+                                    <div class="chartSelectStat">
+                                        <div class="text">
+                                            <p>대구 2022년 지역내 총생산</p>
+                                            <b>63,805,635</b>
+                                        </div>
+                                        <button class="more"><img src="../../resources/images/ico_plus.png" alt="더보기"></button>
+                                    </div>
+                                </div>
+                                <!-- // 모바일 -->
+                                <div class="chartBoxArea">
+                                    <div class="chartBoxItem chartBoxItem1 on">
+                                        <div class="chartLabel">
+                                            <p>전국<span style="background-color: #00c56f;"></span></p>
+                                            <p>대구<span style="background-color: #2b4c89;"></span></p>
+                                            <p class="comment">(2021년 기준, 단위:천원)</p>
+                                        </div>
+                                        <div class="chartBox">
+                                            <canvas id="section1Chart" width=""></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="section1Scroll" data-aos="fade-down" data-aos-delay="2000" data-aos-duration="800" data-aos-anchor=".section1">
+                                Scroll
+                                <img src="../../resources/images/icoScroll.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //section1 -->
+
+            <!-- section2 -->
+            <section class="section2">
+                <div class="sectionBgBox">
+                    <img src="../../resources/images/section2Bg.png" alt="">
+                </div>
+                <div class="sectionCenterPosition">
+                    <div class="inner">
+                        <div class="sectionTitle" data-aos="zoom-out"  data-aos-delay="100" data-aos-duration="600">
+                            <h1>대구 <b>5대 신산업</b></h1>
+                        </div>
+                        <div class="section2ChartWrap" data-aos="fade-down" data-aos-delay="500" data-aos-duration="800">
+                            <div class="chartSelectArea">
+                                <h3>대구 산업별 현황</h3>
+                                <div class="chartSelectBox">
+                                    <button type="button" class="on">
+                                        <p>미래형자동차</p>
+                                        <div><img src="../../resources/images/section2Icon01.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>로봇</p>
+                                        <div><img src="../../resources/images/section2Icon02.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>물산업</p>
+                                        <div><img src="../../resources/images/section2Icon03.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>의료</p>
+                                        <div><img src="../../resources/images/section2Icon04.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>스마트에너지</p>
+                                        <div><img src="../../resources/images/section2Icon05.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>ICT융합</p>
+                                        <div><img src="../../resources/images/section2Icon06.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>섬유</p>
+                                        <div><img src="../../resources/images/section2Icon07.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>지능형 기계</p>
+                                        <div><img src="../../resources/images/section2Icon08.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>뿌리</p>
+                                        <div><img src="../../resources/images/section2Icon09.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>소재</p>
+                                        <div><img src="../../resources/images/section2Icon10.png" alt=""></div>
+                                    </button>
+                                    <button type="button" class="">
+                                        <p>도시형 산업</p>
+                                        <div><img src="../../resources/images/section2Icon11.png" alt=""></div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="chartArea">
+                                <div class="chartTitle">
+                                    <h4>미래형 자동차</h4>
+                                    <div class="chartLabel">
+                                        <p>전국<span style="background-color: #00c56f;"></span></p>
+                                        <p>대구<span style="background-color: #2b4c89;"></span></p>
+                                        <p class="comment">출처:통계청,2020년</p>
+                                    </div>
+                                </div>
+                                <div class="chartBox">
+                                    <div class="chartItem">
+                                        <div class="chart">
+                                            <canvas id="section2Chart1"></canvas>
+                                        </div>
+                                        <h5>사업체수</h5>
+                                        <p>(단위:개)</p>
+                                    </div>
+                                    <div class="chartItem">
+                                        <div class="chart">
+                                            <canvas id="section2Chart2"></canvas>
+                                        </div>
+                                        <h5>종사자수</h5>
+                                        <p>(단위:명)</p>
+                                    </div>
+                                    <div class="chartItem">
+                                        <div class="chart">
+                                            <canvas id="section2Chart3"></canvas>
+                                        </div>
+                                        <h5>생산액</h5>
+                                        <p>(단위:백억원)</p>
+                                    </div>
+                                    <div class="chartItem">
+                                        <div class="chart">
+                                            <canvas id="section2Chart4"></canvas>
+                                        </div>
+                                        <h5>연간출하액</h5>
+                                        <p>(단위:개)</p>
+                                    </div>
+                                    <div class="chartItem">
+                                        <div class="chart">
+                                            <canvas id="section2Chart5"></canvas>
+                                        </div>
+                                        <h5>부가가치</h5>
+                                        <p>(단위:개)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //section2 -->
+
+            <!-- section3 -->
+            <section class="section3">
+                <div class="sectionCenterPosition">
+                    <div class="inner">
+                        <div class="section3Wrap">
+                            <div class="section3Box" data-aos="flip-left" data-aos-delay="50" data-aos-duration="800">
+                                <div class="section3Title">
+                                    <h3>인포그래픽</h3>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <div class="section3BoxBody infoBox">
+                                    <div class="swiper section3Slide">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="../../resources/images/section3Info1.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../../resources/images/section3Info2.png" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="../../resources/images/section3Info3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section3Box" data-aos="flip-left" data-aos-delay="200" data-aos-duration="800">
+                                <div class="section3Title">
+                                    <h3>최신리포트</h3>
+                                    <button type="button"><img src="../../resources/images/ico_plusLink.png" alt="더보기"></button>
+                                </div>
+                                <div class="section3BoxBody reportBox">
+                                    <div class="reportName">
+                                        <p>산업경제동향</p>
+                                        <a href="javascript:void(0)">2023년 상반기대구산업경제동향</a>
+                                    </div>
+                                    <div class="reportImg">
+                                        <img src="../../resources/images/reportImg.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section3Box" data-aos="flip-left" data-aos-delay="400" data-aos-duration="800">
+                                <div class="section3Title">
+                                    <h3>산업경제뉴스</h3>
+                                    <button type="button"><img src="../../resources/images/ico_plusLink.png" alt="더보기"></button>
+                                </div>
+                                <div class="section3BoxBody newsBox">
+                                    <a href="javascript:void(0)">
+                                        <span>ICT융합 산업</span>
+                                        <p>대구 메타버스 산업 거점 센터 구축.. 기업·인력 육성 박차</p>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <span>경제</span>
+                                        <p>[2023년 세법개정안] 기회발전특구 세제 지원…유턴기업 법인세 감면 확대</p>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <span>ICT융합 산업</span>
+                                        <p>대구시, 과기부 ‘뉴테크 융합지원 창작플랫폼 구축’ 공모 선정</p>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <span>지능형기계산업</span>
+                                        <p>DGIST, 유럽연합 주관 국제협력사업 '메라넷' 과제 선정</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="section3Box" data-aos="flip-left" data-aos-delay="600" data-aos-duration="800">
+                                <div class="section3Title">
+                                    <h3>공지사항</h3>
+                                    <button type="button"><img src="../../resources/images/ico_plusLink.png" alt="더보기"></button>
+                                </div>
+                                <div class="section3BoxBody noticeBox">
+                                    <a href="javascript:void(0)">
+                                        <span>2023-08-12</span>
+                                        <p>대구산업경제동향 온라인 시스템 통계DB 한국은행 관련 지표 일시 중단 안내(한국)</p>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <span>2023-07-12</span>
+                                        <p>[시스템 부분오류] 대구산업경제동향 온라인 시스템 기업DB 지도서비스 일시 중단...</p>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <span>2023-06-12</span>
+                                        <p>대구산업경제동향 온라인 시스템의 사용자 메뉴얼 입니다.</p>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <span>2023-06-12</span>
+                                        <p>[시스템 부분오류] 대구산업경제동향 온라인 시스템 기업DB 지도서비스 일시 중단...</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section3Bot" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
+                            <img src="../../resources/images/section3Logo1.png" alt="">
+                            <img src="../../resources/images/section3Logo2.png" alt="">
+                            <img src="../../resources/images/section3Logo3.png" alt="">
+                            <img src="../../resources/images/section3Logo4.png" alt="">
+                            <img src="../../resources/images/section3Logo5.png" alt="">
+                            <img src="../../resources/images/section3Logo6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //section3 -->
+
+            <!-- 바로가기 -->
+            <div class="rightRemote" data-aos="fade-left" data-aos-delay="1500" data-aos-duration="600">
+                <div class="remoteBtn">
+                    <button type="button">
+                        <img src="../../resources/images/rightBtn01.png" alt="">
+                        한눈에 보는<br>지표
+                    </button>
+                    <span></span>
+                    <button type="button">
+                        <img src="../../resources/images/rightBtn02.png" alt="">
+                        산업통계<br>브리프
+                    </button>
+                    <span></span>
+                    <button type="button">
+                        <img src="../../resources/images/rightBtn03.png" alt="">
+                        Q&A
+                    </button>
+                </div>
+                <button class="scrollTop"><img src="../../resources/images/scrollTop.png" alt=""></button>
+            </div>
+            <!-- //바로가기 -->
+        </div>
+        <!------------------------------------ content::end ------------------------------->
+
+
+        <!------------------------------------ footer::start ------------------------------->
+        <footer class="">
+            <div class="inner">
+                <div class="footerTop">
+                    <div class="footerLink">
+                        <a href="javascript:void(0)">이용약관</a>
+                        <a href="javascript:void(0)" class="bold">개인정보처리방침</a>
+                        <a href="javascript:void(0)">이메일무단수집거부</a>
+                        <a href="javascript:void(0)">저작권정책</a>
+                    </div>
+                    <select>
+                        <option>유관기관 바로가기</option>
+                    </select>
+                </div>
+                <div class="footerBot">
+                    <div class="footerAdderss">
+                        <div>
+                            <p>[ 41256 ] 대구광역시 동구 동대구로 475 대구벤처센터 7층</p>
+                            <p>전화  053)757-3716 </p>
+                            <p>팩스  053)757-3709</p>
+                        </div>
+                        <p>COPYRIGHT(C) 대구테크노파크 정책기획단. ALL RIGHTS RESERVED.</p>
+                    </div>
+                    <div class="footerLogo">
+                        <img src="../../resources/images/footerLogo1.png" alt="대구광역시">
+                        <img src="../../resources/images/footerLogo2.png" alt="DGTP 대구테크노파크">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!------------------------------------ footer::end ------------------------------->
+
+        <script>
+            // section1 Chart
+            
+const animation = {
+  x: {
+    type: 'number',
+    easing: 'linear',
+    duration: 200,
+    from: NaN, // the point is initially skipped
+    delay(section1Chart) {
+      if (section1Chart.type !== 'data' || section1Chart.xStarted) {
+        return 0;
+      }
+      section1Chart.xStarted = true;
+      return section1Chart.index * 200;
+    }
+  },
+  y: {
+    type: 'number',
+    easing: 'linear',
+    duration: 200,
+    from: 0,
+    delay(section1Chart) {
+      if (section1Chart.type !== 'data' || section1Chart.yStarted) {
+        return 0;
+      }
+      section1Chart.yStarted = true;
+      return section1Chart.index * 200;
+    }
+  }
+};
+            const section1Chart1 = document.getElementById('section1Chart').getContext('2d');
+            const section1ChartOption = {
+                
+                
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    daegu: {
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: '대구광역시',
+                            font: {
+                                family: 'SUIT-Medium'
+                            }
+                        },
+                        afterDataLimits: (scale) => {
+                            scale.max = scale.max * 1.2;
+                        },
+                        grid: {
+                            display: false
+                        }
+                    },
+                    nationwide: {
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: '전국',
+                            font: {
+                                family: 'SUIT-Medium'
+                            }
+                        },
+                        afterDataLimits: (scale) => {
+                            scale.max = scale.max * 1.2;
+                        },
+                        grid: {
+                            color: '#dedede'
+                        },
+                    },
+                    x: {
+                        grid: {
+                            color: '#dedede'
+                        }
+                    },
+                },
+            }
+            const section1Chart = new Chart(section1Chart1, {
+                data: {
+                    labels: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'],
+                    datasets: [{
+                        type: 'bar',
+                        label: '대구',
+                        data: imsiArray2,
+                        barPercentage: 0.5,
+                        backgroundColor: '#2b4c89',
+                        order: 2,
+                        yAxisID: 'daegu'
+                    },{
+                        type: 'line',
+                        label: '전국',
+                        data: imsiArray2,
+                        pointRadius: 6,
+                        pointHoverRadius: 6,
+                        pointBorderWidth: 2,
+                        pointHoverBorderWidth: 2,
+                        pointBorderColor: '#00c56f',
+                        pointBackgroundColor: '#fff',
+                        borderColor: '#00c56f',
+                        order: 1,
+                        yAxisID: 'nationwide',
+                        options: {
+                            animation
+                        }
+                    }]
+                },
+                options: section1ChartOption
+            });
+
+            // section2 Chart
+            const section2Chart1 = document.getElementById('section2Chart1').getContext('2d');
+            const section2Chart2 = document.getElementById('section2Chart2').getContext('2d');
+            const section2Chart3 = document.getElementById('section2Chart3').getContext('2d');
+            const section2Chart4 = document.getElementById('section2Chart4').getContext('2d');
+            const section2Chart5 = document.getElementById('section2Chart5').getContext('2d');
+            const section2ChartOption = {
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    datalabels: {
+                        color: '#000',
+                        anchor: 'end',
+                        align: 'top',
+                        font: {
+                            size: '12',
+                            family: 'SUIT-Medium'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        display: false,
+                        grid: {
+                            display: false
+                        },
+                        afterDataLimits: (scale) => {
+                            scale.max = scale.max * 1.2;
+                        },
+                    }
+                }
+            }
+            const sec2chart1 = new Chart(section2Chart1, {
+                type: 'bar',
+                data: {
+                    labels: ['전국', '대구'],
+                    datasets: [{
+                        data: imsiArray,
+                        barPercentage: 0.8,
+                        backgroundColor: ['#00c56f', '#2b4c89'],
+                    }]
+                },
+                options: section2ChartOption,
+                plugins: [ChartDataLabels]
+            });
+            const sec2chart2 = new Chart(section2Chart2, {
+                type: 'bar',
+                data: {
+                    labels: ['전국', '대구'],
+                    datasets: [{
+                        data: imsiArray,
+                        barPercentage: 0.8,
+                        backgroundColor: ['#00c56f', '#2b4c89'],
+                    }]
+                },
+                options: section2ChartOption,
+                plugins: [ChartDataLabels]
+            });
+            const sec2chart3 = new Chart(section2Chart3, {
+                type: 'bar',
+                data: {
+                    labels: ['전국', '대구'],
+                    datasets: [{
+                        data: imsiArray,
+                        barPercentage: 0.8,
+                        backgroundColor: ['#00c56f', '#2b4c89'],
+                    }]
+                },
+                options: section2ChartOption,
+                plugins: [ChartDataLabels]
+            });
+            const sec2chart4 = new Chart(section2Chart4, {
+                type: 'bar',
+                data: {
+                    labels: ['전국', '대구'],
+                    datasets: [{
+                        data: imsiArray,
+                        barPercentage: 0.8,
+                        backgroundColor: ['#00c56f', '#2b4c89'],
+                    }]
+                },
+                options: section2ChartOption,
+                plugins: [ChartDataLabels]
+            });
+            const sec2chart5 = new Chart(section2Chart5, {
+                type: 'bar',
+                data: {
+                    labels: ['전국', '대구'],
+                    datasets: [{
+                        data: imsiArray,
+                        barPercentage: 0.8,
+                        backgroundColor: ['#00c56f', '#2b4c89'],
+                    }]
+                },
+                options: section2ChartOption,
+                plugins: [ChartDataLabels]
+            });
+
+            // section3 slide
+            var swiper = new Swiper(".section3Slide", {
+                slidesPerView: 'auto',
+                freeMode: true,
+                spaceBetween: 20,
+                breakpoints: {
+                    1500: {
+                        slidesPerView: 1,
+                        autoplay: true,
+                        freeMode: false,
+                        pagination: {
+                            el: ".swiper-pagination",
+                        },
+                    }
+                }
+            });
+
+            //aos
+            AOS.init({
+                disable: function () {
+                    var desktop = 1500;
+                    return window.innerWidth < desktop;
+                }
+            });
+
+        </script>
+    </body>
+</html>

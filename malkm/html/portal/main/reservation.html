@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../../resources/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="../../../resources/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../../../resources/css/portal/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../../resources/js/common/jquery/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../../resources/js/common/jquery/jquery-ui.min.js"></script>
+        <script src="../../../resources/js/common/jquery/datepicker-ko.js"></script>
+        <script src="../../../resources/js/common/jquery/chart.js"></script>
+        <script src="../../../resources/js/common/design/swiper-bundle.min.js"></script>
+        <script src="../../../resources/js/common/design/portal/gnb.js"></script>
+        <script src="../../../resources/js/common/design/portal/design.js"></script>
+
+        <style>
+            .monthBox + .monthBox{ margin-top: 20px; }
+            .monthBox h2{ margin-bottom: 10px; font-weight: bold; }
+            .dayBox{ display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 4px; }
+            .dayBox div{ display: flex; align-items: center; justify-content: center; }
+            .dayBox div span{ width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 14px; cursor: pointer; border-radius: 100%; }
+            .dayBox div:nth-child(7n) span{ color: blue; }
+            .dayBox div:nth-child(7n + 1) span{ color: red; }
+            .dayBox div.noSelect span{ color: #b1b1b1; cursor: default; }
+            .dayBox div.selectDate.on span{ background-color: var(--mainColor); color: #fff; }
+        </style>
+    </head>
+
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <div class="pageWrap">
+            <div class="contentWrap">
+                <div class="inner">
+                    <button type="button" class="pageBackArrow-s" onclick="location.href='./main.html'" ><img src="../../../resources/images/portal/backArrow-s.png" alt="뒤로가기"></button>
+                    <h1 class="pageTitle-m">예약하실 장소의<br>정보를 입력해 주세요.</h1>
+                    <div class="inputArticle">
+                        <div class="inputArticleItem">
+                            <p class="key">유형선택</p>
+                            <div class="inputArticleBox">
+                                <div class="cell input_radio">
+                                    <input type="radio" name="reservationType" id="reservationType1" checked><label for="reservationType1">호텔</label>
+                                    <input type="radio" name="reservationType" id="reservationType2"><label for="reservationType2">빌딩</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inputArticleItem">
+                            <p class="key">주소입력</p>
+                            <div class="inputArticleBox">
+                                <div class="cell">
+                                    <input type="text" placeholder="" readonly>
+                                    <button type="button" onclick="popupOpen(addressSearch)">주소찾기</button>
+                                </div>
+                                <input type="text" placeholder="상세주소">
+                            </div>
+                        </div>
+                        <div class="inputArticleItem">
+                            <p class="key">객실 수 / 호실 수</p>
+                            <div class="inputArticleBox">
+                                <div class="cell">
+                                    <input type="text" placeholder="" readonly>
+                                    <button type="button" onclick="popupOpen(roomNum)">입력</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inputArticleItem">
+                            <p class="key">연락처</p>
+                            <div class="inputArticleBox">
+                                <div class="cell">
+                                    <input type="text">
+                                </div>
+                                <p class="comment">직접 연락받으실 연락처를 등록해 주세요.</p>
+                            </div>
+                        </div>
+
+                        <div class="inputArticleItem">
+                            <p class="key">일자</p>
+                            <div class="inputArticleBox">
+                                <div class="cell">
+                                    <input type="text" id="selectDateInput" placeholder="" readonly>
+                                    <button type="button" onclick="popupOpen(popupCalendar)">선택</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottomWrap">
+                <div class="inner">
+                    <button type="button" class="btn_full" onclick="popupOpen(reservComplete)">예약하기</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slidePopupWrap">
+
+            <!-- 주소검색 -->
+            <div class="slidePopup bottomScroll" id="addressSearch">
+                <button type="button" class="btn_popupClose" onclick="popupClose(addressSearch)"><img src="../../../resources/images/portal/ico_popupClose.png" alt=""></button>
+                <h3 class="slidePopupTitle-l">지번, 도로명, 건물명으로<br>주소를 검색해 주세요.</h3>
+                <div class="slidePopupContent">
+                    <input type="text" placeholder="말끔오피스텔 또는 말끔로 23" class="inputSearchAddress inputClear">
+                    <div class="addressList">
+                        <a href="javascript:void(0)">
+                            <div class="adrNum">
+                                <b>45678</b>
+                                <span>456-078</span>
+                            </div>
+                            <div class="adrText">
+                                <p>도로명</p>
+                                <span>서울특별시 강남구 학동로 (현대빌딩)</span>
+                            </div>
+                            <div class="adrText">
+                                <p>지번</p>
+                                <span>서울특별시 강남구 삼성동 1-1</span>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <div class="adrNum">
+                                <b>45678</b>
+                                <span>456-078</span>
+                            </div>
+                            <div class="adrText">
+                                <p>도로명</p>
+                                <span>서울특별시 강남구 학동로 (현대빌딩)</span>
+                            </div>
+                            <div class="adrText">
+                                <p>지번</p>
+                                <span>서울특별시 강남구 삼성동 1-1</span>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <div class="adrNum">
+                                <b>45678</b>
+                                <span>456-078</span>
+                            </div>
+                            <div class="adrText">
+                                <p>도로명</p>
+                                <span>서울특별시 강남구 학동로 (현대빌딩)</span>
+                            </div>
+                            <div class="adrText">
+                                <p>지번</p>
+                                <span>서울특별시 강남구 삼성동 1-1</span>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)">
+                            <div class="adrNum">
+                                <b>45678</b>
+                                <span>456-078</span>
+                            </div>
+                            <div class="adrText">
+                                <p>도로명</p>
+                                <span>서울특별시 강남구 학동로 (현대빌딩)</span>
+                            </div>
+                            <div class="adrText">
+                                <p>지번</p>
+                                <span>서울특별시 강남구 삼성동 1-1</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 객실수  -->
+            <div class="slidePopup" id="roomNum">
+                <button type="button" class="btn_popupClose" onclick="popupClose(roomNum)"><img src="../../../resources/images/portal/ico_popupClose.png" alt=""></button>
+                <h3 class="slidePopupTitle-l">객실수</h3>
+                <div class="slidePopupContent">
+                    <input type="text" placeholder="객실수 입력" class="roomNumInput">
+                </div>
+                <div class="slidePopupBtn">
+                    <button type="button" class="btn_full roomNumBtn" onclick="popupClose(roomNum)" disabled>저장</button>
+                </div>
+            </div>
+
+            <!-- 완료  -->
+            <div class="slidePopup" id="reservComplete">
+                <button type="button" class="btn_popupClose" onclick="popupClose(reservComplete)"><img src="../../../resources/images/portal/ico_popupClose.png" alt=""></button>
+                <div class="slidePopupContent">
+                    <div class="reservCompleteText">
+                        예약하신 정보를 확인한 후<br>상담연락을 드리겠습니다.<br><br>감사합니다.
+                    </div>
+                </div>
+                <div class="slidePopupBtn">
+                    <button type="button" class="btn_full" onclick="popupClose(reservComplete)">확인</button>
+                </div>
+            </div>
+
+            <!-- 달력 -->
+            <div class="slidePopup" id="popupCalendar">
+                <button type="button" class="btn_popupClose" onclick="popupClose(popupCalendar)"><img src="../../../resources/images/portal/ico_popupClose.png" alt=""></button>
+                
+                <div class="slidePopupContent">
+                    <div class="calendar"></div>
+                </div>
+                <div class="slidePopupBtn">
+                    <button type="button" class="btn_full" onclick="datePick()">확인</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!------------------------------------ content::end ------------------------------->
+
+
+        <!------------------------------------ footer::start ------------------------------->
+        <footer>
+            
+        </footer>
+        <!------------------------------------ footer::end ------------------------------->
+
+        <script>
+            const popupOpen = function(popupTarget){
+                $('.slidePopupWrap').css({ display: 'block' }).animate({ backgroundColor: 'rgba(0,0,0,0.5)' }, 300);
+                $(popupTarget).css({ transform: 'translateX(-50%) translateY(0%)' });
+            }
+            const popupClose = function(popupTarget){
+                $('.slidePopupWrap').animate({ backgroundColor: 'rgba(0,0,0,0)' }, 300, function() {$('.slidePopupWrap').css({ display: 'none' })});
+                $(popupTarget).css({ transform: 'translateX(-50%) translateY(100%)' });
+            }
+            $(document).on('click', '.slidePopupWrap', function (e) {
+                const popContent = $('.slidePopupWrap');
+                const viewPopup = $('.slidePopup')
+                for(let i = 0; i < viewPopup.length; i++){
+                    if(viewPopup[i].style.transform === 'translateX(-50%) translateY(0%)'){
+                        if(!viewPopup[i].classList.contains('noneBgClick')){
+                            if (popContent.has(e.target).length === 0) {
+                                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, 300, function () {
+                                    $('.slidePopupWrap').css({display: 'none'});
+                                });
+                                $('.slidePopup').css({transform: 'translateX(-50%) translateY(100%)'});
+                            }
+                        }
+                    } 
+                }
+            });
+
+            $.fn.setCursorPosition = function( pos ){
+                this.each( function( index, elem ) {
+                    if( elem.setSelectionRange ) {
+                        elem.setSelectionRange(pos, pos);
+                    } else if( elem.createTextRange ) {
+                        var range = elem.createTextRange();
+                        range.collapse(true);
+                        range.moveEnd('character', pos);
+                        range.moveStart('character', pos);
+                        range.select();
+                    }
+                });
+                return this;
+            };
+            $('.roomNumInput').on('keydown', function(event){
+                if((event.keyCode > 47 && event.keyCode < 58 || event.keyCode > 95 && event.keyCode < 106 ) 
+                    || event.keyCode == 8 //backspace
+                    || event.keyCode == 37 || event.keyCode == 39 //방향키 →, ←
+                    || event.keyCode == 46){ //delete키
+                        $('.roomNumInput').on('keyup', function(){
+                            if(this.value == '개' || this.value == ''){
+                                $('.roomNumBtn').attr('disabled', true);
+                                this.value = this.value.replace('개', '');
+                            } else {
+                                $('.roomNumBtn').attr('disabled', false);
+                                this.value = this.value.replace('개', '');
+                                this.value = this.value + '개';
+                                $('.roomNumInput').setCursorPosition(this.value.length - 1);
+                            }
+                        })
+                }else{
+                    return false;
+                }
+            })
+
+
+            const calendarWrap = document.querySelector('.calendar');
+            calendarWrap.innerHTML = '';
+
+            const date = new Date();
+            let nowYear = date.getFullYear();
+            let nowMonth = date.getMonth() + 1;
+            let nowDate = date.getDate();
+
+            let nowFirstDay = new Date(nowYear, nowMonth - 1, 1).getDay();  // 이번달 첫째날 요일
+            let nowLastDate = new Date(nowYear, nowMonth, 0).getDate();  // 이번달 마지막 날짜
+
+            let nextYear = new Date(nowYear, nowMonth + 1).getFullYear();
+            let nextMonth = new Date(nowYear, nowMonth + 1).getMonth();
+            let nextFirstDay = new Date(nextYear, nextMonth - 1, 1).getDay();
+            let nextLastDate = new Date(nextYear, nextMonth, 0).getDate();
+            
+            const monthCreate = function(year, month, lastDate, firstDay){
+                const monthBox = document.createElement('div');
+                const dayBox = document.createElement('div');
+                monthBox.classList.add('monthBox');
+                dayBox.classList.add('dayBox');
+                dayBox.innerHTML = '<div><span>일</span></div><div><span>월</span></div><div><span>화</span></div><div><span>수</span></div><div><span>목</span></div><div><span>금</span></div><div><span>토</span></div>'
+
+                const viewMonth = month < 10 ? '0' + month : month;  // 한자리수 월 0 추가
+                monthBox.innerHTML = `<h2>${year}.${viewMonth}</h2>`;
+                for(let i = 0; i < lastDate + firstDay; i++){  // 마지막 날짜 + 첫째날 요일
+                    const viewDate = i - firstDay + 1 < 10 ? '0' + (i - firstDay + 1) : (i - firstDay + 1);  // i에서 첫째날 요일만큼 마이너스, 한자리수 일 0 추가
+                    if(i < firstDay){
+                        dayBox.innerHTML += `<div></div>`  //  첫째날 요일만큼 빈여백
+                    } else if (viewMonth == nowMonth && viewDate < nowDate){
+                        dayBox.innerHTML += `<div id="${year}-${viewMonth}-${viewDate}" class="noSelect"><span>${viewDate}</span></div>`  // 오늘 이전 날짜, noSelect클래스 선택불가
+                    } else if (viewMonth == nowMonth && viewDate == nowDate){
+                        dayBox.innerHTML += `<div id="${year}-${viewMonth}-${viewDate}" class="today"><span>오늘</span></div>`  // 오늘
+                    } else {
+                        dayBox.innerHTML += `<div id="${year}-${viewMonth}-${viewDate}" class="selectDate"><span>${viewDate}</span></div>`  // selectDate클래스 선택가능
+                    }
+                }
+                monthBox.appendChild(dayBox)
+                calendarWrap.appendChild(monthBox)
+            }
+            monthCreate(nowYear, nowMonth, nowLastDate, nowFirstDay);
+            monthCreate(nextYear, nextMonth, nextLastDate, nextFirstDay);
+
+            $(document).on('click', '.selectDate', function(){
+                $('.selectDate').removeClass('on')
+                $(this).addClass('on')
+            });
+            const datePick = function(){
+                $('.selectDate').each(function(index, item){
+                    if($(item).hasClass('on')){
+                        $('#selectDateInput').val(item.id)
+                    }
+                });
+                popupClose(popupCalendar)
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+/*------------------ div 테이블 ---------------------*/
+/* divTable */
+.divTable{ border: 1px solid #bfbfbf; }
+.divTable .divTableItem{ border-bottom: 1px solid #e6e6e6; padding: 12px 20px; display: flex; gap: 10px; align-items: baseline; }
+.divTable .divTableItem:last-child{ border-bottom: none; }
+.divTable .divTableItem b{ width: 94px; flex: none; font-size: 15px; letter-spacing: -0.6px; font-family:'SUIT-Bold'; text-align: left; line-height: 40px; }
+.divTable .divTableItem .divTableInput{ display: flex; flex-direction: column; gap: 8px; }
+.divTable .divTableItem .divTableInput input{ width: 220px; height: 40px; border: 1px solid #d2d2d2; border-radius: 0; }
+.divTable .divTableItem .divTableInput h4{ font-size: 16px; letter-spacing: -0.64px; color: #3e57e6; font-family:'SUIT-Bold'; }
+
+.divTable_comm{ font-size: 14px; letter-spacing: -0.56px; color: #1d1d1d; text-align: left; }
+.divTable_comm.red{ color: #ef280e; }
+
+/* divTable2 */
+.divTable2{ width: 100%; display: flex; flex-direction: column; gap: 20px; }
+.divTable2 .divTableItem{ display: flex; align-items: baseline; gap: 6px; }
+.divTable2 .divTableItem b{ width: 60px; flex: none; font-size: 14px; letter-spacing: -0.56px; font-family:'SUIT-Bold'; }
+.divTable2 .divTableItem .divTableInput{ width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.divTable2 .divTableItem .divTableInput input{ height: 40px; }
+
+/*------------------ 리스트 테이블 ---------------------*/
+/* listTable1 */
+.listTable1 thead tr th{ height: 34px; background-color: #dcdcdc; font-size: 13px; letter-spacing: -0.33px; color: #444; font-family:'SUIT-SemiBold'; }
+.listTable1 tbody tr td{ height: 44px; background-color: #fff; font-size: 15px; letter-spacing: -0.6px; text-align: center; border-bottom: 1px solid #e6e6e6; }
+
+/* listTable2 */
+.listTable2{ border: 1px solid #e6e6e6; border-collapse: collapse; }
+.listTable2 thead tr th{ height: 40px; background-color: #f2f2f2; border: 1px solid #e6e6e6; font-size: 13px; letter-spacing: -0.33px; color: #353535; font-family:'SUIT-Bold'; }
+.listTable2 tbody tr td{ height: 56px; background-color: #fff; border: 1px solid #e6e6e6; font-size: 16px; letter-spacing: -0.4px; text-align: center; }
+
+/*------------------ 테이블 레이아웃 ---------------------*/
+/* 텍스트 */
+table tbody tr td .date{ font-size: 14px; letter-spacing: -0.52px; color: #555; }
+table tbody tr td.num{ font-size: 15px; color: #555; }
+
+/* 검색 */
+.table_top{ display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+.table_count{ display: flex; align-items: center; gap: 16px; }
+.table_count p{ font-size: 15px; color: #1f1f1f; font-family:'SUIT-Bold'; }
+.table_count p b{ color: #444; font-family:'SUIT-Bold'; }
+.table_count select{ width: 80px; height: 32px; background-color: transparent; border: 1px solid #e5e5e5; border-radius: 4px; }
+.table_search{ display: flex; align-items: center; gap: 4px; }
+.table_search p{ font-size: 15px; color: #444; font-family:'SUIT-SemiBold'; }
+.table_search select,
+.table_search input{ height: 40px; background-color: #fff; border: none; }
+.table_search .btn_search{ width: 60px; height: 40px; border-radius: 4px; background-color: #555; font-size: 14px; letter-spacing: -0.14px; color: #fff; }
+
+/* 아이콘 */
+.icoText{ display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; letter-spacing: -0.6px; font-family:'SUIT-SemiBold'; }
+.icoText.publish{ color: #0041e2; }
+.icoText.sale{ color: #ff661d; }
+.icoText.purchase{ color: #1aba50; }
+.icoText.send{ color: #08a3a9; }
+.icoText.publish img{ width: 17px; }
+.icoText.sale img{ width: 16px; }
+.icoText.purchase img{ width: 18px; }
+.icoText.send img{ width: 16px; }
+
+/* 페이지 */
+.pagination{ width: 100%; display: flex; align-items: center; justify-content: center; gap: 4px; }
+.pagination button{ width: 24px; height: 24px; border-radius: 2px; font-size: 13px; color: #555; font-family:'SUIT-SemiBold'; }
+.pagination button.on{ background-color: #777; color: #fff; }
+
+/* thead 고정테이블 */
+.fixTable{ overflow: auto; }
+.fixTable::-webkit-scrollbar-thumb{ background-color: #999; }
+.fixTable table thead{ position: sticky; top: 0; }
+
+
+

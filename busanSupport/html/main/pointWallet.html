@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev" onClick="location.href='./main.html'"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>포인트 지갑</h1>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container greyContainer">
+            <div class="content_wrap">
+                <div class="inner">
+
+                    <div class="pointWalletWrap">
+                        <div class="walletCard">
+                            <div class="walletCard_top">
+                                <div class="totalPoint">
+                                    <p class="title">총 봉사포인트</p>
+                                    <p class="point"><b>2,000</b>P</p>
+                                </div>
+                                <div class="extinctionPoint">
+                                    <p class="date">2023.01.01</p>
+                                    <p class="title">소멸 예정 포인트</p>
+                                    <p class="point">2,000P</p>
+                                </div>
+                            </div>
+                            <div class="walletCard_bot">
+                                <div class="pointType pointType1">
+                                    <p class="title">자원봉사은행 포인트</p>
+                                    <p class="point">1,000P</p>
+                                </div>
+                                <div class="pointType pointType2">
+                                    <p class="title">1365봉사 포인트</p>
+                                    <p class="point">1,000P</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pointUseListArea">
+                            <h3>포인트 사용 이력</h3>
+                            <div class="category">
+                                <button type="button" class="on">전체</button>
+                                <button type="button">획득</button>
+                                <button type="button">사용</button>
+                            </div>
+                            <div class="pointUseList">
+                                <div class="pointUseListItem">
+                                    <img src="../../resources/images/ico_point.png" alt="">
+                                    <div class="text">
+                                        <p class="date">2023.01.01</p>
+                                        <p class="title">자원봉사은행 포인트 획득</p>
+                                    </div>
+                                    <p class="pointCount plus">+500</p>
+                                </div>
+                                <div class="pointUseListItem">
+                                    <img src="../../resources/images/ico_point.png" alt="">
+                                    <div class="text">
+                                        <p class="date">2023.01.01</p>
+                                        <p class="title">포인트 사용</p>
+                                    </div>
+                                    <p class="pointCount minus">-500</p>
+                                </div>
+                                <div class="pointUseListItem">
+                                    <img src="../../resources/images/ico_point.png" alt="">
+                                    <div class="text">
+                                        <p class="date">2023.01.01</p>
+                                        <p class="title">1365 포인트 획득</p>
+                                    </div>
+                                    <p class="pointCount plus">+500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+    </body>
+</html>

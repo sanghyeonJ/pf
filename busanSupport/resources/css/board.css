@@ -1,0 +1,76 @@
+/* 작성 테이블 */
+.writeTable{ display: flex; flex-direction: column; gap: 22px; width: 100%; }
+.writeTable .item{ width: 100%; }
+.writeTable .item p{ font-size: 14px; letter-spacing: -0.35px; color: #666; margin-bottom: 8px; }
+.writeTable .item .itemInput{ display: flex; align-items: flex-end; gap: 10px; }
+.writeTable .item .itemInput + .itemInput{ margin-top: 8px; }
+.writeTable .item .itemInput input{ width: 100%; height: 48px; min-width: 0; border: 1px solid #d7d7d7; border-radius: 6px; font-size: 16px; }
+.writeTable .item .itemInput select{ width: 100%; height: 48px; min-width: 0; border: 1px solid #d7d7d7; border-radius: 6px; font-size: 16px; }
+
+.writeTable .item2way{ display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+
+/* 리스트 */
+.linkList .linkItem{ padding: 20px; border-radius: 16px; background-color: #f4f4f4; }
+.linkList .linkItem + .linkItem{ margin-top: 8px; }
+.linkList .linkItem .linkTop{ margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; }
+.linkList .date{ font-size: 14px; letter-spacing: -0.35px; color: #666; }
+.linkList .type{ font-size: 14px; letter-spacing: -0.35px; color: #888; }
+.linkList .name{ font-size: 14px; letter-spacing: -0.35px; }
+.linkList .title{ font-size: 16px; letter-spacing: -0.4px; line-height: 22px; font-family:'AppleSDGothicNeoB'; display: flex; align-items: flex-start; gap: 6px; }
+.linkList .title span{ font-size: 18px; letter-spacing: -0.45px; color: var(--mainColor); font-family:'AppleSDGothicNeoB'; flex: none; }
+.linkList .title.imgTitle{ justify-content: space-between; }
+.linkList .title.imgTitle .imgBox{ width: 56px; height: 56px; flex: none; }
+.linkList .title.imgTitle .imgBox img{ width: 100%; height: 100%; object-fit: cover; }
+
+/* 리스트 더보기 버튼 */
+.btn_listMore{ display: block; margin: 0 auto; margin-top: 30px; min-width: 140px; height: 40px; padding: 0 16px; border: 1px solid #e5e5e5; border-radius: 4px; background-color: #fff; font-size: 14px; letter-spacing: -0.35px; }
+.btn_listMore b{ color: var(--mainColor); }
+
+/* 댓글 */
+.commentWrap{ margin-top: 58px; }
+.commentWrap .commentHeader{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.commentWrap .commentHeader h3{ font-size: 18px; letter-spacing: -0.45px; font-family:'AppleSDGothicNeoB'; }
+.commentWrap .commentHeader button{ width: 80px; height: 32px; border-radius: 16px; border: 1px solid #ccc; font-size: 14px; letter-spacing: -0.35px; color: #000; }
+.commentList .noComment{ font-size: 15px; letter-spacing: -0.38px; color: #777;  }
+
+.linkItem .linkTop .rightCon{ display: flex; align-items: center; gap: 16px; }
+.linkItem .linkTop .rightCon .commentBtn{ display: flex; align-items: center; gap: 8px; }
+.linkItem .linkTop .rightCon .commentBtn span{ display: block; width: 1px; height: 10px; background-color: #d7d7d7; }
+.linkItem .linkTop .rightCon .commentBtn button{ font-size: 13px; letter-spacing: -0.33px; color: #333; }
+.linkItem .linkTop .rightCon .commentBtn button.red{ color: #ff493c; }
+.linkItem .linkTop .rightCon .date{ margin-bottom: 0; }
+.linkItem .commentText{ font-size: 15px; letter-spacing: -0.38px; color: #333; line-height: 20px; }
+
+.commentWriteWrap textarea{ border-radius: 6px; height: 120px; border: 1px solid #d7d7d7; font-size: 16px; min-height: 0; }
+
+
+/* 인풋 */
+input.inputAddress{ background: url(../images/inputAddress.png) no-repeat; background-position: calc(100% - 14px) center; background-size: 16px; padding-right: 50px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

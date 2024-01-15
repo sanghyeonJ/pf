@@ -1,0 +1,792 @@
+/* 메인페이지 */
+/* 메인헤더 */
+.mainHeader{ padding-top: 20px; }
+.mainHeader .inner{ display: flex; align-items: center; justify-content: space-between; }
+.mainHeader .header_logo{ width: 124px; }
+.mainHeader .mainHeaderBtn{ display: flex; align-items: center; gap: 12px; }
+.mainHeader .mainHeaderBtn button{ width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; position: relative; }
+.mainHeader .mainHeaderBtn button.h_btn_qr img{ width: 20px; }
+.mainHeader .mainHeaderBtn button.h_btn_notifi img{ width: 20px; }
+.mainHeader .mainHeaderBtn button.h_btn_setting img{ width: 21px; }
+.mainHeader .mainHeaderBtn button.h_btn_notifi.new::after{ content: ""; width: 4px; height: 4px; border-radius: 100%; background-color: #ff493c; position: absolute; top: 0; right: 0; }
+
+
+.mainContainer{ background: rgb(255,255,255); background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,218,219,1) 100%); }
+/* 프로필 카드 */
+.profileCard{ width: 100%; background-color: rgba(255,255,255,0.4); border: 2px solid #fff; border-radius: 16px; box-shadow: 0 0 13.9px 2.1px rgba(230,72,47,0.3); margin-bottom: 20px; }
+.profileCard_top{ position: relative; padding: 34px 30px 26px; display: flex; gap: 20px; } 
+.profileCard_top .profileCard-certified{ position: absolute; top: 20px; right: 20px; width: 36px; }
+.profileCard_top .profileCardImg{ flex: none; width: 80px; height: 80px; border-radius: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: var(--mainColor); }
+.profileCard_top .profileCardImg img{ width: 100%; height: 100%; object-fit: cover; }
+.profileCard_top .profileCardImg img.nonImg{ width: 37px; height: 39px; object-fit: unset; }
+.profileCard_top .profileCardText{ display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; position: relative; z-index: 1; }
+.profileCard_top .profileCardText .name{ font-size: 26px; font-family:'AppleSDGothicNeoB'; }
+.profileCard_top .profileCardText .birth{ font-size: 16px; color: #444; font-family:'AppleSDGothicNeoSB'; }
+.profileCard_top .profileCardText .gender{ height: 20px; border-radius: 10px; background-color: #dedede; display: flex; align-items: center; justify-content: center; padding: 0 10px; font-size: 13px; color: #282828; }
+
+.profileCard_bot{ display: flex; height: 60px; border-top: 1px solid #ffdce4; }
+.profileCard_bot .profileCard_left{ width: 56%; padding: 0 16px 0 20px; border-right: 1px solid #ffdce4; }
+.profileCard_bot .profileCard_right{ width: 44%; padding: 0 20px 0 16px; }
+.profileCard_bot .profileCard_left,
+.profileCard_bot .profileCard_right{ display: flex; align-items: center; justify-content: space-between; }
+.profileCard_bot .itemTitle{ display: flex; align-items: center; gap: 4px; font-size: 14px; letter-spacing: -0.35px; font-family:'AppleSDGothicNeoSB'; }
+.profileCard_bot .itemValue{ display: flex; align-items: center; gap: 4px; font-size: 12px; letter-spacing: -0.3px; color: var(--mainColor); }
+.profileCard_bot .profileCard_left .itemValue b{ font-size: 16px; color: var(--mainColor); font-family:'GmarketSansTTFBold'; }
+.profileCard_bot .profileCard_right .itemValue b{ font-size: 16px; color: var(--mainColor); font-family:'GmarketSansTTFBold'; }
+
+/* 포인트 카드 */
+.pointCard{ border-radius: 16px; background-color: #fff; box-shadow: 0 0 13.9px 2.1px rgba(0,0,0,0.12); margin-bottom: 20px; }
+.pointCard_top{ padding: 24px 20px; display: flex; align-items: flex-start; justify-content: space-between; border-bottom: 1px solid #ededed; }
+.pointCard_top .mainPoint{ width: 68px; }
+.pointCard_bot{ padding: 20px 20px 28px; display: flex; }
+.pointCard_bot > div{ width: 100%; }
+.pointCard_bot > div:not(:first-child){ border-left: 1px solid #e6e6e6; padding-left: 20px; }
+
+.pointCard_top .pointCardText .itemTitle{ font-size: 15px; letter-spacing: -0.75px; color: #444; font-family:'AppleSDGothicNeoSB'; margin-bottom: 8px; }
+.pointCard_bot .pointCardText .itemTitle{ font-size: 15px; letter-spacing: -0.75px; color: #444; font-family:'AppleSDGothicNeoSB'; margin-bottom: 12px; }
+.pointCardText .itemValue{ display: flex; align-items: center; gap: 4px; }
+.pointCardText .itemValue img{ width: 16px; }
+.pointCard_top .pointCardText .itemValue b{ font-size: 24px; letter-spacing: -0.6px; color: #000; font-family:'GmarketSansTTFBold'; }
+.pointCard_bot .pointCardText .itemValue b{ font-size: 18px; letter-spacing: -0.9px; color: #000; font-family:'GmarketSansTTFBold'; }
+
+/* 메인 버튼 */
+.mainBtn01{ width: 100%; height: 56px; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 17px; letter-spacing: -0.85px; color: #01bf7f; font-family:'AppleSDGothicNeoB'; background-color: #f5f5f5; border-radius: 16px; margin-bottom: 20px; }
+.mainBtn01 img{ width: 32px; }
+.mainBtn02{ width: 100%; height: 56px; display: flex; align-items: center; justify-content: center; background-color: #f5f5f5; border-radius: 16px; margin-bottom: 24px; }
+.mainBtn02 img{ width: 171px; }
+
+/* 메인 공지 */
+.mainNotice{ width: 100%; height: 24px; overflow: hidden; }
+.mainNotice .swiper-slide a{ display: flex; align-items: center; gap: 8px; }
+.mainNotice .swiper-slide a span{ flex: none; height: 24px; padding: 0 12px; background-color: #dfdfdf; border-radius: 12px; font-size: 14px; color: #444; font-family:'AppleSDGothicNeoSB'; display: flex; align-items: center; justify-content: center; }
+.mainNotice .swiper-slide a p{ font-size: 14px; letter-spacing: -0.7px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+
+/* 출석체크 */
+.popupCenterTitle{ text-align: center; padding-top: 40px; }
+.popupCenterTitle.small{ padding-top: 10px; }
+.popupCenterTitle h2{ font-size: 24px; letter-spacing: -1.2px; font-family:'AppleSDGothicNeoB'; margin-bottom: 16px; }
+.popupCenterTitle p{ font-size: 15px; letter-spacing: -0.75px; }
+
+.slidePopupCont:has(.attendanceArea){ overflow: visible; }
+.attendanceArea{ padding-top: 20px; }
+.attendanceBox{ display: flex; align-items: center; justify-content: center; gap: 12px; }
+.attendanceBox + .attendanceBox{ margin-top: 12px; }
+.attendanceItem{ width: 64px; height: 64px; border-radius: 100%; border: 1px dashed #a2a2a2; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #999; font-family:'AppleSDGothicNeoSB'; position: relative; }
+.attendanceItem.lastItem{ border-color: var(--mainColor); font-size: 22px; color: var(--mainColor); font-family:'AppleSDGothicNeoB'; }
+
+.attendanceItem.complete{ border: none; background-color: var(--subColor); }
+.attendanceItem.complete img{ width: 37px; }
+.attendanceItem.complete .completeCount{ position: absolute; width: 39px; height: 39px; top: -12px; left: -8px; background: url(../images/attendanceCompleteBG.png) no-repeat center; background-size: cover; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #fff; font-family:'AppleSDGothicNeoSB'; }
+.attendanceItem.lastItem.complete{ flex-direction: column; border: none; background-color: #333; color: #fff; gap: 4px; padding-top: 6px; }
+.attendanceItem.lastItem.complete p{ font-size: 13px; letter-spacing: -0.33px; color: #fff; font-family:'AppleSDGothicNeoSB'; }
+
+
+/* 회원가입 */
+.joinContainer{ background: url(../images/joinBg.png) no-repeat center top; background-size: cover;  }
+.joinContainer::before{ content: ""; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); top: 0; left: 0; }
+.joinContainer .bottomFix{ position: relative; padding-bottom: 60px; }
+.joinContainer .joinTitle{ text-align: center; font-size: 30px; letter-spacing: -1.5px; color: #fff; font-family:'AppleSDGothicNeoB'; margin-bottom: 10px; }
+
+/* 이용약관 */
+.termsItem + .termsItem{ margin-top: 10px; }
+.termsItem{ width: 100%; height: 72px; border-radius: 10px; border: 1px solid #e2e2e2; background-color: #f5f5f5; display: flex; align-items: center; padding: 10px 24px; gap: 8px; }
+.termsItem input[type="checkbox"] + label::before{ background: #e6e6e6 url(../images/check-wh.png) no-repeat center; width: 24px; height: 24px; border-radius: 100%; }
+.termsItem input[type="checkbox"]:checked + label::before{ background-color: var(--mainColor); }
+.termsItem button{ width: 100%; display: flex; justify-content: space-between; align-items: center; font-size: 18px; letter-spacing: -0.9px; font-family:'AppleSDGothicNeoB'; }
+
+.termsText{ font-size: 14px; line-height: 16px; letter-spacing: -0.7px; }
+.termsText b{ font-size: 16px; letter-spacing: -0.8px; font-family:'AppleSDGothicNeoB'; }
+
+
+/* 프로필 등록 */
+.inputProfileWrap{ height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; padding-bottom: 20vh; }
+.inputProfileBox{ width: 120px; height: 120px; position: relative; }
+.inputProfileBox .inputProfileImg{ width: 100%; height: 100%; border-radius: 100%; background-color: #e3e3e3; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.inputProfileBox .inputProfileImg img{ width: 100%; height: 100%; object-fit: cover; }
+.inputProfileBox .inputProfileImg img.nonImg{ width: 47px; height: 49px; object-fit: initial; }
+.inputProfileBox .btn_cam{ position: absolute; bottom: 0; right: -14px; width: 48px; height: 48px; border-radius: 100%; border: 4px solid #fff; background-color: #555; }
+.inputProfileBox .btn_cam img{ width: 18px; }
+
+
+/* 거주지 인증 */
+.certifiedWrap{ height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; padding-bottom: 20vh; }
+.certifiedBox{ padding: 0 20px; }
+.certifiedBox p{ font-size: 24px; letter-spacing: -0.6px; font-family:'AppleSDGothicNeoB'; margin-bottom: 20px; }
+.certifiedBox div{ display: flex; align-items: center; gap: 4px; }
+.certifiedBox div input{ width: 100%; height: 56px; border-radius: 6px; border: 1px solid #d7d7d7; font-size: 20px; letter-spacing: -0.5px; color: #000; }
+
+
+/* 비밀번호 입력 */
+.inputPWWrap{ padding-top: 4vh; text-align: center; }
+.inputPWWrap h2{ font-size: 24px; letter-spacing: -0.6px; color: #fff; font-family:'AppleSDGothicNeoB'; margin-bottom: 22px; }
+.inputPWWrap p{ font-size: 16px; letter-spacing: -0.4px; color: #fff; margin-bottom: 75px; }
+.PWBox{ display: flex; justify-content: center; align-items: center; gap: 16px; }
+.PWBox .PWItem{ width: 18px; height: 18px; border-radius: 100%; background-color: #6b6b6b; }
+.PWBox .PWItem.on{ background-color: var(--mainColor); }
+
+.numKeyboard{ width: 100%; display: grid; grid-template-columns: 50px 50px 50px; justify-content: center; gap: 10px 60px; }
+.numKeyboard button{ width: 48px; height: 48px; border-radius: 100%; font-size: 26px; color: #fff; transition: all 0.2s; }
+.numKeyboard button:active{ background-color: #515a62; }
+
+
+/* 알림 */
+.notificationItem{ padding: 24px; border-radius: 10px; background-color: #f5f5f5; display: flex; align-items: flex-start; gap: 16px; }
+.notificationItem + .notificationItem{ margin-top: 8px; }
+.notificationItem .iconBox{ flex: none; width: 38px; height: 38px; border-radius: 100%; display: flex; align-items: center; justify-content: center; background-color: #e5e5e5; }
+.notificationItem .iconBox img{ width: 16px; }
+.notificationItem .iconBox img.new{ display: none; }
+.notificationItem.new .iconBox{ background-color: var(--subColor); }
+.notificationItem.new .iconBox img{ display: none; }
+.notificationItem.new .iconBox img.new{ display: block; }
+.notificationItem .textBox h3{ font-size: 16px; letter-spacing: -0.4px; color: #000; line-height: 20px; font-family:'AppleSDGothicNeoSB'; margin-bottom: 12px; }
+.notificationItem .textBox p{ font-size: 13px; letter-spacing: -0.33px; color: #777; }
+
+
+/* qr스캔 */
+.qrWrap{ padding: 10vh 30px 0; max-width: 340px; margin: 0 auto; }
+.qrBox{ width: 100%; margin: 0 auto; height: 0; padding-bottom: 100%; position: relative; margin-bottom: 30px; }
+.qrBox .qrCamera{ width: 100%; height: 100%; background-color: #aaa; position: absolute; top: 0; left: 0; }
+.qrBox .angle1{ position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-top: 4px solid #fff; border-left: 4px solid #fff; z-index: 5; }
+.qrBox .angle2{ position: absolute; top: 0; right: 0; width: 40px; height: 40px; border-top: 4px solid #fff; border-right: 4px solid #fff; z-index: 5; }
+.qrBox .angle3{ position: absolute; bottom: 0; left: 0; width: 40px; height: 40px; border-bottom: 4px solid #fff; border-left: 4px solid #fff; z-index: 5; }
+.qrBox .angle4{ position: absolute; bottom: 0; right: 0; width: 40px; height: 40px; border-bottom: 4px solid #fff; border-right: 4px solid #fff; z-index: 5; }
+.qrWrap p{ font-size: 15px; letter-spacing: -0.75px; color: #fff; text-align: center; line-height: 20px; }
+
+
+/* 자원봉사증 */
+.certificateCard{ width: 100%; padding: 24px 20px 0; position: relative; background: rgb(247,127,158); background: linear-gradient(135deg, rgba(247,127,158,1) 0%, rgba(243,74,140,1) 100%); border-radius: 16px; margin-bottom: 50px; }
+.certificateCard .profileCard-certified{ width: 36px; position: absolute; top: 25px; right: 20px; }
+.certificateCard .imgBox{ width: 120px; height: 120px; border-radius: 100%; overflow: hidden; background-color: #ffdee3; margin: 0 auto; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.certificateCard .imgBox img{ width: 100%; height: 100%; object-fit: cover; }
+.certificateCard .imgBox img.nonImg{ width: 47px; height: 49px; object-fit: unset; }
+.certificateCard .name{ text-align: center; font-size: 24px; letter-spacing: -1.2px; font-family:'AppleSDGothicNeoB'; margin-bottom: 12px; }
+.certificateCard .birth{ text-align: center; font-size: 16px; color: #efefef; font-family:'AppleSDGothicNeoSB'; margin-bottom: 12px; }
+.certificateCard .gender{ margin: 0 auto; width: fit-content; padding: 0 10px; height: 20px; line-height: 20px; border-radius: 10px; background-color: #f34a8c; font-size: 13px; color: #fff; margin-bottom: 10px; }
+
+.certificateCard_bot{ display: flex; height: 50px; }
+.certificateCard_bot .certificateCard_left{ width: 100%; display: flex; align-items: center; justify-content: flex-start; gap: 10px; border-right: 1px solid rgba(255,255,255,0.4); }
+.certificateCard_bot .certificateCard_right{ width: 100%; display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+.certificateCard_bot .itemTitle{ font-size: 14px; letter-spacing: -0.35px; color: #fff; font-family:'AppleSDGothicNeoSB'; }
+.certificateCard_bot .itemValue{ display: flex; align-items: center; gap: 4px; font-size: 13px; letter-spacing: -0.33px; font-family:'AppleSDGothicNeoSB'; color: #fff; }
+.certificateCard_bot .itemValue b{ font-size: 17px; font-family:'GmarketSansTTFBold'; color: #fff; }
+
+.workHistoryListArea h3{ font-size: 24px; letter-spacing: -1.2px; font-family:'AppleSDGothicNeoB'; margin-bottom: 20px; }
+.workHistoryList .workHistoryListItem{ padding: 16px 0; border-top: 1px solid #e7e7e7; display: flex; gap: 16px; }
+.workHistoryList .workHistoryListItem .left{ width: 100%; }
+.workHistoryList .workHistoryListItem .left .date{ font-size: 13px; color: #777; letter-spacing: -0.33px; margin-bottom: 8px; }
+.workHistoryList .workHistoryListItem .left .title{ font-size: 16px; letter-spacing: -0.4px; font-family:'AppleSDGothicNeoB'; margin-bottom: 12px; }
+.workHistoryList .workHistoryListItem .left .point{ display: flex; align-items: center; gap: 4px; font-size: 14px; color: #444; letter-spacing: -0.35px; }
+.workHistoryList .workHistoryListItem .left .point img{ width: 16px; }
+.workHistoryList .workHistoryListItem .right{ width: 60px; height: 44px; border-radius: 8px; flex: none; background-color: #e3e3e3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
+.workHistoryList .workHistoryListItem .right p{ font-size: 13px; letter-spacing: -0.33px; color: #555; font-family:'AppleSDGothicNeoSB'; }
+.workHistoryList .workHistoryListItem .right.complete{ background-color: #fff; }
+.workHistoryList .workHistoryListItem .right.complete img{ width: 12px; }
+.workHistoryList .workHistoryListItem .right.complete p{ color: var(--mainColor); }
+
+
+/* 포인트 지갑 */
+.walletCard{ background-color: #fff; box-shadow: 0 0 13.9px 2.1px rgba(0,0,0,0.12); padding: 0 24px; border-radius: 16px; margin-bottom: 50px; }
+.walletCard_top{ display: flex; height: 90px; margin-bottom: 28px; }
+.walletCard_top .totalPoint{ width: 100%; padding-top: 28px; }
+.walletCard_top .totalPoint .title{ font-size: 16px; letter-spacing: -0.8px; font-family:'AppleSDGothicNeoSB'; margin-bottom: 10px; }
+.walletCard_top .totalPoint .point{ display: flex; align-items: flex-end; font-size: 20px; letter-spacing: -1px; color: var(--mainColor); font-family:'GmarketSansTTFBold'; }
+.walletCard_top .totalPoint .point b{ font-size: 28px; letter-spacing: -0.7px; color: var(--mainColor); font-family:'GmarketSansTTFBold'; }
+.walletCard_top .extinctionPoint{ padding-top: 28px; padding-left: 20px; border-left: 1px solid #eee; width: 110px; flex: none; }
+.walletCard_top .extinctionPoint .date{ font-size: 12px; letter-spacing: -0.6px; color: #777; margin-bottom: 8px; }
+.walletCard_top .extinctionPoint .title{ font-size: 14px; letter-spacing: -0.7px; font-family:'AppleSDGothicNeoSB'; margin-bottom: 8px; }
+.walletCard_top .extinctionPoint .point{ font-size: 14px; letter-spacing: -0.35px; font-family:'GmarketSansTTFBold'; }
+
+.walletCard_bot .pointType{ display: flex; align-items: center; justify-content: space-between; padding: 0 20px; height: 80px; border-radius: 16px 16px 0 0; }
+.walletCard_bot .pointType .title{ font-size: 15px; letter-spacing: -0.75px; font-family:'AppleSDGothicNeoSB'; }
+.walletCard_bot .pointType .point{ font-size: 18px; letter-spacing: -0.45px; font-family:'GmarketSansTTFBold'; }
+.walletCard_bot .pointType1{ background-color: var(--subColor); margin-bottom: -16px; padding-bottom: 16px; }
+.walletCard_bot .pointType2{ background-color: #d9e8f8; height: 64px; }
+
+.pointUseListArea h3{ font-size: 24px; letter-spacing: -1.2px; font-family:'AppleSDGothicNeoB'; margin-bottom: 24px; }
+.pointUseListArea .category{ display: flex; align-items: center; gap: 4px; margin-bottom: 10px; }
+.pointUseListArea .category button{ width: 80px; height: 32px; border-radius: 16px; background-color: #e6e6e6; font-size: 14px; letter-spacing: -0.7px; color: #444; font-family:'AppleSDGothicNeoSB'; }
+.pointUseListArea .category button.on{ background-color: var(--subColor); color: #000; font-family:'AppleSDGothicNeoB'; }
+.pointUseList .pointUseListItem{ padding: 20px 0; display: flex; align-items: center; gap: 12px; }
+.pointUseList .pointUseListItem img{ width: 34px; flex: none; }
+.pointUseList .pointUseListItem .text{ width: 100%; }
+.pointUseList .pointUseListItem .text .date{ font-size: 13px; letter-spacing: -0.33px; color: #777; margin-bottom: 8px; }
+.pointUseList .pointUseListItem .text .title{ font-size: 16px; letter-spacing: -0.4px; color: #000; font-family:'AppleSDGothicNeoB'; }
+.pointUseList .pointUseListItem .pointCount{ word-break: keep-all; font-size: 18px; letter-spacing: -0.45px; font-family:'AppleSDGothicNeoB'; }
+.pointUseList .pointUseListItem .pointCount.plus{ color: #009868; }
+.pointUseList .pointUseListItem .pointCount.minus{ color: #777; }
+
+
+/* 자원봉사 매칭 */
+.requestWrap{ padding-top: 0px; text-align: center; }
+.requestWrap h2{ font-size: 32px; letter-spacing: -1.6px; color: #000; font-family:'AppleSDGothicNeoB'; margin-bottom: 36px; }
+.requestWrap .titleComment{ font-size: 16px; letter-spacing: -0.4px; line-height: 22px; margin-bottom: 36px; }
+
+.requesArea{ margin-bottom: 50px; }
+.requesArea .imgBox{ height: 160px; overflow: hidden; }
+.requesArea .imgBox img{ width: 213px; }
+.requesArea .requesBtn{ display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 116px 60px; gap: 10px 15px; max-width: 400px; margin: 0 auto; }
+.requesArea .requesBtn button{ width: 100%; height: 100%; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; font-size: 16px; letter-spacing: -0.8px; color: #010101; font-family:'AppleSDGothicNeoB'; }
+.requesArea .requesBtn button.btnSubColor{ background-color: var(--subColor); }
+.requesArea .requesBtn button.btnBlue{ background-color: #d9e8f8; }
+
+.newWorkListArea h3{ font-size: 24px; letter-spacing: -0.6px; font-family:'AppleSDGothicNeoB'; margin-bottom: 20px; text-align: left;  }
+.newWorkListArea .newWorkList .newWorkItem{ padding: 20px 20px 24px; background-color: #f4f4f4; border-radius: 16px; text-align: left; }
+.newWorkListArea .newWorkList .newWorkItem + .newWorkItem{ margin-top: 8px; }
+.newWorkListArea .newWorkList .newWorkItem .type{ font-size: 14px; letter-spacing: -0.35px; color: var(--mainColor); font-family:'AppleSDGothicNeoSB'; margin-bottom: 10px; }
+.newWorkListArea .newWorkList .newWorkItem h4{ font-size: 17px; letter-spacing: -0.43px; line-height: 20px; font-family:'AppleSDGothicNeoB'; margin-bottom: 10px; }
+.newWorkListArea .newWorkList .newWorkItem .rocation{ font-size: 13px; letter-spacing: -0.33px; color: #777; margin-bottom: 20px; }
+.newWorkListArea .newWorkList .newWorkItem .info{ display: flex; align-items: center; justify-content: space-between; }
+.newWorkListArea .newWorkList .newWorkItem .info .date{ font-size: 14px; letter-spacing: -0.35px; font-family:'AppleSDGothicNeoSB'; }
+.newWorkListArea .newWorkList .newWorkItem .info .point{ display: flex; align-items: center; gap: 4px; font-size: 14px; letter-spacing: -0.35px; color: #444; }
+.newWorkListArea .newWorkList .newWorkItem .info .point img{ flex: none; width: 16px; }
+
+/* 자원봉사 신청 (지도) */
+.mapWrap{ height: 100%; position: relative; }
+.mapWrap .mapSelect{ top: 16px; }
+.mapBox{ width: 100%; height: 100%; background-color: #ddd; position: relative; }
+.mapSelect{ position: absolute; top: 64px; left: 0; padding: 0 20px; display: flex; gap: 8px; width: 100%; z-index: 4; }
+.mapSelect select{ width: 40%; background-color: #fff; background-image: url(../images/mapSelect.png); background-size: 11px; height: 48px; border: 1px solid #b7b7b7; border-radius: 10px; font-size: 16px; letter-spacing: -0.4px; font-family:'AppleSDGothicNeoSB'; box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2); }
+.mapSelect button{ width: 60%; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background-color: #fff; border: 1px solid #b7b7b7; border-radius: 10px; font-size: 16px; letter-spacing: -0.4px; font-family:'AppleSDGothicNeoSB'; box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2); }
+.mapSelect button img{ width: 11px; }
+
+.btnLocation{ position: absolute; bottom: 24px; left: 20px; width: 40px; height: 40px; border-radius: 6px; border: 1px solid #b7b7b7; background-color: #fff; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; z-index: 4; }
+.btnLocation img{ width: 21px; }
+
+.mapCategoryTitle{ font-size: 18px; letter-spacing: -0.45px; font-family:'AppleSDGothicNeoB'; margin-top: 20px; margin-bottom: 20px; }
+.mapCategorySelect{ width: 100%; height: 48px; border-radius: 24px; border: 1px solid #dedede; margin-bottom: 30px; padding-left: 20px; font-size: 16px; color: #444; }
+.mapCategoryWrap{ display: flex; flex-wrap: wrap; gap: 16px 4px; margin-bottom: 50px; }
+.mapCategoryWrap button{ height: 32px; padding: 0 16px; border-radius: 16px; border: 1px solid #dedede; font-size: 14px; letter-spacing: -0.35px; color: #444; font-family:'AppleSDGothicNeoSB'; }
+.mapCategoryWrap button.on{ border: none; background-color: #444; color: #fff; font-family:'AppleSDGothicNeoB'; }
+.mapCategoryList{ width: calc(100% + 40px); padding: 0 20px; margin-left: -20px; overflow: auto; display: flex; align-items: center; gap: 4px; margin-bottom: 20px; }
+.mapCategoryList::-webkit-scrollbar{ display: none; }
+.mapCategoryList .item{ display: flex; align-items: center; gap: 10px; padding: 0 14px; background-color: #eaeaea; height: 32px; border-radius: 4px; white-space: nowrap; }
+.mapCategoryList .item p{ font-size: 14px; letter-spacing: -0.35px; }
+.mapCategoryList .item button img{ width: 9px; }
+
+.mapPin{ position: absolute; }
+.mapPin .pinImg{ width: 25px; position: relative; z-index: 1; }
+.mapPin .pinText{ position: absolute; top: 0; left: 15px; font-size: 13px; letter-spacing: -0.33px; color: #fff; font-family:'AppleSDGothicNeoSB'; white-space: nowrap; min-width: 120px; height: 24px; border-radius: 0 12px 12px 0; display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 14px; }
+.mapPin .pinText img{ width: 7px; }
+.mapPin.pinGrey .pinText{ background-color: #a9a9a9; }
+.mapPin.pinBlue .pinText{ background-color: #0671f5; }
+.mapPin.pinGreen .pinText{ background-color: #01bf7f; }
+
+.mapInfoWrap{ background-color: #fff; }
+.mapInfoWrap .type{ width: fit-content; height: 22px; border-radius: 11px; display: flex; align-items: center; justify-content: center; padding: 0 12px; background-color: var(--subColor); font-size: 13px; letter-spacing: -0.35px; color: var(--mainColor); font-family:'AppleSDGothicNeoSB'; margin-bottom: 14px; }
+.mapInfoWrap h4{ font-size: 22px; letter-spacing: -1.1px; font-family:'AppleSDGothicNeoB'; margin-bottom: 18px; }
+.mapInfoWrap .date{ font-size: 16px; letter-spacing: -0.8px; margin-bottom: 20px; }
+.mapInfoWrap .infoOutline{ width: 100%; height: 40px; display: flex; align-items: center; border-radius: 6px; background-color: #f4f4f4; padding: 12px 0; margin-bottom: 30px; }
+.mapInfoWrap .infoOutline > div:not(:first-child){ border-left: 1px solid #d1d1d1; }
+.mapInfoWrap .infoOutline .point{ width: 60%; display: flex; align-items: center; gap: 10px; padding-left: 20px; }
+.mapInfoWrap .infoOutline .point .title{ font-size: 14px; letter-spacing: -0.7px; color: #555; }
+.mapInfoWrap .infoOutline .point .value{ display: flex; align-items: center; gap: 4px; font-size: 18px; letter-spacing: -0.45px; color: #009868; font-family:'AppleSDGothicNeoB'; }
+.mapInfoWrap .infoOutline .point .value img{ width: 16px; }
+.mapInfoWrap .infoOutline .personnel{ width: 40%; padding-left: 20px; display: flex; align-items: center; gap: 10px; }
+.mapInfoWrap .infoOutline .personnel .title{ font-size: 14px; letter-spacing: -0.7px; color: #555; }
+.mapInfoWrap .infoOutline .personnel .value{ display: flex; align-items: center; gap: 2px; font-size: 16px; letter-spacing: -0.8px; font-family:'AppleSDGothicNeoB'; }
+.mapInfoWrap .infoOutline .personnel .value b{ color: var(--mainColor); font-family:'AppleSDGothicNeoB'; }
+.mapInfoWrap .address{ display: flex; align-items: center; gap: 8px; font-size: 15px; letter-spacing: -0.38px; margin-bottom: 40px; }
+.mapInfoWrap .address img{ width: 11px; }
+.mapInfoWrap .infoDetail{ font-size: 16px; line-height: 22px; letter-spacing: -0.4px; }
+.mapInfoWrap .infoDetail img{ max-width: 100%; display: block; margin: 0 auto; margin-bottom: 20px; }
+
+.infoDetailWrap{ display: none; padding-bottom: 20px; }
+.infoDetailWrap .infoDetail{ font-size: 16px; letter-spacing: -0.8px; line-height: 24px; padding-bottom: 10px; }
+
+.mapInfoWrap.view .type{ padding: 0; background-color: transparent; border-radius: 0; font-size: 14px; }
+.mapInfoWrap.view h4{ font-size: 24px; }
+.mapInfoWrap.view .address{ margin-bottom: 30px; }
+
+
+/* 자원봉사 신청 관리 */
+.category{ width: calc(100% + 40px); margin-left: -20px; padding: 0 20px; overflow: auto; display: flex; gap: 4px; margin-bottom: 22px; }
+.category::-webkit-scrollbar{ display: none; }
+.category button{ flex: none; width: fit-content; height: 32px; padding: 0 20px; border-radius: 16px; border: 1px solid #dedede; font-size: 14px; letter-spacing: -0.35px; color: #444; font-family:'AppleSDGothicNeoSB'; }
+.category button.on{ border: none; background-color: #333; color: #fff; font-family:'AppleSDGothicNeoB'; }
+
+.requesManageListItem{ padding: 20px 20px 24px; border-radius: 16px; background-color:  #f4f4f4; position: relative; }
+.requesManageListItem + .requesManageListItem{ margin-top: 8px; }
+.requesManageListItem .requesManageLabel{ position: absolute; top: 0; right: 20px; width: 50px; height: 32px; border-radius: 0 0 10px 10px; font-size: 13px; letter-spacing: -0.33px; font-family:'AppleSDGothicNeoSB'; text-align: center; line-height: 32px; }
+.requesManageListItem .requesManageLabel.ongoing{ background-color: var(--mainColor); color: #fff; }
+.requesManageListItem .requesManageLabel.end{ background-color: #ddd; color: #666; }
+.requesManageListItem .type{ font-size: 14px; letter-spacing: -0.35px; color: var(--mainColor); font-family:'AppleSDGothicNeoSB'; margin-bottom: 10px; }
+.requesManageListItem  h4{ font-size: 17px; letter-spacing: -0.43px; font-family:'AppleSDGothicNeoB'; margin-bottom: 10px; }
+.requesManageListItem  .address{ font-size: 13px; letter-spacing: -0.33px; color: #777; margin-bottom: 20px; }
+.requesManageListItem  .info{ display: flex; align-items: flex-start; justify-content: space-between; }
+.requesManageListItem  .info .date{ font-size: 14px; letter-spacing: -0.35px; font-family:'AppleSDGothicNeoSB'; }
+.requesManageListItem  .info .point{ display: flex; align-items: center; gap: 4px; font-size: 14px; letter-spacing: -0.35px; color: #444; font-family:'AppleSDGothicNeoB'; }
+.requesManageListItem  .info .point img{ width: 16px; flex: none; }
+
+
+/* 자원봉사 신청 관리 상세 */
+.mapBox.fit{ height: 180px; flex: none; }
+.inner .mapInfoWrap{ position: relative; z-index: 8; height: 100%; max-height: calc(var(--vh, 1vh) * 100 - 56px - 180px); overflow: auto; padding-top: 30px; }
+.inner .mapInfoWrap .infoDetailWrap{ display: block; }
+
+
+/* 봉사후기*/
+.reviewStar{ display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 16px; }
+.reviewStar .star{ display: flex; align-items: center; justify-content: center; }
+.reviewStar .star img{ width: 33px; }
+.reviewStar .star img.imgOn{ display: none; }
+.reviewStar .star.on img{ display: none; }
+.reviewStar .star.on img.imgOn{ display: block; }
+
+.reviewComment{ text-align: center; font-size: 15px; letter-spacing: -0.38px; margin-bottom: 30px; }
+
+.inputImg{ display: flex; gap: 8px; justify-content: center; margin-bottom: 30px; }
+.inputImg .inputImgItem{ width: 100%; max-width: 106px; height: 106px; position: relative; background-color: #eee; border-radius: 6px; overflow: hidden; }
+.inputImg .inputImgItem img{ width: 100%; height: 100%; object-fit: contain; }
+.inputImg .inputImgItem button{ width: 24px; height: 24px; position: absolute; top: 0; right: 0; background-color: rgba(0,0,0,0.8); }
+.inputImg .inputImgItem button img{ width: 10px; height: 10px; object-fit: unset; }
+.inputImg .inputImgItem.empty{ display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+.inputImg .inputImgItem.empty img{ width: 26px; height: 22px; }
+.inputImg .inputImgItem.empty p{ font-size: 14px; letter-spacing: -0.35px; color: #333; text-align: center; }
+
+.input_reviewTitle{ width: 100%; height: 48px; font-size: 15px; margin-bottom: 10px; }
+.input_reviewText{ width: 100%; height: 280px; margin-bottom: 20px; }
+
+input[type="checkbox"] + label.reviewCheck p{ font-size: 15px; letter-spacing: -0.38px; }
+input[type="checkbox"] + label.reviewCheck p b{ display: block; font-size: 14px; font-family:'AppleSDGothicNeoB'; }
+
+/* 자원봉사 등록 */
+.requsetWriteWrap .point{ font-size: 16px; letter-spacing: -0.4px; font-family:'AppleSDGothicNeoB'; }
+.requsetWriteWrap .point b{ color: var(--mainColor); font-family:'AppleSDGothicNeoB'; }
+
+/* 자원봉사 등록 관리 상세 */
+.mapInfoWrap .infoOutline.full > div{ width: 100%; justify-content: space-between; padding: 0 20px; }
+.mapInfoWrap .infoOutline.full:not(:last-child){ margin-bottom: 8px; }
+
+.mapInfoWrap .infoOutline.full .point .title{ display: flex; align-items: center; gap: 4px; }
+.mapInfoWrap .infoOutline.full .point .title img{ width: 16px; }
+.mapInfoWrap .infoOutline.full .point .value span{ font-size: 13px; letter-spacing: -0.65px; color: #009868; }
+.inner .mapInfoWrap.view .address{ margin-top: 20px; }
+
+.content_wrap .inner .mapInfoWrap{ overflow: initial; }
+
+.applicantWrap{ margin-top: 30px; }
+.applicantWrap .wrapTitle{ font-size: 18px; letter-spacing: -0.45px; font-family:'AppleSDGothicNeoB'; margin-bottom: 10px; }
+.applicantItem{ padding: 16px 20px; border-radius: 16px; background-color: #f4f4f4; display: flex; align-items: center; gap: 24px; position: relative; }
+.applicantItem + .applicantItem{ margin-top: 8px; }
+.applicantItem .imgBox{ flex: none; width: 50px; height: 50px; border-radius: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #fff; }
+.applicantItem .imgBox img{ width: 100%; height: 100%; object-fit: cover; }
+.applicantItem .imgBox img.noneImg{ width: 28px; height: 29px; object-fit: unset; }
+.applicantItem .textBox{ width: 100%; }
+.applicantItem .textBox h5{ font-size: 18px; font-family:'AppleSDGothicNeoB'; margin-bottom: 10px; }
+.applicantItem .textBox .infoBox{ display: flex; align-items: center; justify-content: space-between; }
+.applicantItem .textBox .infoBox .item{ display: flex; align-items: center; gap: 6px; }
+.applicantItem .textBox .infoBox .item .title{ font-size: 14px; letter-spacing: -0.35px; }
+.applicantItem .textBox .infoBox .item .value{ font-size: 14px; font-family:'AppleSDGothicNeoB'; }
+.applicantItem .textBox .infoBox span{ display: block; width: 1px; height: 14px; background-color: #d1d1d1; }
+
+.applicantItem input[type="checkbox"] + label{ position: absolute; top: 0; left: 0; }
+.applicantItem .label{ width: 24px; height: 24px; border-radius: 100%; position: absolute; top: 0; left: 0; display: flex; align-items: center; justify-content: center; }
+.applicantItem .label.complete{ background-color: #01bf7f; }
+.applicantItem .label.wait{ background-color: #777; }
+.applicantItem .label.wait img{ width: 11px; }
+
+
+/* 자원봉사 등록 관리 상세 인증 */
+.btnCertified{ display: flex; flex-direction: column; gap: 10px; margin: 40px 0 20px; }
+.btnCertified button{ width: 100%; height: 80px; border-radius: 24px; display: flex; align-items: center; justify-content: space-between; padding: 0 30px; }
+.btnCertified button .textBox{ text-align: right; display: flex; flex-direction: column; gap: 8px; }
+.btnCertified button .textBox h5{ font-size: 18px; letter-spacing: -0.9px; color: #fff; font-family:'AppleSDGothicNeoB'; }
+.btnCertified button .textBox p{ font-size: 14px; letter-spacing: -0.7px; color: #fff; }
+.btnCertified button.grey{ background-color: #444; }
+.btnCertified button.grey img{ width: 20px; }
+.btnCertified button.main{ background-color: var(--mainColor); }
+.btnCertified button.main img{ width: 17px; }
+
+
+.QRCertified{ margin: 60px 0 100px; text-align: center; }
+.QRCertified .qrBox{ margin: 0 auto; width: 218px; height: 218px; margin-bottom: 40px; padding: 0; }
+.QRCertified .qrBox img{ width: 100%; height: 100%; }
+.QRCertified h5{ font-size: 18px; letter-spacing: -0.9px; font-family:'AppleSDGothicNeoB'; margin-bottom: 20px; }
+.QRCertified p{ font-size: 15px; letter-spacing: -0.38px; }
+
+.onlineCertified{ margin: 60px 0 100px; }
+
+
+/* 봉사자 평가 */
+.appraisalItem{ height: 78px; border-radius: 16px; background-color: #f4f4f4; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+.appraisalItem + .appraisalItem{ margin-top: 8px; }
+.appraisalItem .profile{ display: flex; align-items: center; gap: 10px; }
+.appraisalItem .profile .imgBox{ flex: none; width: 46px; height: 46px; border-radius: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #fff; }
+.appraisalItem .profile .imgBox img{ width: 100%; height: 100%; object-fit: cover; }
+.appraisalItem .profile .imgBox img.noneImg{ width: 24px; height: 25px; object-fit: unset; }
+.appraisalItem .profile p{ font-size: 16px; font-family:'AppleSDGothicNeoB'; }
+.appraisalItem .reviewStar{ gap: 12px; margin-bottom: 0; }
+.appraisalItem .reviewStar .star img{ width: 21px; }
+
+.appraisalAll .reviewStar{ margin: 40px 0 60px; }
+
+
+/* 봉사미션 */
+.textCategory{ display: flex; align-items: center; gap: 34px; margin-bottom: 20px; }
+.textCategory a{ font-size: 20px; letter-spacing: -0.5px; color: #999; font-family:'AppleSDGothicNeoB'; line-height: 34px; border-bottom: 3px solid transparent; }
+.textCategory a.on{ color: #000; border-bottom: 3px solid #000; }
+
+.missionListItem{ width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 0 20.6px 3.4px rgba(0,0,0,0.1); }
+.missionListItem + .missionListItem{ margin-top: 24px; }
+.missionListItem .imgBox{ position: relative; height: 335px; }
+.missionListItem .imgBox .missionLabel{ width: 60px; height: 30px; border-radius: 15px; text-align: center; line-height: 30px; position: absolute; top: 10px; left: 10px; font-size: 14px; letter-spacing: -0.35px; color: #fff; font-family:'AppleSDGothicNeoSB'; }
+.missionListItem .imgBox .missionLabel.ongoing{ background-color: #000; }
+.missionListItem .imgBox .missionLabel.end{ background-color: rgba(0,0,0,0.3); }
+.missionListItem .imgBox img{ width: 100%; height: 100%; object-fit: cover; }
+.missionListItem .textBox{ padding: 24px 24px 30px; }
+.missionListItem .textBox .host{ font-size: 15px; letter-spacing: -0.38px; color: #666; margin-bottom: 14px; }
+.missionListItem .textBox h4{ font-size: 20px; letter-spacing: -0.5px; line-height: 24px; margin-bottom: 14px; font-family:'AppleSDGothicNeoB'; }
+.missionListItem .textBox .date{ font-size: 15px; letter-spacing: -0.38px; color: #777; margin-bottom: 14px; font-family:'AppleSDGothicNeoB'; }
+.missionListItem .textBox .infoBox{ display: flex; align-items: center; margin-bottom: 20px; }
+.missionListItem .textBox .infoBox > *{ display: flex; align-items: center; }
+.missionListItem .textBox .infoBox > *:not(:last-child):after{ content: ""; width: 1px; height: 14px; background-color: #d1d1d1; display: inline-block; margin: 0 12px; }
+.missionListItem .textBox .infoBox .comment{ font-size: 15px; letter-spacing: -0.785px; }
+.missionListItem .textBox .infoBox .point{ display: flex; align-items: center; gap: 2px; font-size: 15px; letter-spacing: -0.75px; color: #009868; font-family:'AppleSDGothicNeoB'; }
+.missionListItem .textBox .infoBox .point img{ width: 16px; }
+.missionListItem .textBox .person{ display: flex; align-items: center; gap: 6px; font-size: 14px; letter-spacing: -0.35px; }
+.missionListItem .textBox .person img{ width: 14px; }
+
+
+
+/* 봉사미션 상세 */
+.missionViewWrap .imgBox{ width: calc(100% + 40px); margin-left: -20px; height: 375px; margin-bottom: 28px; }
+.missionViewWrap .imgBox img{ width: 100%; height: 100%; object-fit: cover; }
+.missionViewWrap .missionTitle{ font-size: 20px; letter-spacing: -0.5px; line-height: 22px; font-family:'AppleSDGothicNeoB'; margin-bottom: 20px; }
+.missionViewWrap .infoBox{ display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 30px; }
+.missionViewWrap .infoBox .textBox{ width: 100%; }
+.missionViewWrap .infoBox .textBox .date{ font-size: 15px; letter-spacing: -0.38px; color: #777; margin-bottom: 10px; }
+.missionViewWrap .infoBox .textBox .host{ font-size: 15px; letter-spacing: -0.38px; color: #666; }
+.missionViewWrap .infoBox .missionLabel{ width: 60px; height: 30px; border-radius: 15px; text-align: center; line-height: 30px; flex: none; font-size: 14px; letter-spacing: -0.35px; color: #fff; font-family:'AppleSDGothicNeoSB'; }
+.missionViewWrap .infoBox .missionLabel.ongoing{ background-color: #000; }
+.missionViewWrap .infoBox .missionLabel.end{ background-color: rgba(0,0,0,0.3); }
+.missionViewInfo{ padding: 24px; }
+.missionViewInfo .infoItem img{ margin-bottom: 13px; }
+.missionViewInfo .infoItem h5{ font-size: 15px; letter-spacing: -0.38px; font-family:'AppleSDGothicNeoB'; margin-bottom: 4px; }
+.missionViewInfo .infoItem p{ font-size: 13px; letter-spacing: -0.33px; }
+.missionViewInfo .infoItem:nth-child(1) img{ width: 25px; }
+.missionViewInfo .infoItem:nth-child(2) img{ width: 29px; }
+.missionViewInfo .infoItem:nth-child(3) img{ width: 22px; }
+.missionViewInfo .infoItem:nth-child(4) img{ width: 27px; margin-bottom: 14px; }
+.missionViewPoint{ padding: 15px 24px; margin-bottom: 40px; }
+.missionViewPoint .title{ display: flex; align-items: center; gap: 8px; font-size: 14px; letter-spacing: -0.7px; }
+.missionViewPoint .title img{ width: 27px; }
+.missionViewPoint .value{ font-size: 18px; letter-spacing: -0.9px; color: #009868; font-family:'AppleSDGothicNeoB'; }
+.missionViewPoint .value b{ font-size: 20px; letter-spacing: -0.5px; color: #009868; font-family:'GmarketSansTTFBold'; }
+.missionViewLoaction{ display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 20px; }
+.missionViewLoaction .title{ display: flex; align-items: center; gap: 4px; font-size: 14px; letter-spacing: -0.7px; color: #777; flex: none; }
+.missionViewLoaction .title img{ width: 11px; }
+.missionViewLoaction .value{ font-size: 18px; letter-spacing: -0.9px; font-family:'AppleSDGothicNeoB'; }
+.missionViewMap{ width: calc(100% + 40px); margin-left: -20px; height: 375px; margin-bottom: 30px; }
+.missionViewText h4{ font-size: 14px; letter-spacing: -0.35px; color: #777; font-family:'AppleSDGothicNeoB'; margin-bottom: 14px; }
+.missionViewText p{ font-size: 15px; letter-spacing: -0.38px; line-height: 20px; }
+
+
+.greyBox{ display: flex; align-items: center; justify-content: space-between; background-color: #f4f4f4; border-radius: 10px; }
+.greyBox + .greyBox{ margin-top: 10px; }
+
+
+/* 봉사미션 진행화면 */
+.missionTop{ padding: 20px; border-radius: 0 0 20px 20px; box-shadow: 0 0 20.6px 3.4px rgba(0,0,0,0.23); background-color: #fff; position: relative; z-index: 2; }
+.missionTop .title{ display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.missionTop .title .imgBox{ width: 34px; height: 34px; border-radius: 100%; background-color: var(--mainColor); display: flex; align-items: center; justify-content: center; flex: none; }
+.missionTop .title .imgBox img{ width: 14px; }
+.missionTop .title h2{ font-size: 16px; letter-spacing: -0.4px; line-height: 20px; font-family:'AppleSDGothicNeoB'; }
+.missionTop .info{ display: flex; gap: 4px; }
+.missionTop .info .time{ width: 100%; height: 40px; border-radius: 20px; background-color: #f4f4f4; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; }
+.missionTop .info .time p{ font-size: 14px; letter-spacing: -0.35px; color: #555; font-family:'AppleSDGothicNeoB'; }
+.missionTop .info .time b{ font-size: 15px; color: var(--mainColor); font-family:'GmarketSansTTFBold'; }
+.missionTop .info button{ width: 80px; height: 40px; border-radius: 20px; font-size: 14px; letter-spacing: -0.35px; font-family:'AppleSDGothicNeoB'; flex: none; }
+.missionTop::before{ content: ""; width: 100%; height: 56px; background-color: #fff; position: absolute; top: 0; left: 0; transform: translateY(-100%); }
+
+.missionContainer .content_wrap{ margin-top: -20px; margin-bottom: -20px; padding: 0; overflow: hidden; position: relative; }
+.missionProgress{ position: absolute; bottom: 36px; left: 0; width: 100%; overflow: auto; display: flex; align-items: center; gap: 4px; padding: 0 20px; }
+.missionProgress .item{ height: 32px; border-radius: 16px; background-color: rgba(0,0,0,0.7); display: flex; align-items: center; padding: 0 16px; gap: 20px; min-width: 130px; word-break: keep-all; }
+.missionProgress .item .title{ font-size: 13px; letter-spacing: -0.33px; color: #fff; }
+.missionProgress .item .value{ font-size: 14px; letter-spacing: -0.35px; color: #fff; font-family:'AppleSDGothicNeoSB'; }
+.missionProgress .item .value b{ font-size: 16px; letter-spacing: -0.4px; color: #fff; font-family:'GmarketSansTTFBold'; margin-right: 2px; }
+
+.mapPhoto{ position: absolute; width: 68px; height: 68px; border-radius: 6px; border: 4px solid #494846; }
+.mapPhoto img{ width: 100%; height: 100%; object-fit: cover; }
+.missionPin{ position: absolute; width: 25px; }
+
+.missionPhoto{ padding: 4px 14px; display: flex; gap: 8px; overflow: auto; }
+.missionPhoto::-webkit-scrollbar{ display: none; }
+.missionPhoto .btn_missionPhoto{ flex: none; width: 140px; height: 140px; border-radius: 10px; background-color: #eee; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; font-size: 15px; letter-spacing: -0.38px; color: #333; font-family:'AppleSDGothicNeoSB'; }
+.missionPhoto .btn_missionPhoto img{ width: 26px; }
+.missionPhoto .item{ flex: none; position: relative; width: 140px; height: 140px; overflow: hidden; border-radius: 10px; }
+.missionPhoto .item img{ width: 100%; height: 100%; object-fit: cover; }
+.missionPhoto .item .count{ position: absolute; top: 4px; left: 4px; width: 24px; height: 24px; border-radius: 100%; background-color: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; font-size: 14px; letter-spacing: -0.35px; color: #fff; font-family:'AppleSDGothicNeoSB'; }
+.missionPhoto .item .info{ width: 100%; height: 24px; position: absolute; bottom: 0; left: 0; background-color: rgba(0,0,0,0.5); text-align: center; line-height: 24px; font-size: 14px; letter-spacing: -0.35px; color: #fff; }
+
+
+/* 봉사미션 완료 */
+.missionCompleteAni{ width: 240px; height: 200px; margin: 0 auto; margin-bottom: 60px; position: relative; }
+.missionCompleteAni img.hand{ position: absolute; top: 30px; left: 50%; transform: translateX(-50%); width: 128px; }
+.missionCompleteAni img.pop{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 240px; animation: pop 1.5s cubic-bezier(0,.95,.3,1.3) infinite alternate; }
+@keyframes pop{
+    0%{ transform: translate(-50%, -50%) scale(0); }
+    30%{ transform: translate(-50%, -50%) scale(0); }
+    70%{ transform: translate(-50%, -50%) scale(1); }
+}
+
+/* 봉사미션 리뷰작성 */
+.missionReviewHead{ padding: 16px 24px 24px; background-color: #f4f4f4; border-radius: 16px; margin-bottom: 30px; }
+.missionReviewHead p{ margin: 0 auto; width: fit-content; height: 30px; border-radius: 15px; border: 1px solid var(--mainColor); color: var(--mainColor); padding: 0 26px; font-size: 15px; letter-spacing: -0.38px; line-height: 30px; font-family:'AppleSDGothicNeoB'; margin-bottom: 16px; }
+.missionReviewHead  h3{ font-size: 16px; letter-spacing: -0.4px; line-height: 20px; font-family:'AppleSDGothicNeoB'; }
+.missionReviewComment{ text-align: center; font-size: 15px; letter-spacing: -0.38px; margin-bottom: 20px; }
+.missionReviewWrap .reviewStar{ margin-bottom: 40px; }
+
+
+/* 봉사미션 리뷰보기 */
+.missionReviewSlide{ width: calc(100% + 40px); margin-left: -20px; height: 400px; margin-bottom: 30px; }
+.missionReviewSlide .swiper-slide{ background-color: #f0f0f0; height: 400px; }
+.missionReviewSlide .swiper-slide img{ width: 100%; height: 400px; object-fit: contain; }
+.missionReviewSlide .swiper-scrollbar{ width: 120px; height: 4px; border-radius: 2px; left: 50%; bottom: 16px; transform: translateX(-50%); background-color: rgba(255,255,255,0.8); }
+.missionReviewSlide .swiper-scrollbar .swiper-scrollbar-drag{ background-color: #444; }
+
+.missionReviewArea{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.missionReviewArea .reviewStar{ gap: 4px; margin: 0; }
+.missionReviewArea .reviewStar .star img{ width: 17px; }
+.missionReviewArea .btn_like img{ width: 28px; }
+.missionReviewArea .btn_like img.onImg{ display: none; }
+.missionReviewArea .btn_like.on img{ display: none; }
+.missionReviewArea .btn_like.on img.onImg{ display: block; }
+
+.missionReviewViewWrap .name{ font-size: 15px; letter-spacing: -0.38px; font-family:'AppleSDGothicNeoB'; margin-bottom: 20px; }
+.missionReviewViewWrap .missionName{ font-size: 13px; letter-spacing: -0.33px; color: #555; margin-bottom: 16px; }
+.missionReviewViewWrap .title{ font-size: 18px; letter-spacing: -0.45px; font-family:'AppleSDGothicNeoB'; margin-bottom: 24px; }
+.missionReviewViewWrap .text{ font-size: 15px; letter-spacing: -0.38px; color: #333; line-height: 22px; }
+
+
+/* 포인트사용 가맹점 지도 */
+.pointContainer .textCategory{ padding: 0 20px; margin: 0; padding-top: 18px; }
+
+.mapInfoWrap.point .address{ margin-bottom: 16px; }
+
+/* 포인트사용 가맹점 상세 */
+.storeViewWrap .storeImgBox{ width: calc(100% + 40px); margin-left: -20px; height: 310px; position: relative; background: linear-gradient(0deg, rgba(231,231,231,1) 0%, rgba(255,255,255,1) 100%); margin-bottom: 30px; }
+.storeViewWrap .storeImgBox img{ width: 100%; height: 100%; object-fit: cover; }
+.storeViewWrap .storeImgBox.empty img{ width: 246px; height: 144px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+.storeViewWrap .title{ font-size: 24px; letter-spacing: -0.6px; font-family:'AppleSDGothicNeoB'; margin-bottom: 12px; }
+.storeViewWrap .address{ display: flex; align-items: center; gap: 4px; font-size: 15px; letter-spacing: -0.38px; color: #555; margin-bottom: 20px; }
+.storeViewWrap .address img{ width: 11px; }
+.storeViewWrap .comment{ font-size: 15px; letter-spacing: -0.38px; line-height: 20px; font-family:'AppleSDGothicNeoSB'; margin-bottom: 26px; }
+
+.storeItemList .item{ padding: 16px 0; border-top: 1px solid #eee; display: flex; align-items: center; gap: 16px; }
+.storeItemList .item .imgBox{ width: 100px; height: 100px; border-radius: 6px; background: #f4f4f4; flex: none; display: flex; align-items: center; justify-content: center; }
+.storeItemList .item .imgBox img{ width: 100%; height: 100%; object-fit: contain; }
+.storeItemList .item .imgBox img.noneImg{ width: 43px; height: 33px; }
+.storeItemList .item .textBox{ width: 100%; }
+.storeItemList .item .textBox h4{ font-size: 17px; letter-spacing: -0.43px; font-family:'AppleSDGothicNeoB'; margin-bottom: 8px; }
+.storeItemList .item .textBox span{ display: block; font-size: 14px; letter-spacing: -0.35px; color: #666; margin-bottom: 14px; }
+.storeItemList .item .textBox .point{ display: flex; align-items: center; gap: 4px; }
+.storeItemList .item .textBox .point p{ height: 12px; font-size: 16px; letter-spacing: -0.4px; color: #009868; font-family:'AppleSDGothicNeoB'; }
+.storeItemList .item .textBox .point img{ width: 16px; }
+
+.popupItemInfoWrap h3{ font-size: 22px; letter-spacing: -1.1px; font-family:'AppleSDGothicNeoB'; margin-bottom: 16px; }
+.popupItemInfoWrap .popupItemInfo{ display: flex; align-items: center; gap: 4px; margin-bottom: 14px; }
+.popupItemInfoWrap .popupItemInfo span{ font-size: 14px; letter-spacing: -0.35px; color: #666; }
+.popupItemInfoWrap .popupItemInfo img{ width: 16px; margin-left: 4px; flex: none; }
+.popupItemInfoWrap .popupItemInfo p{ font-size: 16px; letter-spacing: -0.4px; color: #009868; font-family:'AppleSDGothicNeoB'; }
+.popupItemInfoWrap .imgBox{ width: 100%; height: 260px; background-color: #f4f4f4; display: flex; align-items: center; justify-content: center; margin-bottom: 70px; }
+.popupItemInfoWrap .imgBox img{ width: 100%; height: 100%; object-fit: cover; }
+.popupItemInfoWrap .imgBox img.noneImg{ width: 77px; height: 59px; }
+.popupItemInfoWrap .popupItemQrBox{ text-align: center; padding-bottom: 20px; }
+.popupItemInfoWrap .popupItemQrBox img{ width: 218px; }
+
+
+/* 포인트사용 물품교환 리스트 */
+.btn_searchArea { display: flex; justify-content: flex-end; margin-bottom: 16px; }
+.btn_searchArea .btn_search img{ width: 20px; }
+
+.exchaingeList .item{ padding: 16px; border-radius: 16px; background-color: #f4f4f4; display: flex; align-items: center; gap: 14px; }
+.exchaingeList .item + .item{ margin-top: 8px; }
+.exchaingeList .item .imgBox{ width: 80px; height: 80px; flex: none; background-color: #fff; display: flex; align-items: center; justify-content: center; }
+.exchaingeList .item .imgBox img{ width: 100%; height: 100%; object-fit: cover; }
+.exchaingeList .item .imgBox img.noneImg{ width: 43px; height: 33px; }
+.exchaingeList .item .textBox{ width: 100%; }
+.exchaingeList .item .textBox h3{ font-size: 16px; letter-spacing: -0.4px; font-family:'AppleSDGothicNeoB'; margin-bottom: 8px; }
+.exchaingeList .item .textBox .text{ font-size: 13px; letter-spacing: -0.33px; color: #333; line-height: 14px; font-family:'AppleSDGothicNeoSB'; margin-bottom: 14px;  overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.exchaingeList .item .textBox .point{ display: flex; align-items: center; gap: 4px; font-size: 16px; letter-spacing: -0.4px; color: #009868; font-family:'AppleSDGothicNeoB'; }
+.exchaingeList .item .textBox .point img{ width: 16px; }
+
+
+/* 포인트사용 물품교환 상세 */
+.exchangeSlide{ width: calc(100% + 40px); margin-left: -20px; height: 400px; margin-bottom: 30px; }
+.exchangeSlide .swiper-slide{ background-color: #f0f0f0; height: 400px; }
+.exchangeSlide .swiper-slide img{ width: 100%; height: 400px; object-fit: contain; }
+.exchangeSlide .swiper-scrollbar{ width: 120px; height: 4px; border-radius: 2px; left: 50%; bottom: 16px; transform: translateX(-50%); background-color: rgba(255,255,255,0.8); }
+.exchangeSlide .swiper-scrollbar .swiper-scrollbar-drag{ background-color: #444; }
+
+.exchangeViewWrap h3{ font-size: 22px; letter-spacing: -1.1px; font-family:'AppleSDGothicNeoB'; margin-bottom: 14px; }
+.exchangeViewWrap .point{ display: flex; align-items: center; gap: 4px; font-size: 20px; letter-spacing: -0.5px; color: #009868; font-family:'AppleSDGothicNeoB'; margin-bottom: 20px; }
+.exchangeViewWrap .point img{ width: 16px; }
+.exchangeViewWrap .text{ font-size: 15px; letter-spacing: -0.38px; line-height: 22px; color: #333; margin-bottom: 30px; }
+
+.input_addressWrap h4{ font-size: 14px; letter-spacing: -0.35px; font-family:'AppleSDGothicNeoB'; margin-bottom: 14px; }
+.input_addressArea{ display: grid; grid-template-columns: 120px 80px 1fr; gap: 8px 4px; }
+.input_addressArea .full{ grid-column: 1/4; }
+.input_addressArea input{ height: 48px; border-radius: 6px; border: 1px solid #d7d7d7; font-size: 16px; }
+.input_addressArea button{ width: 100%; height: 48px; border-radius: 6px; border: 2px solid #555; font-size: 15px; letter-spacing: -0.75px; color: #000; font-family:'AppleSDGothicNeoSB'; }
+
+
+/* 주소검색 */
+.addressSearchInput{ display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #000; margin-bottom: 30px; }
+.addressSearchInput *:not(button){ width: 100%; }
+.addressSearchInput input{ font-size: 18px; letter-spacing: -0.45px; border: none; padding-left: 0; }
+.addressSearchInput button.btn_search img{ width: 21px; }
+
+.addressSearchList .item{ padding: 20px 24px; background-color: #f4f4f4; border-radius: 10px; }
+.addressSearchList .item + .item{ margin-top: 8px; }
+.addressSearchList .item .number{ display: flex; align-items: center; gap: 4px; margin-bottom: 20px; }
+.addressSearchList .item .number b{ font-size: 16px; letter-spacing: -0.4px; color: var(--mainColor); font-family:'AppleSDGothicNeoB'; }
+.addressSearchList .item .number p{ font-size: 14px; letter-spacing: -0.35px; color: #777; font-family:'AppleSDGothicNeoSB'; }
+.addressSearchList .item .address{ display: flex; align-items: baseline; gap: 8px; }
+.addressSearchList .item .address + .address{ margin-top: 6px; }
+.addressSearchList .item .address span{ width: 40px; height: 24px; flex: none; border-radius: 4px; background-color: #e2e2e2; line-height: 24px; text-align: center; font-size: 13px; letter-spacing: -0.65px; }
+.addressSearchList .item .address p{ font-size: 16px; letter-spacing: -0.8px; line-height: 20px; color: #010101; }
+.addressSearchList .item .address + .address p{ font-size: 14px; letter-spacing: -0.7px; }
+
+
+/* 사용자 설정 */
+.settingBundle{ margin-bottom: 56px; }
+.settingBundle h3{ font-size: 13px; letter-spacing: -0.65px; color: #666; margin-bottom: 10px; }
+.settingBundle a{ height: 50px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #eee; font-size: 18px; letter-spacing: -0.9px; font-family:'AppleSDGothicNeoB'; }
+.settingBundle a span{ font-size: 15px; font-family:'AppleSDGothicNeoM'; }
+
+/* 내정보 확인 */
+.didCard{ padding: 24px; background-color: #f5f5f5; border: 1px solid #e2e2e2; border-radius: 10px; }
+.didCard h1{ font-size: 24px; letter-spacing: -1.2px; font-family:'AppleSDGothicNeoB'; margin-bottom: 16px; }
+.didCard p{ font-size: 16px; letter-spacing: -0.08px; margin-bottom: 30px; word-break: break-all; }
+.didCard .didBtn_area{ display: flex; align-items: center; justify-content: center; gap: 4px; }
+.didCard .didBtn_area button{ width: 100px; height: 32px; border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 8px; background-color: #d6d6d6; font-size: 14px; letter-spacing: -0.7px; }
+.didCard .didBtn_area button img{ width: 13px; }
+
+.mypageInfoWrap{ margin-top: 28px; }
+.mypageInfoWrap h3{ font-size: 14px; letter-spacing: -0.7px; font-family:'AppleSDGothicNeoB'; margin-bottom: 12px; }
+.mypageInfoTable{ padding: 16px 24px; border: 1px solid #eee; border-radius: 10px; }
+.mypageInfoTable .item{ height: 50px; display: flex; align-items: center; justify-content: space-between; }
+.mypageInfoTable .item + .item{ border-top: 1px solid #eee; }
+.mypageInfoTable .item span{ font-size: 14px; letter-spacing: -0.7px; color: #666; }
+.mypageInfoTable .item p{ font-size: 16px; letter-spacing: -0.8px; font-family:'AppleSDGothicNeoB'; }
+.mypageInfoTable .btn_mypage{ width: 100%; height: 32px; border-radius: 16px; border: 1px solid #555; font-size: 14px; letter-spacing: -0.7px; font-family:'AppleSDGothicNeoB'; margin-top: 12px; }
+
+/* 1365 연계 */
+.pageCenter{ padding-bottom: 0 !important; height: 100%; display: flex; align-items: center; justify-content: center; }
+.pageCenter p{ font-size: 16px; letter-spacing: -0.4px; color: #333; }
+
+.settingComment{ padding: 40px 0 60px; text-align: center; font-size: 18px; letter-spacing: -0.9px; }
+.linkedSubmitWrap h3{ font-size: 14px; letter-spacing: -0.7px; font-family:'AppleSDGothicNeoB'; margin-bottom: 12px; }
+.linkedSubmitWrap input[type="checkbox"] + label{ width: 100%; height: 60px; border-radius: 10px; border: 1px solid #e2e2e2; background-color: #f5f5f5; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; margin-bottom: 10px; }
+.linkedSubmitWrap input[type="checkbox"] + label::before{ width: 16px; height: 16px; border-radius: 0; background: url(../images/check-grey.png); background-size: 16px; }
+.linkedSubmitWrap input[type="checkbox"]:checked + label::before{ width: 16px; height: 16px; background: url(../images/check_main-12.png); background-size: 16px 16px; }
+
+
+.linkedWrap h3{ font-size: 14px; letter-spacing: -0.7px; font-family:'AppleSDGothicNeoB'; margin-bottom: 12px; }
+.linkedWrap .nameCard{ padding: 0 24px; height: 64px; border: 1px solid #e2e2e2; background-color: #f5f5f5; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.linkedWrap .nameCard span{ font-size: 14px; letter-spacing: -0.7px; color: #666; font-family:'AppleSDGothicNeoSB'; }
+.linkedWrap .nameCard p{ font-size: 18px; letter-spacing: -0.9px; font-family:'AppleSDGothicNeoB'; }
+.linkedWrap .workCard{ border: 1px solid #e2e2e2; background-color: #f5f5f5; border-radius: 10px; padding: 24px 26px; margin-bottom: 10px; }
+.linkedWrap .workCard .workTime{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+.linkedWrap .workCard .workTime span{ font-size: 14px; letter-spacing: -0.7px; color: #666; font-family:'AppleSDGothicNeoB'; }
+.linkedWrap .workCard .workTime p{ font-size: 13px; letter-spacing: -0.65px; font-family:'AppleSDGothicNeoSB'; }
+.linkedWrap .workCard .workTime p b{ font-size: 24px; letter-spacing: -1.2px; font-family:'AppleSDGothicNeoSB'; }
+.linkedWrap .workCard .progressArea{ margin-bottom: 34px; }
+.linkedWrap .workCard .point{ display: flex; align-items: center; justify-content: center; gap: 4px; font-size: 13px; letter-spacing: -0.65px; color: #009868; }
+.linkedWrap .workCard .point b{ font-size: 18px; letter-spacing: -0.9px; color: #009868; font-family:'AppleSDGothicNeoB'; }
+.linkedWrap .workCard .point img{ width: 16px; }
+
+
+.progressArea .progressBg{ width: 100%; height: 8px; border-radius: 4px; background-color: #ccc; position: relative; }
+.progressArea .progressBg span{ position: absolute; left: 0; top: 0; height: 8px; border-radius: 4px; background-color: #333; }
+.progressArea .progressNum{ margin-top: 8px; display: flex; align-items: center; justify-content: space-between; }
+.progressArea .progressNum span{ font-size: 12px; letter-spacing: -0.6px; color: #666; }
+
+/* 기부하기 */
+.donationPoint{ padding: 20px; border-radius: 16px; background-color: #f4f4f4; margin-top: 20px; }
+.donationPoint .mypoint{ display: flex; align-items: center; justify-content: flex-end; gap: 6px; font-size: 13px; letter-spacing: -0.33px; color: #777; font-family:'AppleSDGothicNeoSB'; margin-right: 16px; margin-bottom: 12px; }
+.donationPoint .mypoint b{ font-size: 16px; letter-spacing: -0.4px; font-family:'AppleSDGothicNeoSB'; }
+.donationPoint .donation{ display: flex; align-items: center; gap: 20px; }
+.donationPoint .donation .title{ display: flex; align-items: center; gap: 4px; font-size: 16px; letter-spacing: -0.4px; font-family:'AppleSDGothicNeoB'; word-break: keep-all; }
+.donationPoint .donation .title img{ width: 16px; }
+.donationPoint .donation .value{ display: flex; align-items: center; gap: 6px; width: 100%; font-size: 20px; font-family:'AppleSDGothicNeoB'; }
+.donationPoint .donation .value input{ width: 100%; border: none; height: 48px; }
+
+.pageComment{ margin-top: 18px; font-size: 14px; letter-spacing: -0.35px; color: #444; line-height: 20px; }
+
+/* 인증 및 보안설정 */
+.securityItem{ height: 60px; padding: 0 20px 0 26px; background-color: #f5f5f5; border: 1px solid #e2e2e2; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.securityItem input[type="radio"] + label{ font-size: 16px; margin: 0; gap: 16px; }
+.securityItem input[type="radio"] + label::before{ width: 16px; height: 16px; box-shadow: none; border-radius: 0; background: url(../images/check-grey.png); background-size: 16px; }
+.securityItem input[type="radio"]:checked + label::before{ width: 16px; height: 16px; border: none; background: url(../images/check_main-12.png); background-size: 16px 16px; }
+.securityItem button{ width: 64px; height: 32px; border-radius: 16px; border: 1px solid #555; background-color: #fff; font-size: 14px; letter-spacing: -0.35px; color: #000; font-family:'AppleSDGothicNeoSB'; flex: none; }
+
+
+/* 1:1 문의 */
+.answerArea{ margin-top: 20px; padding-top: 22px; border-top: 1px solid #e3e3e3; display: none; }
+.answerArea .answerTitle{ font-size: 14px; letter-spacing: -0.35px; color: var(--mainColor); margin-bottom: 16px; }
+.answerArea .answerText{ font-size: 15px; letter-spacing: -0.38px; color: #333; line-height: 20px; margin-bottom: 14px; }
+
+.btn_write{ position: fixed; bottom: 30px; right: 20px;  height: 56px; border-radius: 28px; background-color: var(--mainColor); display: flex; align-items: center; justify-content: center; gap: 10px; padding: 0 20px; transition: all 0.3s; box-shadow: 0 4px 10px 0 rgba(0,0,0,0.26); }
+.btn_write.botMenu{ bottom: 110px; }
+.btn_write img{ width: 21px; }
+.btn_write p{ font-size: 16px; letter-spacing: -0.4px; color: #fff; font-family:'AppleSDGothicNeoSB'; word-break: keep-all; overflow: hidden; transition: all 0.3s; }
+
+.btn_write.mini{ gap: 0; padding: 0 18px; }
+.btn_write.mini p{ width: 0px !important; }
+
+/* 자주묻는 질문 */
+.faqArea{ margin-top: 24px; display: none; }
+.faqArea .answerText{ font-size: 15px; letter-spacing: -0.38px; color: #333; line-height: 20px; }
+
+/* 공지사항 상세 */
+.noticeViewWrap h2{ font-size: 18px; letter-spacing: -0.45px; line-height: 24px; font-family:'AppleSDGothicNeoB'; margin-bottom: 14px; }
+.noticeViewWrap .date{ font-size: 14px; letter-spacing: -0.35px; color: #666; margin-bottom: 24px; }
+.noticeViewWrap .noticeText{ margin-top: 30px; font-size: 15px; letter-spacing: -0.38px; color: #000; line-height: 24px; }
+
+hr{ width: calc(100% + 40px); margin-left: -20px; height: 1px; background-color: #eee; }
+
+/* 봉사후기 리스트 */
+.reviewList .reviewStar{ gap: 2px; margin: 0; }
+.reviewList .reviewStar .star img{ width: 17px; }
+.reviewList .reviewStar .name{ margin-left: 6px; }
+.reviewList .type{ margin-bottom: 20px; }
+
+/* 봉사후기 상세 */
+.reviewArea{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+.reviewArea .reviewStar{ gap: 4px; margin: 0; }
+.reviewArea .reviewStar .star img{ width: 17px; }
+.reviewArea .reviewStar .name{ font-size: 15px; letter-spacing: -0.38px; font-family:'AppleSDGothicNeoB'; }
+.reviewArea .date{ font-size: 14px; letter-spacing: -0.35px; color: #666; }
+
+.reviewViewWrap .type{ width: fit-content; padding: 4px 10px; min-height: 24px; border-radius: 12px; background-color: var(--subColor); font-size: 14px; letter-spacing: -0.35px; color: var(--mainColor); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+.reviewViewWrap .missionName{ font-size: 13px; letter-spacing: -0.33px; color: #555; margin-bottom: 20px; }
+.reviewViewWrap .title{ font-size: 18px; letter-spacing: -0.45px; font-family:'AppleSDGothicNeoB'; margin-bottom: 24px; }
+.reviewViewWrap .text{ font-size: 15px; letter-spacing: -0.38px; color: #333; line-height: 22px; }
+
+
+/* 자유게시판 상세 */
+.boardViewMenu{ position: absolute; top: 20px; right: 16px; }
+.boardViewMenu .btn_ViewMenu{ width: 18px; height: 18px; }
+.boardViewMenu .btn_ViewMenu img{ width: 3px; }
+.boardViewMenu .menuList{ display: none; position: absolute; top: 28px; right: 0; width: 100px; border-radius: 12px; border: 1px solid #999; background-color: #fff; padding: 4px 0; }
+.boardViewMenu .menuList button{ width: 100%; height: 40px; font-size: 14px; letter-spacing: -0.35px; color: #000; }
+.boardViewMenu .menuList button.red{ color: #ff583d; }
+
+
+/* 약관 및 정책 */
+.termsView h3{ font-size: 16px; letter-spacing: -0.4px; font-family:'AppleSDGothicNeoB'; margin-bottom: 12px; }
+.termsView .termsBox{ background-color: #f4f4f4; border-radius: 16px; padding: 20px; font-size: 14px; letter-spacing: -0.7px; line-height: 18px; margin-bottom: 22px; }
+.termsView .termsBox b{ font-size: 16px; font-family:'AppleSDGothicNeoB'; }
+
+
+/* 스플래쉬 */
+.splashContainer{ padding: 0; }
+.splashContainer .content_wrap{ padding: 0; }
+.splash{ height: 100%; display: flex; align-items: center; justify-content: center; background-color: var(--mainColor); }
+.splash svg{ width: 124px; }
+.splash svg path{ fill: #fff; }
+.splash img{ position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); width: 113px; }
+
+

@@ -1,0 +1,207 @@
+header{ width: 100%; height: 110px; position: fixed; top: 0; left: 0; z-index: 5; background-color: #fff; border-bottom: 1px solid rgba(0,0,0,0.1); }
+footer{ margin-top: 0; }
+.mainWrap section{ width: 100%; height:calc(var(--vh, 1vh) * 100); padding-top: 180px; position: relative; }
+.mainWrap section .sectionBgBox{ width: 100%; height:calc(var(--vh, 1vh) * 100); position: absolute; top: 0; left: 0; z-index: -1; overflow: hidden; }
+.mainWrap section .sectionBgBox img{ width: 100%; height: 100%; object-fit: cover;  }
+.mainWrap section .sectionBgBox.on img{ animation: bgAni 2s ease-out; animation-fill-mode: forwards; }
+@-webkit-keyframes bgAni{
+    0%{ transform: scale(1.25); }
+    100%{ transform: scale(1); }
+}
+@media screen and (max-width: 1200px){
+    header{ height: 60px; }
+}
+.mainWrap section .sectionCenterPosition{ width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+@media screen and (max-width: 1200px){
+    .mainWrap section{ height: auto; padding-top: 125px; padding-bottom: 40px; }
+    .mainWrap section .sectionBgBox{ display: none; }
+}
+
+/* 차트공통 */
+.chartLabel{ display: flex; justify-content: flex-end; gap: 16px; margin: -7px 0 27px; }
+.chartLabel p{ font-size: 13px; letter-spacing: -0.52px; color: #14284d; display: flex; align-items: center; }
+.chartLabel p span{ width: 28px; height: 6px; display: inline-block; margin-left: 6px; }
+.chartLabel p.comment{ font-size: 12px; letter-spacing: -0.48px; color: #333; margin-left: 32px; }
+
+/* section1 */
+.section1{  }
+.section1 .sectionTitle{ text-align: center; margin-bottom: 55px; }
+.section1 .sectionTitle h1{ font-size: 48px; letter-spacing: -2.4px; color: #fefefe; font-family:'TTOmniGothic015'; }
+.section1 .sectionTitle h1 b{ font-size: 48px; letter-spacing: -2.4px; color: #fefefe; font-family:'TTOmniGothic035'; }
+.section1 .sectionTitle p{ margin-top: 30px; font-size: 30px; letter-spacing: -0.75px; color: #fefefe; font-family:'TTOmniGothic025'; }
+
+.section1ChartWrap{ background-color: rgba(255,255,255,0.9); border-radius: 10px; padding: 38px 42px 32px; box-shadow: 0 11px 21.1px 5.9px rgba(28,34,45,0.54); }
+.section1ChartWrap h3{ font-size: 30px; letter-spacing: -1.5px; color: #010101; font-family: 'SUIT-Bold'; }
+.section1ChartWrap .chartArea{ display: flex; gap: 40px; }
+.section1ChartWrap .chartArea .chartSelectArea{ width: 220px; flex: none; padding-top: 30px; }
+.section1ChartWrap .chartArea .chartSelectArea-m{ display: none; }
+
+.section1ChartWrap .chartSelectItem .titleBox{ height: 40px; display: flex; align-items: center; justify-content: space-between; }
+.section1ChartWrap .chartSelectItem .titleBox .title{ font-size: 16px; letter-spacing: -0.8px; color: #000; font-family: 'SUIT-SemiBold'; }
+.section1ChartWrap .chartSelectItem .titleBox .more{ display: none; flex: none; }
+.section1ChartWrap .chartSelectItem.on .titleBox .title { font-size: 22px; letter-spacing: -1.1px; color: #1b4085; font-family: 'SUIT-Bold'; transition: all 0.3s; }
+.section1ChartWrap .chartSelectItem.on .titleBox .more{ display: block; }
+.section1ChartWrap .chartSelectItem .statsBox{ display: none; border-radius: 6px; background-color: #c1ddec; }
+.section1ChartWrap .chartSelectItem:first-child .statsBox{ display: block; }
+.section1ChartWrap .chartSelectItem .statsBox .statsBoxInner{ display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px 14px 14px; }
+.section1ChartWrap .chartSelectItem .statsBox .statsBoxInner .text{ width: 100%; }
+.section1ChartWrap .chartSelectItem .statsBox .statsBoxInner .text p{ font-size: 13px; letter-spacing: -0.65px; color: #000; margin-bottom: 8px; white-space: nowrap; }
+.section1ChartWrap .chartSelectItem .statsBox .statsBoxInner .text b{ font-size: 26px; letter-spacing: -1.3px; color: #000; font-family:'SUIT-ExtraBold'; }
+.section1ChartWrap .chartSelectItem .statsBox .statsBoxInner img{ flex: none; }
+
+.section1ChartWrap .chartBoxArea{ width: 100%; position: relative; perspective: 1000px; }
+.section1ChartWrap .chartBoxArea .chartBoxItem{ width: 100%; transition: all 1.2s; backface-visibility: hidden; }
+
+.section1ChartWrap .chartArea .chartBox{ width: 100%; height: 310px; overflow-x: auto; overflow-y: hidden; }
+.section1ChartWrap .chartArea .chartBox::-webkit-scrollbar{ display: none; }
+.section1ChartWrap .chartArea .chartBox canvas{ min-width: 500px; }
+
+.section1Scroll{ margin: 0 auto; margin-top: 24px; display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 14px; color: #fefefe; flex: none; }
+@media screen and (max-width: 1200px){
+    .section1{ background: url(../images/section1Bg.png) no-repeat center; background-size: cover; }
+    .section1 .sectionTitle{ margin-bottom: 60px; }
+    .section1 .sectionTitle h1{ font-size: 26px; letter-spacing: -1.3px; line-height: 1.4; }
+    .section1 .sectionTitle h1 b{ font-size: 26px; letter-spacing: -0.26px; display: block; }
+    .section1 .sectionTitle p{ margin-top: 16px; font-size: 17px; letter-spacing: -0.43px; }
+
+    .section1ChartWrap{ padding: 30px; }
+    .section1ChartWrap h3{ font-size: 22px; letter-spacing: -1.1px; margin-bottom: 25px; }
+    .section1ChartWrap .chartArea{ gap: 20px; flex-direction: column; }
+    .section1ChartWrap .chartArea .chartSelectArea{ display: none; }
+    .section1ChartWrap .chartArea .chartSelectArea-m{ display: block; }
+    
+    .section1ChartWrap .chartArea .chartSelectArea-m .chartSelectTitle{ display: flex; align-items: center; gap: 18px; overflow: auto; margin-bottom: 20px; height: 20px; width: calc(100% + 60px); padding: 0 30px; margin-left: -30px; }
+    .section1ChartWrap .chartArea .chartSelectArea-m .chartSelectTitle::-webkit-scrollbar{ display: none; }
+    .section1ChartWrap .chartArea .chartSelectArea-m .chartSelectTitle button{ font-size: 15px; letter-spacing: -0.75px; color: #000; font-family: 'SUIT-SemiBold'; white-space: nowrap; }
+    .section1ChartWrap .chartArea .chartSelectArea-m .chartSelectTitle button.on{ color: #1b4085; font-family: 'SUIT-Bold'; }
+    .section1ChartWrap .chartArea .chartSelectArea-m .chartSelectStat{ display: flex; align-items: center; }
+    .section1ChartWrap .chartArea .chartSelectArea-m .chartSelectStat .text{ display: flex; width: 100%; min-height: 50px; align-items: center; justify-content: space-between; gap: 18px; padding: 10px 14px; background-color: #c1ddec; border-radius: 6px; }
+    .section1ChartWrap .chartArea .chartSelectArea-m .chartSelectStat .text p{ font-size: 13px; letter-spacing: -0.65px; color: #000; word-break: keep-all; }
+    .section1ChartWrap .chartArea .chartSelectArea-m .chartSelectStat .text b{ font-size: 20px; letter-spacing: -1px; color: #000; font-family: 'SUIT-Bold'; }
+    .section1ChartWrap .chartArea .chartSelectArea-m .chartSelectStat .more{ flex: none; width: 56px; }
+
+    .chartLabel{ margin: 10px 0 30px; }
+    .chartLabel p.comment{ margin-left: 0; }
+
+    .section1Scroll{ display: none; }
+
+}
+
+/* section2 */
+.section2 .sectionTitle{ text-align: center; margin-bottom: 96px; }
+.section2 .sectionTitle h1{ font-size: 72px; letter-spacing: -3.6px; color: #fefefe; font-family:'TTOmniGothic015'; }
+.section2 .sectionTitle h1 b{ font-size: 72px; letter-spacing: -3.6px; color: #fefefe; font-family:'TTOmniGothic035'; }
+
+.section2ChartWrap{ padding: 46px 54px 50px 30px; border-radius: 10px; background-color: rgba(255,255,255,0.85); box-shadow: 0 11px 15.1px 2.9px rgba(0,0,0,0.13); display: flex; gap: 70px; }
+.section2ChartWrap .chartSelectArea{ width: 220px; flex: none; }
+.section2ChartWrap .chartSelectArea h3{ font-size: 30px; letter-spacing: -1.5px; color: #000; font-family: 'SUIT-Bold'; margin-bottom: 24px; }
+.section2ChartWrap .chartSelectArea .chartSelectBox{ display: flex; flex-direction: column; justify-content: space-between; }
+.section2ChartWrap .chartSelectArea .chartSelectBox button{ width: 100%; height: auto; border-radius: 6px; display: flex; align-items: center; justify-content: space-between; padding: 6px 20px 6px 18px; }
+.section2ChartWrap .chartSelectArea .chartSelectBox button div{ height: 36px; display: none; align-items: center; justify-content: center; }
+.section2ChartWrap .chartSelectArea .chartSelectBox button p{ text-align: center;display: flex; align-items: center; justify-content: center; font-size: 16px; letter-spacing: -0.8px; color: #000; font-family: 'SUIT-SemiBold'; }
+.section2ChartWrap .chartSelectArea .chartSelectBox button.on{ background-color: #d1e6f2; }
+.section2ChartWrap .chartSelectArea .chartSelectBox button.on p{ font-family: 'SUIT-Bold'; font-size: 18px; letter-spacing: -0.9px; color: #1b4085; }
+.section2ChartWrap .chartSelectArea .chartSelectBox button.on div{ display: flex; }
+
+.section2ChartWrap .chartArea{ width: calc(100% - 220px); }
+.section2ChartWrap .chartArea .chartTitle{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 50px; }
+.section2ChartWrap .chartArea .chartTitle h4{ font-size: 24px; letter-spacing: -1.2px; color: #1b4085; font-family: 'SUIT-Bold'; }
+.section2ChartWrap .chartArea .chartTitle .chartLabel{ margin: 0; }
+.section2ChartWrap .chartArea .chartBox{ display: flex; justify-content: space-between; overflow-x: auto; overflow-y: hidden; }
+.section2ChartWrap .chartArea .chartBox::-webkit-scrollbar{ display: none; }
+.section2ChartWrap .chartArea .chartBox .chartItem{ width: auto; text-align: center; min-width: 100px; }
+.section2ChartWrap .chartArea .chartBox .chartItem h5{ font-size: 16px; letter-spacing: -0.4px; font-family: 'SUIT-SemiBold'; margin-bottom: 6px; }
+.section2ChartWrap .chartArea .chartBox .chartItem p{ font-size: 11px; letter-spacing: -0.28px; color: #444; }
+.section2ChartWrap .chartArea .chartBox .chartItem .chart{ width: 80px; height: 270px; margin: 0 auto; }
+
+@media screen and (max-width: 1200px){
+    .section2{ background: url(../images/section2Bg.png) no-repeat center; background-size: cover; }
+    .section2 .sectionTitle{ margin-bottom: 54px; }
+    .section2 .sectionTitle h1{ font-size: 32px; letter-spacing: -1.6px; }
+    .section2 .sectionTitle h1 b{ font-size: 32px; letter-spacing: -0.32px; }
+
+    .section2ChartWrap{ flex-direction: column; padding: 30px; gap: 30px; }
+    .section2ChartWrap .chartSelectArea{ width: 100%; }
+    .section2ChartWrap .chartSelectArea h3{ font-size: 22px; letter-spacing: -1.1px; }
+    .section2ChartWrap .chartSelectArea .chartSelectBox{ height: 30px; flex-direction: row; gap: 24px; justify-content: flex-start; overflow: auto; width: calc(100% + 60px); padding: 0 30px; margin-left: -30px; }
+    .section2ChartWrap .chartSelectArea .chartSelectBox::-webkit-scrollbar{ display: none; }
+    .section2ChartWrap .chartSelectArea .chartSelectBox button{ width: auto; height: auto; border-radius: 0; padding: 0; }
+    .section2ChartWrap .chartSelectArea .chartSelectBox button div{ height: 0; display: none; }
+    .section2ChartWrap .chartSelectArea .chartSelectBox button p{ font-size: 15px; letter-spacing: -0.75px; white-space: nowrap; }
+    .section2ChartWrap .chartSelectArea .chartSelectBox button.on{ background-color: transparent; }
+    .section2ChartWrap .chartSelectArea .chartSelectBox button.on p{ font-family: 'SUIT-Bold'; font-size: 15px; letter-spacing: -0.75px; color: #1b4085; }
+    .section2ChartWrap .chartSelectArea .chartSelectBox button.on div{ display: none; }
+
+    .section2ChartWrap .chartArea{ width: 100%; }
+    .section2ChartWrap .chartArea .chartTitle{ justify-content: center; margin-bottom: 12px; }
+    .section2ChartWrap .chartArea .chartTitle h4{ display: none; }
+    .section2ChartWrap .chartArea .chartBox .chartItem h5{ font-size: 13px; letter-spacing: -0.33px; }
+    .section2ChartWrap .chartArea .chartBox .chartItem p{ font-size: 10px; letter-spacing: -0.25px; }
+    .section2ChartWrap .chartArea .chartBox .chartItem .chart{ width: 80px; }
+}
+@media screen and (max-width: 600px){
+    .section2ChartWrap .chartArea .chartBox .chartItem .chart{ width: 60px; }
+}
+@media screen and (max-width: 500px){
+    .section2ChartWrap .chartArea .chartBox .chartItem .chart{ width: 50px; }
+}
+
+/* section3 */
+.mainWrap section.section3{ padding-top: 110px; }
+.section3Wrap{ display: flex; justify-content: space-between; gap: 30px; }
+.section3Box{ width: 100%; display: grid; }
+.section3Title{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.section3Title h3{ font-size: 24px; letter-spacing: -0.96px; font-family: 'SUIT-Bold'; }
+.section3BoxBody{ width: 100%; height: 370px; border-radius: 10px; background-color: #f2f2f2; overflow: hidden; padding: 24px; }
+
+.section3Box .swiper-pagination{ position: relative; width: fit-content; top: auto; bottom: auto; }
+.section3Box .swiper-pagination .swiper-pagination-bullet{ width: 6px; height: 6px; opacity: 1; background-color: #b0b0b0; border-radius: 3px; transition: all 0.3s; }
+.section3Box .swiper-pagination .swiper-pagination-bullet-active{ width: 40px; background-color: #555; }
+.section3BoxBody.infoBox{ padding: 0; }
+.section3BoxBody.infoBox .swiper{ height: 100%; }
+.section3BoxBody.infoBox .swiper-slide img{ width: 100%; height: 100%; object-fit: cover; }
+
+.section3BoxBody.reportBox .reportName{ margin-bottom: 40px; }
+.section3BoxBody.reportBox .reportName p{ font-size: 14px; letter-spacing: -0.56px; color: #444; font-family: 'SUIT-SemiBold'; margin-bottom: 8px; }
+.section3BoxBody.reportBox .reportName a{ font-size: 18px; letter-spacing: -0.72px; color: #000; font-family: 'SUIT-Bold'; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.section3BoxBody.reportBox .reportImg{ text-align: center; }
+.section3BoxBody.reportBox .reportImg img{ width: 186px; height: 241px; object-fit: cover; box-shadow: 0 6px 12.4px 0.7px rgba(0,0,0,0.14); }
+
+.section3BoxBody.newsBox{ display: flex; flex-direction: column; gap: 30px; }
+.section3BoxBody.newsBox a span{ display: block; font-size: 13px; letter-spacing: -0.52px; color: #2b4c89; font-family: 'SUIT-SemiBold'; margin-bottom: 6px; }
+.section3BoxBody.newsBox a p{ font-size: 16px; letter-spacing: -0.64px; color: #000; font-family: 'SUIT-SemiBold'; line-height: 20px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+
+.section3BoxBody.noticeBox{ display: flex; flex-direction: column; gap: 30px; }
+.section3BoxBody.noticeBox a span{ display: block; font-size: 13px; letter-spacing: -0.33px; color: #555; font-family: 'SUIT-SemiBold'; margin-bottom: 6px; }
+.section3BoxBody.noticeBox a p{ font-size: 16px; letter-spacing: -0.4px; color: #000; font-family: 'SUIT-SemiBold'; line-height: 20px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+
+.section3Bot{ margin-top: 28px; width: 100%; display: flex; align-items: center; justify-content: space-around; overflow: auto; }
+@media screen and (max-width: 1200px){
+    .mainWrap section.section3{ padding-top: 50px; }
+    .section3Wrap{ flex-direction: column; }
+    .section3Title h3{ font-size: 22px; letter-spacing: -0.88px; }
+    .section3BoxBody{ height: auto; }
+
+    .section3BoxBody.infoBox{ background-color: transparent; border-radius: 0; }
+    .section3BoxBody.infoBox .swiper-wrapper{ width: calc(100% + 40px); padding: 0 20px; margin-left: -20px; }
+    .section3BoxBody.infoBox .swiper-slide{ width: auto; border-radius: 10px; overflow: hidden; }
+    .section3BoxBody.infoBox .swiper-slide img{ width: 270px; height: 370px; }
+
+    .section3Bot{ justify-content: flex-start; gap: 20px; width: calc(100% + 40px); padding: 0 20px; margin-left: -20px; }
+    .section3Bot::-webkit-scrollbar{ display: none; }
+}
+
+
+/* 바로가기 */
+.rightRemote{ position: fixed; right: 20px; top: 32%; border-radius: 10px; background-color: rgba(0,0,0,0.6); z-index: 9; }
+.rightRemote .remoteBtn{ padding: 30px 16px 24px; display: flex; flex-direction: column; border-bottom: 1px solid rgba(85,85,85,0.5); gap: 20px; }
+.rightRemote .remoteBtn button{ display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center;font-size: 13px; letter-spacing: -0.65px; color: #fefefe; line-height: 16px; }
+.rightRemote .remoteBtn span{ width: 100%; height: 1px; background-color: rgba(85,85,85,0.5); }
+.rightRemote .scrollTop{ width: 100%; height: 30px; }
+@media screen and (max-width: 1500px) {
+    .rightRemote{ display: none; }
+}
+
+
+
+

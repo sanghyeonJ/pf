@@ -1,3 +1,8 @@
+:root{
+    --pointColor: #292a50;
+    --pointBorderColor: #1c2f65;
+    --pointShadowColor: #5f79e5;
+}
 html{
     font-size: 16px;
 }
@@ -11,6 +16,7 @@ body{
     color: #fff;
 }
 a{
+    display: block;
     color: #fff;
 }
 .bg{
@@ -30,7 +36,6 @@ a{
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
-    position: relative;
 }
 
 /* titleSection */
@@ -50,6 +55,9 @@ a{
     height: 100%;
     display: block;
     background-color: rgba(0,0,0,0.6);
+}
+.titleSection .inner{
+    position: relative;
 }
 .titleSection h1{
     font-size: 2.5rem;
@@ -145,15 +153,11 @@ table tr:nth-child(odd) td{
     border-radius: 10px;
 }
 .gridColorBox{
-    background-color: #7e023c;
-    border: 1px solid #970248;
+    background-color: var(--pointColor);
+    border: 1px solid var(--pointBorderColor);
 }
 .gridBorderBox{
     border: 1px solid #aaa;
-}
-.gridColorBox.ready{
-    background-color: #7e023c44;
-    border: 1px solid #97024844;
 }
 .gridBox h3{
     font-size: 1.4rem;
@@ -175,7 +179,142 @@ table tr:nth-child(odd) td{
 }
 .imgBox img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
     position: absolute;
     top: 0;
     left: 0;
 }
+
+/* skill */
+.skillBox{
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px 4px var(--pointShadowColor);
+    transition: all 0.5s;
+}
+.skillBox img{
+    width: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: skillIcon 0.5s infinite linear alternate;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    transition: all 0.5s;
+}
+@keyframes skillIcon{
+    from{
+        transform: translate(-50%, -50%) rotateY(0);
+    }
+    to{
+        transform: translate(-50%, -50%) rotateY(90deg);
+    }
+}
+.skillBox::before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 70px) calc(50% - 1px), 0 calc(50% - 1px), 0 calc(50% + 1px), calc(100% - 70px) calc(50% + 1px), 100% 100%, 0 100%);
+    transition: all 0.5s;
+}
+.skillBox::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70px calc(50% + 1px), 100% calc(50% + 1px), 100% calc(50% - 1px), 70px calc(50% - 1px));
+    transition: all 0.5s;
+}
+.skillText{
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.skillBox:hover{
+    box-shadow: 0 0 20px 5px var(--pointShadowColor);
+    scale: 1.02;
+}
+.skillBox:hover img{
+    opacity: 0.2;
+}
+.skillBox:hover::before{
+    transform: translateX(calc(-100% + 40px));
+}
+.skillBox:hover::after{
+    transform: translateX(calc(100% - 40px));
+}
+.skillBox:hover .skillText{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 프로젝트 */
+.projectBox{
+    position: relative;
+    perspective: 1000px;
+}
+.projectBox .gridBox{
+    padding: 34px;
+}
+.projectBox .projectBoxInner{
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+}
+.projectBox .front{
+    backface-visibility: hidden;
+    transform: translateZ(80px);
+    transition: all 0.5s;
+}
+.projectBox .back{
+    position: absolute;
+    width: calc(100% - 60px);
+    top: 50%;
+    left: 50%;
+    transform: rotateY(180deg) translateX(50%) translateY(-50%) translateZ(80px);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    text-align: center;
+}
+.btn{
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--pointBorderColor);
+    transition: all 0.5s;
+}
+.btn:hover{
+    background-color: var(--pointColor);
+}
+
+.projectBox .imgBox{
+    padding-bottom: 100%;
+}
+.projectBox:hover .projectBoxInner{
+    transform: rotateY(180deg);
+}
+
+
+
+
+/* ani */
+.ani{ opacity: 0; transform: translateY(50px); transition: all 0.5s; }
+.ani.on{ opacity: 1; transform: translateY(0); }
+
+
+

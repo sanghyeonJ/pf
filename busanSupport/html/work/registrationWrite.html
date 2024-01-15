@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev" onclick="location.href='./workMain.html'"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>도와주세요</h1>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container">
+            <div class="content_wrap">
+                <div class="inner">
+
+                    <div class="requsetWriteWrap">
+                        <div class="writeTable">
+                            <div class="item">
+                                <p>제목</p>
+                                <div class="itemInput">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>카테고리</p>
+                                <div class="itemInput">
+                                    <select name="" id="">
+                                        <option value="">배움</option>
+                                    </select>
+                                </div>
+                                <div class="itemInput">
+                                    <select name="" id="">
+                                        <option value="">세부카테고리</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="item2way">
+                                <div class="item">
+                                    <p>모집인원</p>
+                                    <div class="itemInput">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>시작시간</p>
+                                <div class="itemInput">
+                                    <input type="text" class="date everyStartDate">
+                                    <select name="" id="">
+                                        <option value="">14:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>종료시간</p>
+                                <div class="itemInput">
+                                    <input type="text" class="date everyEndDate">
+                                    <select name="" id="">
+                                        <option value="">14:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>장소</p>
+                                <div class="itemInput">
+                                    <input type="text" class="inputAddress">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>소모 봉사 포인트</p>
+                                <div class="itemInput">
+                                    <input type="text" class="maxW50p">
+                                    <p class="point">
+                                        P / 전체 <b>20,000</b>P
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>마감일시</p>
+                                <div class="itemInput">
+                                    <input type="text" class="date everyDate">
+                                    <select name="" id="">
+                                        <option value="">14:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="item2way">
+                                <div class="item">
+                                    <p>연락방법</p>
+                                    <div class="itemInput">
+                                        <select name="" id="">
+                                            <option value="">안심번호</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="bottomFix">
+                <div class="inner">
+                    <button type="button" class="btn_bot1 btn_mainColor">확인</button>
+                </div>
+            </div>
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+    </body>
+</html>

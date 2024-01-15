@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../../resources/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="../../../resources/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../../../resources/css/portal/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../../resources/js/common/jquery/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../../resources/js/common/jquery/jquery-ui.min.js"></script>
+        <script src="../../../resources/js/common/jquery/datepicker-ko.js"></script>
+        <script src="../../../resources/js/common/jquery/chart.js"></script>
+        <script src="../../../resources/js/common/design/swiper-bundle.min.js"></script>
+        <script src="../../../resources/js/common/design/portal/gnb.js"></script>
+        <script src="../../../resources/js/common/design/portal/design.js"></script>
+    </head>
+
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <div class="pageWrap">
+            <div class="contentWrap">
+                <div class="inner">
+                    <button type="button" class="pageBackArrow-s" onclick="location.href='./more.html'"><img src="../../../resources/images/portal/backArrow-s.png" alt="뒤로가기"></button>
+                    <h1 class="pageTitle-s">말끔!! 보기</h1>
+                    <div class="malkmList">
+                        <a href="javascript:void(0)" class="item">
+                            <div class="imgBox">
+                                <div class="swiper malkmSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="../../../resources/images/portal/img-default.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="../../../resources/images/portal/mainPerson.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="../../../resources/images/portal/img-default.png" alt=""></div>
+                                    </div>
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <h4>광명 사무실청소, 가학동 상가 건물청소용역 진행한 후기</h4>
+                                <span>2023.12.10</span>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="item">
+                            <div class="imgBox">
+                                <div class="swiper malkmSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="../../../resources/images/portal/img-default.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="../../../resources/images/portal/mainPerson.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="../../../resources/images/portal/img-default.png" alt=""></div>
+                                    </div>
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <h4>광명 사무실청소, 가학동 상가 건물청소용역 진행한 후기</h4>
+                                <span>2023.12.10</span>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0)" class="item">
+                            <div class="imgBox">
+                                <div class="swiper malkmSwiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="../../../resources/images/portal/img-default.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="../../../resources/images/portal/mainPerson.png" alt=""></div>
+                                        <div class="swiper-slide"><img src="../../../resources/images/portal/img-default.png" alt=""></div>
+                                    </div>
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                            </div>
+                            <div class="textBox">
+                                <h4>광명 사무실청소, 가학동 상가 건물청소용역 진행한 후기</h4>
+                                <span>2023.12.10</span>
+                            </div>
+                        </a>
+
+                        <div class="nodata" style="display: none;">  <!-- 내용 없을경우 -->
+                            <img src="../../../resources/images/portal/nodata.png" alt="">
+                            <p>등록된 게시물이 없습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottomWrap">
+                <div class="inner">
+                    <button type="button" class="btn_full btn_img"><img src="../../../resources/images/portal/ico_malkm.png" alt="" style="width: 28px;">말끔!! 후기등록</button>
+                </div>
+            </div>
+        </div>
+
+        <!------------------------------------ content::end ------------------------------->
+
+
+        <!------------------------------------ footer::start ------------------------------->
+        <footer>
+            
+        </footer>
+        <!------------------------------------ footer::end ------------------------------->
+        <script>
+            var swiper = new Swiper(".malkmSwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                },
+            });
+        </script>
+    </body>
+</html>

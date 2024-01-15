@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../resources/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../resources/css/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../resources/js/lib/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../resources/js/jquery-ui.js"></script>
+        <script src="../../resources/js/datepicker-ko.js"></script>
+        <script src="../../resources/js/gnb.js"></script>
+        <script src="../../resources/js/design.js"></script>
+    </head>
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            <div class="inner">
+                <button type="button" class="btn_headerPagePrev" onclick="location.href='../main/main.html'"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                <h1>커뮤니티</h1>
+            </div>
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <article class="container">
+            <div class="content_wrap">
+                <div class="inner">
+
+                    <div>
+                        <div class="textCategory">
+                            <a href="./reviewList.html">봉사후기</a>
+                            <a href="javascript:void(0)" class="on">자유 게시판</a>
+                        </div>
+                        <div class="btn_searchArea">
+                            <button type="button" class="btn_search" onclick="popupOpen(searchPopup)"><img src="../../resources/images/btn_search.png" alt=""></button>
+                        </div>
+
+                        <div class="linkList">
+                            <a href="./boardView.html" class="linkItem">
+                                <div class="linkTop">
+                                    <p class="name">홍길동</p>
+                                    <p class="date">2023.01.01</p>
+                                </div>
+                                <p class="title">자유게시판 제목입니다.</p>
+                            </a>
+                            <a href="./boardView.html" class="linkItem">
+                                <div class="linkTop">
+                                    <p class="name">홍길동</p>
+                                    <p class="date">2023.01.01</p>
+                                </div>
+                                <p class="title">자유게시판 제목입니다.</p>
+                            </a>
+                        </div>
+
+                        <button class="btn_listMore">더보기 (<b>1</b>/3)</button>
+
+                    </div>
+                    
+                </div>
+                <button type="button" class="btn_write botMenu" onclick="location.href='./boardWrite.html'"><img src="../../resources/images/btn_write.png" alt=""><p>글쓰기</p></button>
+
+            </div>
+
+            <div class="bottomFix">
+                <div class="botMenu">
+                    <a href="../main/main.html">
+                        <img src="../../resources/images/menu_home.png" alt=""><img src="../../resources/images/menu_home-on.png" alt="" class="onimg">
+                        홈
+                    </a>
+                    <a href="../work/workMain.html">
+                        <img src="../../resources/images/menu_work.png" alt=""><img src="../../resources/images/menu_work-on.png" alt="" class="onimg">
+                        자원봉사
+                    </a>
+                    <a href="../mission/missionList.html">
+                        <img src="../../resources/images/menu_mission.png" alt=""><img src="../../resources/images/menu_mission-on.png" alt="" class="onimg">
+                        봉사미션
+                    </a>
+                    <a href="javascript:void(0)" class="on">
+                        <img src="../../resources/images/menu_commu.png" alt=""><img src="../../resources/images/menu_commu-on.png" alt="" class="onimg">
+                        커뮤니티
+                    </a>
+                </div>
+            </div>
+        </article>
+        <!------------------------------------ content::end ------------------------------->
+
+        <!-- 상단 팝업 -->
+        <div class="slidePopupWrap">
+
+            <div class="slidePopup_search" id="searchPopup">
+                <div class="slidePopup_header">
+                    <button type="button" class="btn_headerPagePrev"><img src="../../resources/images/headerArrow.png" alt="이전 페이지"></button>
+                    <h1>게시판 검색</h1>
+                </div>
+                <div class="slidePopupSearchCont">
+                    <div class="inputSearch">
+                        <img src="../../resources/images/btn_search.png" alt="" class="ico_search">
+                        <input type="text" placeholder="원하시는 글을 검색해보세요." class="inputClear">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <script>
+            let aniDuration = 300;
+            // 팝업 열기
+            function popupOpen(popupTargetId){
+                $('.slidePopupWrap').css({display: 'block'});
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0.5)'}, aniDuration);
+                $(popupTargetId).css({transform: 'translateY(0%)'});
+            }
+            // 팝업 닫기
+            function popupCloseSearch(popupTargetId){
+                $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                $(popupTargetId).css({transform: 'translateY(-100%)'});
+            }
+            $(document).on('click', '.slidePopupWrap', function (e) {
+                var popContent = $('.slidePopup_search');
+                if (popContent.has(e.target).length === 0) {
+                    $('.slidePopupWrap').animate({backgroundColor: 'rgba(0,0,0,0)'}, aniDuration, function(){ $('.slidePopupWrap').css({display: 'none'}); });
+                    $('.slidePopup_search').css({transform: 'translateY(-100%)'});
+                    setTimeout(function(){
+                        $('.infoDetailWrap').css({display: 'none'})
+                        $('.mapInfoWrap').removeClass('view')
+                    }, 300)
+                }
+            });
+
+            // 하단고정 글쓰기 버튼
+            let btnWriteTextWidth = $('.btn_write p').width();
+            $('.btn_write p').css({ width: btnWriteTextWidth })
+            let scrollArea = $('.content_wrap');
+            let lastScrollY = 0;
+            addEventListener("touchmove", e => {
+                const scrollY = scrollArea.scrollTop();
+                if( scrollY > lastScrollY ){
+                    $('.btn_write').addClass('mini')
+                } else if( scrollY < lastScrollY ){
+                    $('.btn_write').removeClass('mini')
+                }
+                lastScrollY = scrollY;
+            });
+        </script>
+    </body>
+</html>

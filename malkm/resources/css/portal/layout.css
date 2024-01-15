@@ -1,0 +1,48 @@
+/* ---------------------------------------------------------------- */
+/* ----------------------- 레이아웃 관련 css ----------------------- */
+/* ---------------------------------------------------------------- */
+body{ min-height: calc(var(--vh, 1vh) * 100); }
+
+/* 최상단 구조 */
+.pageWrap{ display: flex; flex-direction: column; width: 100%; min-height: calc(var(--vh, 1vh) * 100); background: #f3f3f3; }
+.pageWrap.pageWrap-wh{ background-color: #fff; }
+.pageWrap:has(.bottomWrap) .contentWrap{ padding-bottom: 120px; }
+.contentWrap{ height: 100%; padding: 20px 0 20px; position: relative; z-index: 1; }
+.inner{ padding: 0 30px; max-width: 460px; margin: 0 auto; }
+
+.bottomWrap{ flex: none; position: fixed; bottom: 0; left: 0; z-index: 2; width: 100%; }
+.bottomWrap:has(button){ padding: 16px 0 30px; }
+
+/* 뒤로가기 버튼 */
+.pageBackArrow-s{ margin-bottom: 30px; }
+.pageBackArrow-s img{ width: 9px; }
+
+/* 타이틀 */
+.pageTitle-l{ font-size: 30px; letter-spacing: -1.5px; color: #333; font-weight:  700; margin-bottom: 40px; margin-top: 20px; }
+.pageTitle-m{ font-size: 24px; letter-spacing: -1.2px; color: #333; font-weight:  700; height: 82px; line-height: 28px; }
+.pageTitle-s{ font-size: 24px; letter-spacing: -1.2px; color: #333; font-weight:  700; margin-bottom: 20px; }
+
+
+/* 슬라이딩 팝업 */
+.slidePopupWrap{ position: fixed; width: 100%; height: calc(var(--vh, 1vh) * 100); top: 0; left: 0; display: none; z-index: 9; }
+.slidePopup{ position: fixed; width: 100%; max-width: 480px; max-height: calc(var(--vh, 1vh) * 100 - 60px); bottom: 0; left: 50%; background-color: #fff; border-radius: 20px 20px 0 0; padding: 30px; display: flex; flex-direction: column; transition: all 0.3s; transform: translateX(-50%) translateY(100%); }
+.slidePopup.bottomScroll,
+.slidePopup.bottomScroll .slidePopupContent{ padding-bottom: 0; }
+.btn_popupClose{ width: 16px; height: 16px; margin-bottom: 30px; }
+.btn_popupClose img{ width: 16px; }
+.slidePopupTitle{ font-size: 16px; letter-spacing: -0.64px; color: #333; font-weight:  700; margin-bottom: 20px; flex: none; }
+.slidePopupTitle-l{ font-size: 20px; letter-spacing: -0.8px; color: #333; line-height: 25px; font-weight:  700; margin-bottom: 30px; }
+.slidePopupContent{ overflow: auto; padding: 2px 0 16px; }
+.slidePopupBtn{ flex: none; display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
+.slidePopupBtn .btn_text{ margin-top: 34px; }
+
+
+/* nav */
+nav{ height: 85px; background-color: #fff; width: 100%; max-width: 480px; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; margin: 0 auto; border-radius: 20px 20px 0 0; box-shadow: 0 15px 35.6px 4.4px rgba(27,56,107,0.32); }
+nav a{ display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; font-size: 12px; letter-spacing: -0.48px; color: #888; padding: 10px; }
+nav a.on{ color: var(--mainColor); }
+nav a img{ width: 24px; height: 24px; object-fit: scale-down; }
+nav a img.nabImg-on{ display: none; }
+nav a.on img{ display: none; }
+nav a.on img.nabImg-on{ display: block; }
+

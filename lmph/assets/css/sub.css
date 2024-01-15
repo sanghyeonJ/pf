@@ -1,0 +1,489 @@
+/*----------------------------- bestList --------------------------*/
+.best_box{ display: flex; margin: 3.875rem 0; }
+.best_box:hover{ box-shadow: 0 0.875rem 1.125rem 2px rgba(0,0,0,0.14); }
+
+.best_img img{ width: 20rem; }
+
+.best_text{ background-color: #f4f4f4; padding: 3.75rem 4.25rem 0 3.563rem; }
+.best_tit{ display: flex; justify-content: space-between; }
+.best_tit .best_company{ display: flex; }
+.best_tit .best_company > p{ width: 4.375rem; height: 1.75rem; line-height: 1.75rem; border-radius: 0.875rem; margin-right: 0.75rem; background-color: #5e5e5e; color: #fff; font-size: 0.938rem; letter-spacing: -0.6px; font-weight: bold; text-align: center; }
+.best_tit .best_company > div > h3{ font-size: 2rem; letter-spacing: -1.28px; line-height: 1.5rem; font-family:'Noto Sans KR', sans-serif;  }
+.best_tit .best_company > div > span{ font-size: 1rem; letter-spacing: -0.16px; color: #777; margin-top: 0.5rem; display: block; }
+
+.best_tit .best_name { display: flex; }
+.best_tit .best_name p{ font-size: 1.25rem; letter-spacing: -0.8px; line-height: 1.75rem; color: #000; font-weight: bold; }
+.best_tit .best_name p:first-child{ width: 5rem; height: 1.75rem; line-height: 1.75rem; border-radius: 0.875rem; margin-right: 0.75rem; background-color: #5e5e5e; color: #fff; font-size: 0.938rem; letter-spacing: -0.6px; text-align: center; }
+
+.best_text > h4{ font-size: 1.25rem; letter-spacing: -0.2px; margin-top: 3.125rem; color: #1c1c1c; }
+.best_text > p{ font-size: 1rem; letter-spacing: -0.16px; line-height: 1.375rem; color: #444; margin-top: 0.938rem; display: inline-block; width: 100%; white-space: normal; overflow: hidden; text-overflow: ellipsis; height: 2.75rem; text-align: left; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.best_text > a{ font-size: 0.938rem; color: #14549e; letter-spacing: -0.15px; margin-top: 1.188rem; display: inline-block; }
+
+
+/*----------------------------- bestView --------------------------*/
+.bestView_area{ border-top: 2px solid #222; border-bottom: 1px solid #222; padding: 3rem 2rem 6.25rem 2rem; display: flex; justify-content: space-between; }
+
+.bestView_area .bestV_text p{ width: 7.5rem; height: 2rem; line-height: 2rem; border-radius: 1rem; background-color: #4d7dd5; color: #fff; font-size: 1rem; font-weight: bold; letter-spacing: -0.64px; text-align: center; }
+.bestView_area .bestV_text h3{ font-size: 2rem; letter-spacing: -1.28px; color: #000; margin-top: 1.063rem; font-family:'Noto Sans KR', sans-serif; }
+
+.bestView_area .bestV_text table{ margin-top: 2.25rem; padding-right: 6.25rem; }
+.bestView_area .bestV_text table th{ font-size: 0.938rem; color: #1c1c1c; letter-spacing: -0.15px; text-align: left; padding: 0.563rem 0; position: relative; width: 12%; }
+.bestView_area .bestV_text table th::after{ content: "|"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: #dcdcdc; }
+.bestView_area .bestV_text table td{ font-size: 1.125rem; color: #000; letter-spacing: -0.72px; font-weight: bold; padding: 0.688rem 0; line-height: 1.5rem; padding-left: 1.313rem; }
+.bestView_area .bestV_text table td.con{ font-size: 1rem; color: #333; letter-spacing: -0.64px; font-weight: normal; }
+
+.bestView_area .bestV_img img{ width: 25rem; }
+
+
+
+/*----------------------------- schedule --------------------------*/
+.calendar_tag{ display: flex; }
+.table_search p{ width: 5.25rem; height: 2rem; border-radius: 1rem; display: flex; justify-content: center; align-items: center; color: #fff; margin: 0 2px; font-size: 0.875rem; }
+.table_search p img{ margin-right: 0.5rem; }
+.table_search p:nth-child(1){ background-color: #2679d5; }
+.table_search p:nth-child(2){ background-color: #00bc73; }
+.table_search p:nth-child(1) img{ width: 1.25rem; }
+.table_search p:nth-child(2) img{ width: 1.063rem; }
+
+.schedule_area{ margin-top: 3.438rem; }
+.schedule_category a{ display: inline-block; width: 12.5rem; height: 3.125rem; line-height: 3.125rem; text-align: center; font-size: 1.063rem; letter-spacing: -0.17px; font-weight: bold; color: #fff; background-color: #434343; }
+.schedule_category a:nth-child(1).on{ background-color: #2679d5; }
+.schedule_category a:nth-child(2).on{ background-color: #00bc73; }
+
+.schedule_table{ background-color: #f4f4f4; padding: 3.5rem; }
+.schedule_table table thead tr th{ font-size: 0.938rem; color: #333; letter-spacing: -0.15px; padding: 0.688rem; border-bottom: 1px solid #dadada; }
+.schedule_table table thead tr th:first-child{ text-align: left; }
+.schedule_table table tbody tr td{ font-size: 1rem; color: #333; letter-spacing: -0.16px; padding: 1rem 0.688rem; text-align: center; }
+.schedule_table table tbody tr td:first-child{ text-align: left; font-weight: bold; }
+
+
+/*----------------------------- way --------------------------*/
+.wayMap{ width: 100%; height: 37.5rem; background-color: #aaa; }
+
+.way_con{ margin-top: 3.688rem; }
+.way_con .way_tit{ display: flex; align-items: flex-end; margin-bottom: 1.875rem; }
+.way_con .way_tit h4{ font-size: 1.75rem; color: #333; margin-left: 0.75rem; }
+.way_con button{ width: 22.25rem; height: 3.125rem; background-color: #444; color: #fff; border-radius: 6px; font-size: 1.125rem; font-weight: bold; margin-right: 1rem; }
+.way_con ul{ margin-bottom: 1.813rem; }
+.way_con ul li{ display: inline-block; font-size: 1rem; line-height: 1.875rem; color: #000; }
+.way_con ul li:first-child{ font-size: 1.125rem; font-weight: bold; }
+.way_con ul li::after{ content: ""; background: url(../images/wayArrow.png) center no-repeat; background-size: 0.875rem; display: inline-block; margin: 0 0.25rem; width: 0.875rem; height: 0.625rem;  }
+.way_con ul li:last-child:after{ display: none; }
+
+
+/*----------------------------- photo --------------------------*/
+.photo_area{ display: grid; grid-template-columns: 1fr 1fr 1fr; }
+
+.photo_box{ width: 24.375rem; cursor: pointer; margin-bottom: 4rem; }
+.photo_box:hover{ box-shadow: 0 14px 18px 2px rgba(0,0,0,0.14); }
+
+.photo_box:nth-child(3n-1){ margin: 0 auto; margin-bottom: 4rem; }
+.photo_box:nth-child(3n){ margin-left: auto; }
+
+.photo_box .photo_img img{ width: 100%; }
+.photo_box .photo_text{ background-color: #f4f4f4; padding: 2.5rem; height: 10.625rem; position: relative; }
+.photo_box .photo_text h4{ font-size: 1.25rem; color: #000; letter-spacing: -0.8px; line-height: 1.625rem; font-family:'Noto Sans KR', sans-serif; }
+.photo_box .photo_text p{ position: absolute; bottom: 2.5rem; left: 2.5rem; font-size: 0.938rem; color: #333; }
+.photo_box .photo_text p span{ color: #c6c6c6; margin: 0 1rem; }
+
+.photoViewImg{ margin-bottom: 2rem; width: 100%; max-width: 800px; }
+
+
+/*----------------------------- 기획전시 --------------------------*/
+.exhibit_category{ display: flex; justify-content: space-between; }
+.exhibit_category a{ width: calc(100% / 3); text-align: center; font-size: 1.375rem; color: #444; letter-spacing: -0.88px; padding: 1.313rem 0; border-bottom: 4px solid #e7e7e7; font-family:'Noto Sans KR', sans-serif; }
+.exhibit_category a.on{ border-bottom: 4px solid #313131; font-size: 1.625rem; color: #000; font-weight: bold; }
+
+.exhibit_box{ width: 100%; display: flex; margin-top: 4.375rem; cursor: pointer; }
+.exhibit_box:hover{ box-shadow: 0 14px 18px 2px rgba(0,0,0,0.14); }
+.exhibit_box .exhibit_img{ width: 37.5rem; height: 20rem; overflow: hidden; }
+.exhibit_box .exhibit_img img{ width: 100%; }
+
+.exhibit_box .exhibit_text{ width: calc(100% - 37.5rem); background-color: #f4f4f4; padding: 3rem 3.5rem; position: relative; }
+.exhibit_box .exhibit_text p{ width: 5rem; height: 2rem; border-radius: 1rem; text-align: center; line-height: 2rem; color: #fff; font-weight: bold; }
+.exhibit_box .exhibit_text p.blue{ background-color: #4d7dd5; }
+.exhibit_box .exhibit_text p.gray{ background-color: #a9a9a9; }
+.exhibit_box .exhibit_text p.black{ background-color: #333; }
+
+.exhibit_box .exhibit_text h3{ font-size: 2rem; margin-top: 1.125rem; font-family:'Noto Sans KR', sans-serif; }
+.exhibit_box .exhibit_text span{ font-size: 1.125rem; color: #1c1c1c; letter-spacing: -0.18px; display: block; margin-top: 1.313rem; }
+.exhibit_box .exhibit_text a{ font-size: 0.938rem; letter-spacing: -0.15px; color: #14549e;  position: absolute; left: 3.5rem; bottom: 3rem; }
+
+/*----------------------------- 기획전시 View --------------------------*/
+.specialView_area{ border-bottom: 1px solid #222; padding: 3rem 2rem 6.25rem 2rem; display: flex; justify-content: space-between; }
+
+.specialView_area .specialV_text p{ width: 7.5rem; height: 2rem; line-height: 2rem; border-radius: 1rem; background-color: #4d7dd5; color: #fff; font-size: 1rem; font-weight: bold; letter-spacing: -0.64px; text-align: center; }
+.specialView_area .specialV_text h3{ font-size: 2rem; letter-spacing: -1.28px; color: #000; margin-top: 1.063rem; font-family:'Noto Sans KR', sans-serif; }
+
+.specialView_area .specialV_text table{ margin-top: 2.25rem; padding-right: 6.25rem; }
+.specialView_area .specialV_text table th{ font-size: 0.938rem; color: #1c1c1c; letter-spacing: -0.15px; text-align: left; padding: 0.563rem 0; position: relative; width: 12%; }
+.specialView_area .specialV_text table th::after{ content: "|"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); color: #dcdcdc; }
+.specialView_area .specialV_text table td{ font-size: 1.125rem; color: #000; letter-spacing: -0.72px; font-weight: bold; padding: 0.688rem 0; line-height: 1.5rem; padding-left: 1.313rem; }
+.specialView_area .specialV_text table td.con{ font-size: 1rem; color: #333; letter-spacing: -0.64px; font-weight: normal; }
+
+.specialView_area .specialV_img img{ width: 25rem; }
+
+
+/*----------------------------- 관광지 --------------------------*/
+.tour_area{ display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 0.738rem; }
+.tour_area .tour_box{ width: 95%; margin: 0 auto; display: flex; flex-direction: column; margin-bottom: 2.5rem; }
+.tour_area .tour_box:nth-child(3n){ margin-right: 0; }
+.tour_area .tour_box:nth-child(3n-2){ margin-left: 0; }
+
+.tour_area .tour_box .tour_img{ width: 100%; height: 15.625rem; position: relative; overflow: hidden; }
+.tour_area .tour_box .tour_img img{ width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.tour_area .tour_box .tour_text{ background-color: #f4f4f4; padding: 2.5rem; }
+.tour_area .tour_box .tour_text > h4{ font-size: 1.25rem; color: #010101; letter-spacing: -0.2px;  }
+.tour_area .tour_box .tour_text > p{ margin-top: 1.188rem; font-size: 1rem; color: #444; letter-spacing: -0.24px; line-height: 1.375rem; width: 100%; min-height: 4.125rem; white-space: normal; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.tour_area .tour_box .tour_text > div{ margin-top: 1.188rem; display: flex; align-items: center; }
+.tour_area .tour_box .tour_text > div span{ width: 4.438rem; height: 1.813rem; border-radius: 0.875rem; text-align: center; line-height: 1.813rem; background-color: #5e5e5e; color: #fff; font-size: 0.938rem; letter-spacing: -0.15px; margin-right: 0.5rem; }
+.tour_area .tour_box .tour_text > div p{ font-size: 0.938rem; color: #010101; letter-spacing: -0.15px; }
+
+
+
+/*----------------------------- 큐레이터 --------------------------*/
+.curator_wrap{ display: grid; grid-template-columns: 1fr 1fr; }
+.curator_wrap .curator_box{ width: 95%; display: flex; border: 1px solid #c1c1c1; padding: 3.75rem; margin-bottom: 2.5rem; }
+.curator_wrap .curator_box:nth-child(2n){ margin-left: auto; }
+
+.curator_wrap .curator_box .curator_img{ width: 12.5rem; height: 12.5rem; position: relative; overflow: hidden; margin-right: 3.313rem; }
+.curator_wrap .curator_box .curator_img img{ width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.curator_wrap .curator_box .curator_text > h1{ font-size: 2rem; letter-spacing: -1.28px; color: #000; }
+.curator_wrap .curator_box .curator_text > h1 > span{ font-size: 1.125rem; letter-spacing: -0.72px; margin-left: 0.5rem; }
+.curator_wrap .curator_box .curator_text > div{ margin-top: 1.563rem; display: flex; align-items: flex-start; }
+.curator_wrap .curator_box .curator_text > div > p{ font-size: 0.938rem; color: #1c1c1c; letter-spacing: -0.15px; flex: none; white-space: nowrap; }
+.curator_wrap .curator_box .curator_text > div > span{ color: #dcdcdc; margin: 0 1.125rem 0 1.25rem; flex: none; }
+.curator_wrap .curator_box .curator_text > div > h5{ font-size: 1.125rem; color: #000; letter-spacing: -0.18px; font-weight: bold; }
+.curator_wrap .curator_box .curator_text > ul{ margin-top: 1.25rem; }
+.curator_wrap .curator_box .curator_text > ul > li{ font-size: 1rem; letter-spacing: -0.64px; color: #333; line-height: 1.625rem; text-decoration: dotted; }
+.curator_wrap .curator_box .curator_text > ul > li::before{ content: "·"; margin-right: 0.25rem; }
+
+
+
+/*----------------------------- 로고및캐릭터 --------------------------*/
+.symbol_wrap{ margin-top: 3.75rem; position: relative; display: flex; flex-direction: column; }
+.symbol_wrap .tymbol_tit h2{ font-size: 2rem; color: #333; letter-spacing: -0.32px; }
+.symbol_wrap .tymbol_tit p{ font-size: 1rem; color: #444; letter-spacing: -0.4px; margin-top: 1.25rem; }
+
+.symbol_wrap .symbol_area{ margin-top: 2rem; border: 1px solid #c1c1c1; display: flex; justify-content: space-around; padding: 3.75rem; }
+.symbol_wrap .symbol_area .symbol_box p{ font-size: 1.25rem; letter-spacing: -0.2px; color: #000; }
+.symbol_wrap .symbol_area .symbol_box > div.symbol1{ margin-top: 2.5rem; width: 17.125rem; }
+.symbol_wrap .symbol_area .symbol_box > div.symbol2{ margin-top: 4.875rem; width: 35.813rem; }
+.symbol_wrap .symbol_area .symbol_box > div.symbol3{ margin-top: 5.375rem; width: 23.25rem; }
+.symbol_wrap .symbol_area .symbol_box > div img{ width: 100%; }
+
+.symbol_box-text{ margin-top: 2.5rem; }
+.symbol_box-text > div{ margin-bottom: 1.438rem; display: flex; align-items: flex-start; }
+.symbol_box-text > div > h3{ width: 10rem; height: 2.313rem; line-height: 2.313rem; text-align: center; font-size: 1.25rem; letter-spacing: -0.2px; color: #fff; margin-right: 1.125rem; }
+.symbol_box-text > div > div > h5{ font-size: 1.25rem; color: #000; letter-spacing: -0.2px; margin-top: 0.6rem; }
+.symbol_box-text > div > div > p{ font-size: 1rem; color: #444; letter-spacing: -0.4px; margin-top: 1.25rem; }
+.symbol_box-text > div > div > div{ display: flex; margin-top: 0.75rem; }
+.symbol_box-text > div > div > div > div{ width: 1.063rem; margin-right: 0.5rem; }
+.symbol_box-text > div > div > div > div img{ width: 100%; }
+.symbol_box-text > div > div > div p{ font-size: 0.938rem; letter-spacing: -0.38px; color: #444; }
+.symbol_box-text > div:last-child{ margin-bottom: 0; }
+
+.symbol_wrap > button{ width: 8.188rem; height: 2.063rem; border-radius: 0.313rem; background-color: #707070; font-size: 0.875rem; color: #fff; position: absolute; top: 0; right: 0; }
+
+
+/*----------------------------- 검색결과 --------------------------*/
+.search_page{width: 100%; background-color: #f4f4f4; padding: 3.75rem 0; }
+.search_page h1{ font-size: 1.875rem; text-align: center; letter-spacing: -0.3px; color: #333; font-weight: normal; }
+.search_page h1 b{ color: #f07600; }
+
+.search_area{ margin-top: 5rem; }
+.search_tit{ display: flex; justify-content: space-between; align-items: flex-end; }
+.search_tit p{ font-size: 1.75rem; font-weight: bold; letter-spacing: -0.28px; color: #333; }
+.search_tit p span{ font-size: 1.125rem; letter-spacing: -0.18px; margin-left: 6px; }
+.search_tit p span b{ color: #f07600; }
+.search_tit a{ font-size: 0.938rem; letter-spacing: -0.15px; color: #777; }
+
+.search_result{ margin-top: 1.438rem; }
+.search_result .search_result-box{ padding: 1.688rem 1rem 1.313rem 1rem; border-bottom: 1px solid #e5e5e5; }
+.search_result .search_result-box:first-child{ border-top: 2px solid #222; }
+.search_result .search_result-box a{ font-size: 1.125rem; color: #000; letter-spacing: -0.18px; font-weight: bold; }
+.search_result .search_result-box a span{ font-size: 0.938rem; color: #9b9b9b; font-weight: normal; letter-spacing: -0.15px; margin-left: 0.75rem; }
+.search_result .search_result-box p{ font-size: 0.938rem; color: #777; letter-spacing: -0.15px; line-height: 1.375rem; margin-top: 1.25rem; }
+.search_result .search_result-box ul{ margin-top: 1.25rem; display: flex; align-items: center; }
+.search_result .search_result-box ul li{ font-size: 0.875rem; letter-spacing: -0.14px; color: #a47445; display: flex; align-items: center; }
+.search_result .search_result-box ul li img{ width: 0.938rem; }
+.search_result .search_result-box ul li::after{ content: ">"; color: #a47445; margin: 0 4px; display: inline-block; }
+.search_result .search_result-box ul li:last-child::after{ display: none; }
+
+.search_result-img{ margin-top: 1.438rem; display: flex; justify-content: space-between; padding-top: 3.125rem; border-top: 2px solid #222; }
+.search_result-img .search_result-box{ width: calc((100% - 7.5rem) / 4 ); }
+.search_result-img .search_result-box img{ width: 100%; }
+.search_result-img .search_result-box p{ font-size: 1.125rem; margin-top: 1.5rem; color: #000; letter-spacing: -0.72px; font-weight: bold; font-family:'Noto Sans KR', sans-serif; }
+
+.search_result .search_result-box p.result_none{ margin-bottom: 1.25rem; font-size: 1.125rem; color: #777; letter-spacing: -0.72px; text-align: center; font-weight: bold; font-family:'Noto Sans KR', sans-serif; }
+
+
+/*------------------------------- 시설예약 ------------------------*/
+.reservation_wrap{ margin-top: 4.375rem; display: flex; justify-content: space-between; align-items: flex-start; position: relative; }
+
+.reservation_slide{ width: 46.75rem; }
+.reservation_slide .bxslider li { height: 25rem; overflow: hidden; position: relative; }
+.reservation_slide .bxslider li img{ width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.reservation_slide #bx-pager{ display: flex; justify-content: space-between; margin-top: 0.438rem; }
+.reservation_slide #bx-pager a{ width: 32.5%; height: 10.063rem; overflow: hidden; position: relative; background-color: #e5e5e5; }
+.reservation_slide #bx-pager a img{ width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  }
+
+
+.reservation_text { width: calc(100% - 50rem); }
+.reservation_text > h3{ font-size: 2rem; letter-spacing: -0.08rem; color: #000; }
+
+.reservation_text_con{ margin-top: 1rem; }
+.reservation_text_con > div{ padding: 1.563rem 0 1.375rem; border-bottom: 1px solid #dcdcdc; }
+.reservation_text_con > div:last-child{ border-bottom: none; }
+.reservation_text_con > div h4{ font-size: 1.125rem; letter-spacing: -0.18px; color: #000; display: flex; align-items: center; }
+.reservation_text_con > div:nth-child(1) h4 img{ width: 1.063rem; margin-right: 0.563rem; }
+.reservation_text_con > div:nth-child(2) h4 img{ width: 1.313rem; margin-right: 0.438rem; }
+.reservation_text_con > div:nth-child(3) h4 img{ width: 1.563rem; margin-right: 0.563rem; }
+.reservation_text_con > div:nth-child(4) h4 img{ width: 1.313rem; margin-right: 0.438rem; }
+.reservation_text_con > div p{ margin-top: 0.75rem; font-size: 1rem; color: #333; letter-spacing: -0.64px; line-height: 1.5rem; }
+
+
+.reservation_wrap > button{ position: absolute; right: 0; bottom: 0; }
+
+
+/*------------------------------- 유관기관소개 ------------------------*/
+.relationship_area{ display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; }
+.relationship_area a{ height: 7.5rem; display: flex; align-items: center; justify-content: center; padding: 2.25rem 0; border: 1px solid #c1c1c1; margin-right: 1.25rem; margin-bottom: 1.25rem; }
+.relationship_area a img{ max-height: 100%; max-width: 80%; }
+
+
+
+/*------------------------------- 상설전시 ------------------------*/
+.permanent_top{ background-color: #efe9e4; }
+.permanent_top_bar{ width: 1px; height: 100%; background-color: #bf9d7c; position: absolute; top: 0; left: 4.5rem; }
+.permanent_top_area{ display: flex; justify-content: space-between; padding: 5rem 0;  }
+.permanent_top_left{ position: relative; width: 28.125rem; margin-right: 1rem; }
+
+.permanent_top_left .permanent_top_textBox{ width: 100%; background-color: #b7a28e; padding: 1.25rem 3.063rem; margin-bottom: 1.25rem; transition: 1s ease-in-out; cursor: pointer; }
+.permanent_top_left .permanent_top_textBox:last-child{ margin-bottom: 0; }
+.permanent_top_left .permanent_top_textBox h2{ font-size: 1.125rem; letter-spacing: -0.18px; font-weight: normal; color: #fff; }
+.permanent_top_left .permanent_top_textBox h2 img{ display: none; }
+.permanent_top_left .permanent_top_textBox span{ font-size: 0.813rem; color: #b7a28e; margin-top: 0.625rem; display: none; }
+.permanent_top_left .permanent_top_textBox p{ font-size: 0.938rem; line-height: 1.25rem; color: #fff; margin-top: 1.313rem; display: none; }
+.permanent_top_left .permanent_top_textBox.on{ background-color: #252525; padding: 3.063rem; }
+.permanent_top_left .permanent_top_textBox.on h2{ font-size: 2.5rem; font-weight: bold; }
+.permanent_top_left .permanent_top_textBox.on span{ display: block; }
+.permanent_top_left .permanent_top_textBox.on p{ display: block; }
+
+
+.permanent_top_right{ width: 44.125rem; position: relative; }
+.permanent_top_right .permanent_map{ width: 44.125rem; position: absolute; }
+.permanent_top_right .permanent_map img{ width: 100%; }
+
+.permanent_top_right .permanent_mapPin{ width: 100%; height: 100%; position: relative; }
+.permanent_top_right .permanent_mapPin p{ height: 1.75rem; line-height: 1.75rem; text-align: center; border-radius: 0.25rem; font-size: 1rem; letter-spacing: -0.16px; font-weight: bold; background-color: #8fcd9f; color: #478f55; position: absolute; transition: 1s ease-in-out; }
+.permanent_top_right .permanent_mapPin p.on{ background-color: #252525; color: #fff; }
+.permanent_top_right .permanent_mapPin p:nth-child(1){ width: 4.938rem; top: 14.6rem; left: 33.3rem; }
+.permanent_top_right .permanent_mapPin p:nth-child(2){ width: 5.688rem; top: 10.5rem; left: 16rem; }
+.permanent_top_right .permanent_mapPin p:nth-child(3){ width: 4.375rem; top: 16.5rem; left: 14.8rem; }
+.permanent_top_right .permanent_mapPin p:nth-child(4){ width: 4.375rem; top: 27.2rem; left: 18.7rem; }
+
+.permanent_top_right .permanent_mapPin .permanent_mapArrow{ width: 1.938rem; position: absolute; top: 16.6rem; left: 33.75rem; animation: mapArrow 1s infinite linear; transition: 1s ease-in-out; }
+.permanent_top_right .permanent_mapPin .permanent_mapArrow img{ width: 100%; }
+  @keyframes mapArrow {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(180deg); }
+  }
+
+.permanent_bot{ margin-top: 6.375rem !important; }
+.permanentSwiper{ position: relative; }
+
+.permanentSwiper .swiper-slide{ position: relative; display: flex; justify-content: space-between; background-color: #f0f0f0; }
+.permanentSwiper .swiper-slide .slide_text{ background-color: #f0f0f0; padding: 5.375rem  5rem 3.313rem 7.188rem; }
+.permanentSwiper .swiper-slide .slide_text h3{ font-size: 1.875rem; letter-spacing: -0.3px; color: #000; font-family:'nexonGothic_bold'; }
+.permanentSwiper .swiper-slide .slide_text p{ font-size: 1rem; letter-spacing: -0.16px; color: #000; margin-top: 1.313rem; }
+.permanentSwiper .swiper-slide .slide_text a{ position: absolute; bottom: 3.313rem; left: 7.25rem; font-size: 0.938rem; color: #f07600; letter-spacing: -0.15px; }
+.permanentSwiper .swiper-slide .slide_img{ width: 37.5rem; }
+.permanentSwiper .swiper-slide .slide_img img{ width: 100%; height: 22.5rem; overflow: hidden; }
+.permanentSwiper .swiper-slide .slideNum{ position: absolute; top: 0; left: 0; transform: translateY(-50%); width: 6.25rem; height: 6.25rem; background-color: #252525; color: #fff; font-size: 3rem; text-align: center; line-height: 6.25rem; letter-spacing: -0.48px; font-weight: bold;  }
+
+
+
+/*----------------------------- 반응형 --------------------------*/
+@media screen and (max-width:1320px){
+    /* photo */
+    .photo_area{ grid-template-columns: 1fr 1fr; }
+
+    .photo_box{ width: 95%; }
+    .photo_box:nth-child(3n-1){ margin: 0; }
+    .photo_box:nth-child(3n){ margin-left: 0; }
+    .photo_box:nth-child(2n-1){ margin-right: auto; }
+    .photo_box:nth-child(2n){ margin-left: auto; }
+
+
+    /* 관광지 */
+    .tour_area{ grid-template-columns: 1fr 1fr; }
+    .tour_area .tour_box:nth-child(3n-2){ margin-left: auto; }
+    .tour_area .tour_box:nth-child(2n){ margin-right: 0; }
+    .tour_area .tour_box:nth-child(2n-1){ margin-left: 0; }
+
+
+    /* 큐레이터 */
+    .curator_wrap{ grid-template-columns: 1fr; }
+    .curator_wrap .curator_box{ width: 100%;  }
+
+
+    /* 시설예약 */
+    .reservation_wrap{ flex-direction: column-reverse;  }
+    .reservation_slide{ width: 100%; margin-top: 2rem; margin-bottom: 5rem; }
+    .reservation_text{ width: 100%; }
+    .reservation_text_con > div{ display: flex; align-items: flex-start; border-bottom: none; padding: 0.839rem 0 0.756rem; }
+    .reservation_text_con > div h4{ width: 6rem; }
+    .reservation_text_con > div h4 img{ display: none; }
+    .reservation_text_con > div p{ margin-top: 0; }
+
+    .reservation_wrap > button{ width: 100%; }
+
+}
+
+@media screen and (max-width:1024px){
+    /* bestList */
+    .best_area{ display: grid; grid-template-columns: 1fr 1fr; }
+    .best_box{ cursor: pointer; flex-direction: column; margin: 1.818rem 0; margin-right: 0.818rem; }
+    .best_box:nth-child(2n){ margin-right: 0; margin-left: 0.818rem; }
+    .best_box:hover{ box-shadow: none; }
+
+    .best_img img{ width: 100%; }
+
+    .best_text{ background-color: #fff; padding: 1.091rem 0 0 0; }
+    .best_tit .best_company > p{ display: none; }
+    .best_tit .best_company > div > h3{ font-size: 1.636rem; }
+    .best_tit .best_company > div > span{ margin-top: 0.545rem; }
+
+    .best_tit .best_name{ display: none; }
+
+    .best_text > h4{ margin-top: 1.091rem; }
+    .best_text > p{ display: none; }
+    .best_text > a{ display: none; }
+
+
+
+    /* bestView */
+    .bestView_area{ display: block; padding: 0; padding-bottom: 2.182rem; border-top: 0; }
+
+    .bestView_area .bestV_text p{ display: none; }
+    .bestView_area .bestV_text h3{ margin-top: 0; }
+
+    .bestView_area .bestV_text table{ margin-top: 1.25rem; padding-right: 0; }
+    .bestView_area .bestV_text table th{ width: 10%; }
+    .bestView_area .bestV_text table th::after{ display: none; }
+    .bestView_area .bestV_text table td{ padding-left: 0; }
+
+    .bestView_area .bestV_img img{ width: 100%; }
+
+
+    /* schedule */
+    .schedule_category{ display: flex; }
+    .schedule_category a{ width: 50%; }
+
+
+    /* way */
+    .way_con button{ width: 100%; margin-bottom: 0.5rem; }
+
+
+    /* photo */
+    .photo_area{ grid-template-columns: 1fr; }
+
+    .photo_box{ width: 100%; }
+
+
+    /* 기획전시 */
+    .exhibit_box{ flex-direction: column; }
+    .exhibit_box:hover{ box-shadow: none; }
+
+    .exhibit_box .exhibit_img{ width: 100%; }
+    .exhibit_box .exhibit_text{ width: 100%; background-color: rgba(0,0,0,0); padding: 0; }
+    
+    .exhibit_box .exhibit_text p{ display: none; }
+    .exhibit_box .exhibit_text a{ display: none; }
+
+
+    /* 기획전시 View */
+    .specialView_area{ display: block; padding: 0; padding-bottom: 2.182rem; padding-top: 2rem; }
+
+    .specialView_area .specialV_text p{ display: none; }
+    .specialView_area .specialV_text h3{ margin-top: 0; }
+
+    .specialView_area .specialV_text table{ margin-top: 1.25rem; padding-right: 0; }
+    .specialView_area .specialV_text table th{ width: 10%; }
+    .specialView_area .specialV_text table th::after{ display: none; }
+    .specialView_area .specialV_text table td{ padding-left: 0; }
+
+    .specialView_area .specialV_img img{ width: 100%; }
+
+
+    
+    /* 관광지 */
+    .tour_area{ grid-template-columns: 1fr; }
+
+    .tour_area .tour_box{ width: 100%; }
+    .tour_area .tour_box .tour_img{ height: 17.727rem; }
+
+    .tour_area .tour_box .tour_text{ background-color: #fff; padding: 1.455rem 0; }
+    .tour_area .tour_box .tour_text > p{ display: none; }
+    .tour_area .tour_box .tour_text > div{ display: none; }
+
+
+    /* 큐레이터 */
+    .curator_wrap .curator_box{ border: none; margin-bottom: 0; padding: 3rem 0; border-bottom: 1px solid #dcdcdc; }
+
+    /* 로고및 캐릭터 */
+    .symbol_wrap .symbol_area{ flex-direction: column; }
+    .symbol_wrap .symbol_area .symbol_box p{ margin-top: 2.5rem; }
+    .symbol_wrap .symbol_area .symbol_box:first-child p{ margin-top: 0; }
+    .symbol_wrap .symbol_area .symbol_box > div.symbol1{ margin: 0 auto; margin-top: 1.5rem; }
+    .symbol_wrap .symbol_area .symbol_box > div.symbol2{ margin: 0 auto; margin-top: 1.275rem; }
+    .symbol_wrap .symbol_area .symbol_box > div.symbol3{ margin: 0 auto; margin-top: 3.375rem; }
+
+    .symbol_wrap > button{ position: static; width: 100%; height: 3rem; font-size: 1rem; background-color: #434343; letter-spacing: -0.96px; margin-top: 1rem; }
+
+    .symbol_box-text > div{ position: relative; margin-bottom: 6.438rem;  }
+    .symbol_box-text > div:last-child{ margin-bottom: 6.468rem; }
+    .symbol_box-text > div > div > p{ position: absolute; left: 0; bottom: -20px; }
+    .symbol_box-text > div > div > div{ position: absolute; left: 0; top: 46px; }
+
+    
+    /* 유관기관소개 */
+    .relationship_area{ grid-template-columns: 1fr 1fr 1fr; }
+
+
+    /* 상설전시 */
+    .permanent_top{ background-color: #fff; }
+    .permanent_top_area{ padding-bottom: 0; }
+    .permanent_top_right{ display: none; }
+    .permanent_top_left{ margin-right: 0; width: 100%; }
+
+    .permanent_top_left .permanent_top_textBox h2{ display: flex; justify-content: space-between; align-items: center; }
+    .permanent_top_left .permanent_top_textBox h2 img.ico_open{ display: block; }
+    .permanent_top_left .permanent_top_textBox.on h2 img.ico_open{ display: none; }
+
+    .permanentSwiper .swiper-slide{ flex-direction: column-reverse; }
+    .permanentSwiper .swiper-slide .slideNum{ transform: translateY(-100%); background-color: #fff; color: #252525; width: 5.25rem; height: 5.25rem; font-size: 2.5rem; }
+    .permanentSwiper .swiper-slide .slide_img{ width: 100%; }
+    .permanentSwiper .swiper-slide .slide_img img{ height: auto; }
+    .permanentSwiper .swiper-slide .slide_text{ padding: 1rem 0; background-color: #fff; }
+    .permanentSwiper .swiper-slide .slide_text a{ position: static; margin-top: 0.25rem; }
+    .permanentSwiper .swiper-button-prev, 
+    .permanentSwiper .swiper-button-next{ display: none; }
+
+
+
+}
+@media screen and (max-width:768px){
+    .relationship_area{ grid-template-columns: 1fr 1fr; }
+}
+@media screen and (max-width:500px){
+    .symbol_wrap .symbol_area .symbol_box > div.symbol2{ width: 100%; }
+}
+
+
+
+

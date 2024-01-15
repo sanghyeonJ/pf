@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="OOO 홈페이지 입니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OOO">
+        <meta property="og:description" content="OOO 홈페이지 입니다.">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <!-- <meta http-equiv="imagetoolbar" content="no"> -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+
+        <title></title>
+
+
+        <!-- css -->
+        <link rel="stylesheet" href="../../../resources/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="../../../resources/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../../../resources/css/portal/global.css">
+
+
+        <!-- js :: lib -->
+        <script src="../../../resources/js/common/jquery/jquery-3.6.1.min.js"></script>
+        
+
+        <!-- js -->
+        <script src="../../../resources/js/common/jquery/jquery-ui.min.js"></script>
+        <script src="../../../resources/js/common/jquery/datepicker-ko.js"></script>
+        <script src="../../../resources/js/common/jquery/chart.js"></script>
+        <script src="../../../resources/js/common/design/swiper-bundle.min.js"></script>
+        <script src="../../../resources/js/common/design/portal/gnb.js"></script>
+        <script src="../../../resources/js/common/design/portal/design.js"></script>
+    </head>
+
+
+    <body>
+        <!------------------------------------ header::start ------------------------------->
+        <header>
+            
+        </header>
+        <!------------------------------------ header::end ------------------------------->
+
+
+        <!------------------------------------ content::start ------------------------------->
+        <div class="pageWrap">
+            <div class="contentWrap">
+                <div class="inner">
+                    <button type="button" class="pageBackArrow-s"><img src="../../../resources/images/portal/backArrow-s.png" alt="뒤로가기"></button>
+                    <h1 class="pageTitle-s">이용안내</h1>
+                    <div class="input_radio">
+                        <input type="radio" name="reservationType" id="reservationType1" checked=""><label for="reservationType1">호텔</label>
+                        <input type="radio" name="reservationType" id="reservationType2"><label for="reservationType2">빌딩</label>
+                    </div>
+                    <div class="category swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide on">거실, 방</div>
+                            <div class="swiper-slide">주방</div>
+                            <div class="swiper-slide">화장실</div>
+                            <div class="swiper-slide">현관, 쓰레기배출</div>
+                            <div class="swiper-slide">세탁, 실내창틀, 베란다</div>
+                        </div>
+                    </div>
+                    <div class="guide">
+                        <p class="tit">기본서비스</p>
+                        <ul class="guideList">
+                            <li>소파, 책상, 화장대 등 가구 위 먼지 제거</li>
+                            <li>건조된 빨래 개켜서 마무리</li>
+                            <li>청소기 및 막대 걸레로 바닥 청소</li>
+                            <li>침구 정리정돈</li>
+                            <li>물건 제자리 정리정돈</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!------------------------------------ content::end ------------------------------->
+
+
+        <!------------------------------------ footer::start ------------------------------->
+        <footer>
+            
+        </footer>
+        <!------------------------------------ footer::end ------------------------------->
+        <script>
+            var swiper = new Swiper(".category", {
+                slidesPerView: "auto",
+                freeMode: true,
+                spaceBetween: 8
+            });
+        </script>
+    </body>
+</html>
