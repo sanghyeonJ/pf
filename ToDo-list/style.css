@@ -19,8 +19,8 @@ input {
   opacity: 80%;
 }
 .todo-container {
-  max-width: 100%;
-  width: 400px;
+  max-width: 400px;
+  width: 90%;
 }
 #todo-input {
   background-color: lightyellow;

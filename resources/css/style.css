@@ -19,6 +19,11 @@ a{
     display: block;
     color: #fff;
 }
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 .bg{
     width: 100%;
     height: 100vh;
@@ -194,6 +199,7 @@ table tr:nth-child(odd) td{
     overflow: hidden;
     box-shadow: 0 0 10px 4px var(--pointShadowColor);
     transition: all 0.5s;
+    scale: 0.95;
 }
 .skillBox img{
     width: 70px;
@@ -309,9 +315,70 @@ table tr:nth-child(odd) td{
     transform: rotateY(180deg);
 }
 
-
-
-
+/* 개인작업물 */
+.worksArea{
+    display: flex;
+    gap: 20px;
+    transition: all 0.5s;
+}
+.worksItem{
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.5s;
+}
+.worksItem .imgBox{
+    padding-bottom: 240px;
+}
+.worksItem .imgBox{
+    filter: brightness(1);
+    transition: all 0.5s;
+    margin: 0;
+}
+.worksItem .textBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 1s;
+    padding: 1.4rem 2rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+.worksItem .textBox p{
+    font-size: 0.89rem;
+}
+.worksItem:hover{
+    flex: 2.5;
+}
+.worksArea:hover{
+    gap: 10px;
+}
+.worksArea:hover .worksItem:not(:hover){
+    flex: 0.4;
+}
+.worksItem:hover .imgBox{
+    filter: brightness(0.3);
+}
+.worksItem:hover .imgBox img{
+    filter: blur(2px);
+}
+.worksItem:hover .textBox{
+    opacity: 1;
+}
+@media (max-width: 768px){
+    .worksArea{
+        flex-direction: column;
+    }
+    .worksArea:hover{
+        gap: 20px;
+    }
+    .worksItem .textBox{
+        white-space: wrap;
+    }
+}
 /* ani */
 .ani{ opacity: 0; transform: translateY(50px); transition: all 0.5s; }
 .ani.on{ opacity: 1; transform: translateY(0); }

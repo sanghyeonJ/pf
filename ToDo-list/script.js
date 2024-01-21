@@ -84,7 +84,6 @@ const weatherDataActive = function ({ location, weather }) {
   weather = weatherMainList.includes(weather) ? weather : "Fog";
   const locationNameTag = document.querySelector("#locationNameTag");
   locationNameTag.textContent = location;
-  console.log(weather);
   document.body.style.backgroundImage = `url('./images/${weather}.jpg')`;
   if (
     !savedWeatherData ||

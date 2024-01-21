@@ -1,5 +1,6 @@
 document.addEventListener("touchstart", function() {}, true); // 모바일 hover 적용
 
+// 스크롤 애니메이션
 function scollAni(){
     let content = document.querySelectorAll('.ani');
     for(let i = 0; i < content.length; i++){
@@ -14,3 +15,4 @@ function scollAni(){
 scollAni()
 
 window.addEventListener('scroll',scollAni)
+

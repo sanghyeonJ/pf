@@ -4,12 +4,12 @@ const container = document.querySelector("#d-day-container");
 container.style.display = "none";
 messageContainer.innerHTML = "<h3>d-day를 입력해 주세요.</h3>";
 
-const dateFormMaker = function () {
-  const inputYear = document.querySelector("#target-year-input").value;
-  const inputMonth = document.querySelector("#target-month-input").value;
-  const inputDate = document.querySelector("#target-date-input").value;
+const inputYear = document.querySelector("#target-year-input");
+const inputMonth = document.querySelector("#target-month-input");
+const inputDate = document.querySelector("#target-date-input");
 
-  const dateFormat = `${inputYear}-${inputMonth}-${inputDate}`;
+const dateFormMaker = function () {
+  const dateFormat = `${inputYear.value}-${inputMonth.value}-${inputDate.value}`;
 
   return dateFormat;
 };
@@ -105,10 +105,22 @@ const resetTimer = function () {
   messageContainer.style.display = "flex";
   messageContainer.innerHTML = "<h3>d-day를 입력해 주세요.</h3>";
   setClearInterval();
+  inputYear.value = '';
+  inputMonth.value = '';
+  inputDate.value = '';
 };
+
+const inputFill = function(fillDate){
+  const dateFormat = fillDate.split('-');
+  inputYear.value = dateFormat[0];
+  inputMonth.value = dateFormat[1];
+  inputDate.value = dateFormat[2];
+}
+
 if (savedDate) {
   console.log(savedDate);
   starter(savedDate);
+  inputFill(savedDate);
 } else {
   console.log("data is null");
 }
