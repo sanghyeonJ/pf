@@ -63,16 +63,88 @@ button{
 }
 .titleSection .inner{
     position: relative;
+    padding: 0 40px;
+}
+.titleSection .titleBox{
+    position: relative;
+    width: 0;
+    animation: titleBoxAni 6s forwards;
+    margin-bottom: 1.5rem;
+    padding-left: 20px;
+}
+.titleSection .titleBox span{
+    position: absolute;
+    width: 2rem;
+    height: 150%;
+    left: 0;
+    top: 50%;
+    transform: translateX(-100%) translateY(-50%);
+}
+.titleSection .titleBox span:last-child{
+    left: auto;
+    right: 0;
+    transform: translateX(100%) translateY(-50%);
+}
+.titleSection .titleBox span svg{
+    height: 100%;
+}
+.titleSection .titleBox span:last-child svg{
+    margin-left: calc(-2rem - 20px);
 }
 .titleSection h1{
+    width: fit-content;
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
     text-shadow: 2px 2px 2px grey;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: titleAni 3s 3s forwards;
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+}
+@keyframes titleBoxAni{
+    0%{
+        opacity: 0;
+        scale: 10;
+    }
+    50%{
+        scale: 1;
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        width: var(--titleWidth);
+        opacity: 1;
+    }
+}
+@keyframes titleAni{
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    100%{
+        width: var(--titleWidth);
+        opacity: 1;
+    }
 }
 .titleSection p{
     font-size: 1.1rem;
 }
-
+@media (max-width: 768px){
+    .titleSection .titleBox{
+        animation: none;
+        width: auto;
+        padding: 0;
+    }
+    .titleSection .titleBox span{
+        display: none;
+    }
+    .titleSection h1{
+        animation: none;
+        opacity: 1;
+        clip-path: none;
+        white-space: normal;
+    }
+}
 /* contentSection */
 .contWrap{
     margin: 30px auto;

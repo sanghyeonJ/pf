@@ -13,6 +13,13 @@ function scollAni(){
     }
 }
 scollAni()
-
 window.addEventListener('scroll',scollAni)
+
+function titleBox() {
+    let titleWidth = document.querySelector('.titleSection h1').offsetWidth;
+    document.documentElement.style.setProperty('--titleWidth', `${titleWidth + 20}px`);
+}
+titleBox();
+window.addEventListener('resize', titleBox);
+
 
