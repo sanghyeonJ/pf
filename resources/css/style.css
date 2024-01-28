@@ -157,6 +157,15 @@ button{
 .sectionTitle{
     font-size: 2.2rem;
     margin-bottom: 1.4rem;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sectionTitle span{
+    font-size: .8rem;
+    color: #aaa;
+    font-weight: normal;
 }
 .contArea{
     display: flex;
