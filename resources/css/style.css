@@ -145,6 +145,58 @@ button{
         white-space: normal;
     }
 }
+.me{
+    position: absolute;
+    width: 100%;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.meTitle{
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    animation: meTitleAni 2s linear infinite;
+}
+.meTitle h5{
+    text-align: center;
+    font-size: 1rem;
+    line-height: 4rem;
+    animation: meTitleAni 2s reverse linear infinite ;
+}
+.meText{
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    width: 80%;
+    max-width: 600px;
+    padding: 1.4rem;
+    background-color: #ddd;
+    border-radius: 1rem;
+    font-size: 0.92rem;
+    color: #333;
+    box-shadow: 0px 4px 20px 14px rgba(255, 255, 255, 0.4);
+    opacity: 0;
+}
+.me .meTitle:hover + .meText{
+    top: 5rem;
+    opacity: 1;
+}
+@keyframes meTitleAni{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 /* contentSection */
 .contWrap{
     margin: 30px auto;
